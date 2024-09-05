@@ -16,10 +16,10 @@
                 <div class="col">
                     <nav class="site-main-menu menu-height-100 justify-content-center">
                         <ul>
-                            <li class="has-children"><a href="#"><span class="menu-text">Home</span></a></li>
-                            <li class="has-children"><a href="#"><span class="menu-text">Property</span></a></li>
-                            <li class="has-children"><a href="#"><span class="menu-text">About</span></a></li>
-                            <li class="has-children"><a href="#"><span class="menu-text">Contact Us</span></a></li>
+                            <li class="has-children"><a href="<?= urlOf('index.php') ?>"><span class="menu-text">Home</span></a></li>
+                            <li class="has-children"><a href="<?= urlOf('pages/propertylist.php') ?>"><span class="menu-text">Property</span></a></li>
+                            <li class="has-children"><a href="<?= urlOf('pages/about.php') ?>"><span class="menu-text">About</span></a></li>
+                            <li class="has-children"><a href="<?= urlOf('pages/contact.php') ?>"><span class="menu-text">Contact Us</span></a></li>
                         </ul>
                     </nav>
                 </div>
@@ -61,10 +61,10 @@
                 <div class="col">
                     <nav class="site-main-menu justify-content-center">
                         <ul>
-                            <li class="has-children"><a href="#"><span class="menu-text">Home</span></a></li>
-                            <li class="has-children"><a href="#"><span class="menu-text">Property</span></a></li>
-                            <li class="has-children"><a href="#"><span class="menu-text">About</span></a></li>
-                            <li class="has-children"><a href="#"><span class="menu-text">Contact Us</span></a></li>
+                            <li class="has-children"><a href="<?= urlOf('index.php') ?>"><span class="menu-text">Home</span></a></li>
+                            <li class="has-children"><a href="<?= urlOf('pages/propertylist.php') ?>"><span class="menu-text">Property</span></a></li>
+                            <li class="has-children"><a href="<?= urlOf('pages/about.php') ?>"><span class="menu-text">About</span></a></li>
+                            <li class="has-children"><a href="<?= urlOf('pages/contact.php') ?>"><span class="menu-text">Contact Us</span></a></li>
                         </ul>
                     </nav>
                 </div>
@@ -195,51 +195,6 @@
         </div>
     </div>
     <!-- OffCanvas Search End -->
-
-    <!-- OffCanvas Wishlist Start -->
-    <div id="offcanvas-wishlist" class="offcanvas offcanvas-wishlist">
-        <div class="inner">
-            <div class="head">
-                <span class="title">Wishlist</span>
-                <button class="offcanvas-close">×</button>
-            </div>
-            <div class="body customScroll">
-                <ul class="minicart-product-list">
-                    <li>
-                        <a href="product-details.html" class="image"><img src="assets/images/product/cart-product-1.webp" alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="product-details.html" class="title">Walnut Cutting Board</a>
-                            <span class="quantity-price">1 x <span class="amount">$100.00</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="product-details.html" class="image"><img src="assets/images/product/cart-product-2.webp" alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="product-details.html" class="title">Lucky Wooden Elephant</a>
-                            <span class="quantity-price">1 x <span class="amount">$35.00</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="product-details.html" class="image"><img src="assets/images/product/cart-product-3.webp" alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="product-details.html" class="title">Fish Cut Out Set</a>
-                            <span class="quantity-price">1 x <span class="amount">$9.00</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="foot">
-                <div class="buttons">
-                    <a href="wishlist.html" class="btn btn-dark btn-hover-primary">view wishlist</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- OffCanvas Wishlist End -->
-
     <!-- OffCanvas Cart Start -->
     <div id="offcanvas-cart" class="offcanvas offcanvas-cart">
         <div class="inner">
@@ -301,10 +256,10 @@
             </div>
             <div class="offcanvas-menu">
                 <ul>
-                    <li><a href="#"><span class="menu-text">Home</span></a></li>
-                    <li><a href="#"><span class="menu-text">Property</span></a></li>
-                    <li><a href="#"><span class="menu-text">About</span></a></li>
-                    <li><a href="#"><span class="menu-text">Contact Us</span></a></li>
+                    <li class="has-children"><a href="<?= urlOf('index.php') ?>"><span class="menu-text">Home</span></a></li>
+                    <li class="has-children"><a href="<?= urlOf('pages/propertylist.php') ?>"><span class="menu-text">Property</span></a></li>
+                    <li class="has-children"><a href="<?= urlOf('pages/about.php') ?>"><span class="menu-text">About</span></a></li>
+                    <li class="has-children"><a href="<?= urlOf('pages/contact.php') ?>"><span class="menu-text">Contact Us</span></a></li>
                 </ul>
             </div>
             <div class="offcanvas-buttons">
