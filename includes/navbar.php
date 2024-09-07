@@ -29,7 +29,7 @@
                 <div class="col">
                     <div class="header-tools justify-content-end">
                         <div class="header-login">
-                            <a href="my-account.html"><i class="far fa-user"></i></a>
+                            <a href="<?= urlOf('pages/login.php') ?>"><i class="far fa-user"></i></a>
                         </div>
                         <div class="header-cart">
                             <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
@@ -74,7 +74,7 @@
                 <div class="col">
                     <div class="header-tools justify-content-end">
                         <div class="header-login">
-                            <a href="my-account.html"><i class="far fa-user"></i></a>
+                            <a href="<?= urlOf('pages/login.php') ?>"><i class="far fa-user"></i></a>
                         </div>
                         <div class="header-cart">
                             <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
@@ -105,7 +105,7 @@
                 <div class="col-auto">
                     <div class="header-tools justify-content-end">
                         <div class="header-login d-none d-sm-block">
-                            <a href="my-account.html"><i class="far fa-user"></i></a>
+                            <a href="<?= urlOf('pages/login.php') ?>"><i class="far fa-user"></i></a>
                         </div>
                         <div class="header-cart">
                             <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
@@ -145,7 +145,7 @@
                 <div class="col-auto">
                     <div class="header-tools justify-content-end">
                         <div class="header-login d-none d-sm-block">
-                            <a href="my-account.html"><i class="far fa-user"></i></a>
+                            <a href="<?= urlOf('pages/login.php') ?>"><i class="far fa-user"></i></a>
                         </div>
                         <div class="header-cart">
                             <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
