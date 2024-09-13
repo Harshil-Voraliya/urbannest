@@ -19,7 +19,7 @@ CREATE TABLE `User` (
     `Password` VARCHAR(255) NOT NULL,
     `Email` VARCHAR(255) NOT NULL
 );
-
+ 
 -- Create the state table
 CREATE TABLE State (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
@@ -93,13 +93,8 @@ CREATE TABLE Payment (
 -- Create the feedback table
 CREATE TABLE Feedback (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
-    `UserId` INT,
-    `PropertyId` INT,
-    `Rating` INT,
-    `Comments` TEXT,
-    `Date` DATE,
-    FOREIGN KEY (`UserId`) REFERENCES `User`(`Id`),
-    FOREIGN KEY (`PropertyId`) REFERENCES PropertyDetails(`Id`)
+    `Name` VARCHAR(50) NOT NULL,
+    `Message` TEXT
 );
 
 INSERT INTO User (

@@ -6,7 +6,7 @@
 
 <body>
     <!-- Page Title/Header Start -->
-    <div class="page-title-section section" data-bg-image="assets/images/bg/page-title-1.webp">
+    <div class="page-title-section section" data-bg-image="<?= urlOf('assets/images/bg/page-title-1.webp') ?>">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -14,7 +14,7 @@
                     <div class="page-title">
                         <h1 class="title">Shop</h1>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="<?= urlOf('index.php') ?>">Home</a></li>
                             <li class="breadcrumb-item active">Products</li>
                         </ul>
                     </div>
@@ -171,8 +171,8 @@
                         <div class="product">
                             <div class="product-thumb">
                                 <a href="product-details.html" class="image">
-                                    <img src="assets/images/product/s328/product-17.webp" alt="Product Image">
-                                    <img class="image-hover " src="assets/images/product/s328/product-17-hover.webp" alt="Product Image">
+                                    <img src="<?= urlOf('assets/images/out/8H.jpg') ?>" alt="Product Image">
+                                    <img class="image-hover " src="<?= urlOf('assets/images/out/8H.jpg') ?>" alt="Product Image">
                                 </a>
                                 <a href="wishlist.html" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                             </div>
@@ -197,8 +197,8 @@
                                     <span class="product-badges">
                                         <span class="outofstock"><i class="far fa-frown"></i></span>
                                     </span>
-                                    <img src="assets/images/product/s328/product-14.webp" alt="Product Image">
-                                    <img class="image-hover " src="assets/images/product/s328/product-14-hover.webp" alt="Product Image">
+                                    <img src="<?= urlOf('assets/images/product/s328/product-14.webp') ?>" alt="Product Image">
+                                    <img class="image-hover " src="<?= urlOf('assets/images/product/s328/product-14-hover.webp') ?>" alt="Product Image">
                                 </a>
                                 <a href="wishlist.html" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                             </div>
@@ -223,8 +223,8 @@
                                     <span class="hot">hot</span>
                                 </span>
                                 <a href="product-details.html" class="image">
-                                    <img src="assets/images/product/s328/product-30.webp" alt="Product Image">
-                                    <img class="image-hover " src="assets/images/product/s328/product-30-hover.webp" alt="Product Image">
+                                    <img src="<?= urlOf('assets/images/product/s328/product-30.webp') ?>" alt="Product Image">
+                                    <img class="image-hover " src="<?= urlOf('assets/images/product/s328/product-30-hover.webp') ?>" alt="Product Image">
                                 </a>
                                 <a href="wishlist.html" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                             </div>
@@ -246,8 +246,8 @@
                         <div class="product">
                             <div class="product-thumb">
                                 <a href="product-details.html" class="image">
-                                    <img src="assets/images/product/s328/product-9.webp" alt="Product Image">
-                                    <img class="image-hover " src="assets/images/product/s328/product-9-hover.webp" alt="Product Image">
+                                    <img src="<?= urlOf('assets/images/product/s328/product-9.webp') ?>" alt="Product Image">
+                                    <img class="image-hover " src="<?= urlOf('assets/images/product/s328/product-9-hover.webp') ?>" alt="Product Image">
                                 </a>
                                 <a href="wishlist.html" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                             </div>
@@ -272,8 +272,8 @@
                                     <span class="product-badges">
                                         <span class="onsale">-20%</span>
                                     </span>
-                                    <img src="assets/images/product/s328/product-25.webp" alt="Product Image">
-                                    <img class="image-hover " src="assets/images/product/s328/product-25-hover.webp" alt="Product Image">
+                                    <img src="<?= urlOf('assets/images/product/s328/product-25.webp') ?>" alt="Product Image">
+                                    <img class="image-hover " src="<?= urlOf('assets/images/product/s328/product-25-hover.webp') ?>" alt="Product Image">
                                 </a>
                                 <a href="wishlist.html" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                             </div>
@@ -299,8 +299,8 @@
                                     <span class="product-badges">
                                         <span class="onsale">-13%</span>
                                     </span>
-                                    <img src="assets/images/product/s328/product-1.webp" alt="Product Image">
-                                    <img class="image-hover " src="assets/images/product/s328/product-1-hover.webp" alt="Product Image">
+                                    <img src="<?= urlOf('assets/images/product/s328/product-1.webp') ?>" alt="Product Image">
+                                    <img class="image-hover " src="<?= urlOf('assets/images/product/s328/product-1-hover.webp') ?>" alt="Product Image">
                                 </a>
                                 <a href="wishlist.html" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                             </div>
@@ -323,7 +323,7 @@
                         <div class="product">
                             <div class="product-thumb">
                                 <a href="product-details.html" class="image">
-                                    <img src="assets/images/product/s328/product-31.webp" alt="Product Image">
+                                    <img src="<?= urlOf('assets/images/product/s328/product-31.webp') ?>" alt="Product Image">
                                 </a>
                                 <a href="wishlist.html" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                             </div>
@@ -345,8 +345,8 @@
                         <div class="product">
                             <div class="product-thumb">
                                 <a href="product-details.html" class="image">
-                                    <img src="assets/images/product/s328/product-15.webp" alt="Product Image">
-                                    <img class="image-hover " src="assets/images/product/s328/product-15-hover.webp" alt="Product Image">
+                                    <img src="<?= urlOf('assets/images/product/s328/product-15.webp') ?>" alt="Product Image">
+                                    <img class="image-hover " src="<?= urlOf('assets/images/product/s328/product-15-hover.webp') ?>" alt="Product Image">
                                 </a>
                                 <a href="wishlist.html" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                             </div>
@@ -368,8 +368,8 @@
                         <div class="product">
                             <div class="product-thumb">
                                 <a href="product-details.html" class="image">
-                                    <img src="assets/images/product/s328/product-12.webp" alt="Product Image">
-                                    <img class="image-hover " src="assets/images/product/s328/product-12-hover.webp" alt="Product Image">
+                                    <img src="<?= urlOf('assets/images/product/s328/product-12.webp') ?>" alt="Product Image">
+                                    <img class="image-hover " src="<?= urlOf('assets/images/product/s328/product-12-hover.webp') ?>" alt="Product Image">
                                 </a>
                                 <a href="wishlist.html" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                             </div>
@@ -394,8 +394,8 @@
                                     <span class="product-badges">
                                         <span class="outofstock"><i class="far fa-frown"></i></span>
                                     </span>
-                                    <img src="assets/images/product/s328/product-32.webp" alt="Product Image">
-                                    <img class="image-hover " src="assets/images/product/s328/product-32-hover.webp" alt="Product Image">
+                                    <img src="<?= urlOf('assets/images/product/s328/product-32.webp') ?>" alt="Product Image">
+                                    <img class="image-hover " src="<?= urlOf('assets/images/product/s328/product-32-hover.webp') ?>" alt="Product Image">
                                 </a>
                                 <a href="wishlist.html" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                 <div class="product-options">
@@ -423,8 +423,8 @@
                         <div class="product">
                             <div class="product-thumb">
                                 <a href="product-details.html" class="image">
-                                    <img src="assets/images/product/s328/product-6.webp" alt="Product Image">
-                                    <img class="image-hover " src="assets/images/product/s328/product-6-hover.webp" alt="Product Image">
+                                    <img src="<?= urlOf('assets/images/product/s328/product-6.webp') ?>" alt="Product Image">
+                                    <img class="image-hover " src="<?= urlOf('assets/images/product/s328/product-6-hover.webp') ?>" alt="Product Image">
                                 </a>
                                 <a href="wishlist.html" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                             </div>
@@ -449,7 +449,7 @@
                                     <span class="product-badges">
                                         <span class="onsale">-13%</span>
                                     </span>
-                                    <img src="assets/images/product/s328/product-19.webp" alt="Product Image">
+                                    <img src="<?= urlOf('assets/images/product/s328/product-19.webp') ?>" alt="Product Image">
                                 </a>
                                 <a href="wishlist.html" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                             </div>
@@ -476,8 +476,8 @@
                                         <span class="outofstock"><i class="far fa-frown"></i></span>
                                     <span class="hot">hot</span>
                                     </span>
-                                    <img src="assets/images/product/s328/product-8.webp" alt="Product Image">
-                                    <img class="image-hover " src="assets/images/product/s328/product-8-hover.webp" alt="Product Image">
+                                    <img src="<?= urlOf('assets/images/product/s328/product-8.webp') ?>" alt="Product Image">
+                                    <img class="image-hover " src="<?= urlOf('assets/images/product/s328/product-8-hover.webp') ?>" alt="Product Image">
                                 </a>
                                 <a href="wishlist.html" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                                 <div class="product-options">
@@ -510,8 +510,8 @@
                         <div class="product">
                             <div class="product-thumb">
                                 <a href="product-details.html" class="image">
-                                    <img src="assets/images/product/s328/product-28.webp" alt="Product Image">
-                                    <img class="image-hover " src="assets/images/product/s328/product-28-hover.webp" alt="Product Image">
+                                    <img src="<?= urlOf('assets/images/product/s328/product-28.webp') ?>" alt="Product Image">
+                                    <img class="image-hover " src="<?= urlOf('assets/images/product/s328/product-28-hover.webp') ?>" alt="Product Image">
                                 </a>
                                 <a href="wishlist.html" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                             </div>
@@ -533,8 +533,8 @@
                         <div class="product">
                             <div class="product-thumb">
                                 <a href="product-details.html" class="image">
-                                    <img src="assets/images/product/s328/product-11.webp" alt="Product Image">
-                                    <img class="image-hover " src="assets/images/product/s328/product-11-hover.webp" alt="Product Image">
+                                    <img src="<?= urlOf('assets/images/product/s328/product-11.webp') ?>" alt="Product Image">
+                                    <img class="image-hover " src="<?= urlOf('assets/images/product/s328/product-11-hover.webp') ?>" alt="Product Image">
                                 </a>
                                 <a href="wishlist.html" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
                             </div>

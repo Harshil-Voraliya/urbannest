@@ -1,7 +1,7 @@
 <?php
 
-define("BASE_DIR", $_SERVER['DOCUMENT_ROOT'] . "/urbannestweb/admin");
-define("BASE_URL", "/urbannestweb/admin");
+define("BASE_DIR", $_SERVER['DOCUMENT_ROOT'] . "/urbannest/admin");
+define("BASE_URL", "/urbannest/admin");
 
 date_default_timezone_set('Asia/Kolkata');
 

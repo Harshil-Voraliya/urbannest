@@ -86,9 +86,9 @@ include pathOf('includes/navbar.php');
                     <div class="contact-form">
                         <form action="https://htmldemo.net/learts/learts/assets/php/contact-mail.php" id="contact-form" method="post">
                             <div class="row learts-mb-n30">
-                                <div class="col-md-6 col-12 learts-mb-30"><input type="text" placeholder="Your Name *" name="name"></div>
-                                <div class="col-md-6 col-12 learts-mb-30"><input type="email" placeholder="Email *" name="email"></div>
-                                <div class="col-12 learts-mb-30"><textarea name="message" placeholder="Message"></textarea></div>
+                                <div class="col-md-6 col-12 learts-mb-30"><input type="text" placeholder="Your Name *" name="Name" id="Name"></div>
+                                <div class="col-md-6 col-12 learts-mb-30"><input type="email" placeholder="Email *" name="Email" id="Email"></div>
+                                <div class="col-12 learts-mb-30"><textarea name="Message" placeholder="Message" id="Message"></textarea></div>
                                 <div class="col-12 text-center learts-mb-30"><button class="btn btn-dark btn-outline-hover-dark">Submit</button></div>
                             </div>
                         </form>
@@ -100,6 +100,16 @@ include pathOf('includes/navbar.php');
         </div>
     </div>
     <!-- Contact Form Section End -->
+    <script>
+        function insertData(){
+            Name = $("#Name").val();
+            Email = $("#Email").val();
+            Message = $("#Message").val();
+            $.ajax({
+                url: "../admin/api/feedback/insert.php"
+            });
+        }
+    </script>
 <?php
 include pathOf('includes/footer.php');
 include pathOf('includes/scripts.php');

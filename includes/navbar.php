@@ -7,7 +7,7 @@
                 <!-- Header Logo Start -->
                 <div class="col">
                     <div class="header-logo">
-                        <a href="index-2.html"><img src="assets/images/logo/logo-2.webp" alt="Learts Logo"></a>
+                        <a href="index-2.html"><img src="<?= urlOf('assets/images/logo/logo-2.webp') ?>" alt="Learts Logo"></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->
@@ -29,7 +29,7 @@
                 <div class="col">
                     <div class="header-tools justify-content-end">
                         <div class="header-login">
-                            <a href="my-account.html"><i class="far fa-user"></i></a>
+                            <a href="<?= urlOf('pages/acc.php') ?>"><i class="far fa-user"></i></a>
                         </div>
                         <div class="header-cart">
                             <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
@@ -74,7 +74,7 @@
                 <div class="col">
                     <div class="header-tools justify-content-end">
                         <div class="header-login">
-                            <a href="my-account.html"><i class="far fa-user"></i></a>
+                            <a href="<?= urlOf('pages/acc.php') ?>"><i class="far fa-user"></i></a>
                         </div>
                         <div class="header-cart">
                             <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>

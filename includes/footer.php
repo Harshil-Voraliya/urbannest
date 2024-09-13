@@ -9,7 +9,6 @@
                     <div class="footer5-menu">
                         <ul class="widget-menu justify-content-center">
                             <li><a href="#">About us</a></li>
-                            <li><a href="#">Store location</a></li>
                             <li><a href="#">Contact</a></li>
                             <li><a href="#">Support</a></li>
                             <li><a href="#">Policy</a></li>
