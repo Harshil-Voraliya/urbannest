@@ -16,10 +16,10 @@
                 <div class="col">
                     <nav class="site-main-menu menu-height-100 justify-content-center">
                         <ul>
-                            <li class="has-children"><a href="<?= urlOf('index.php') ?>"><span class="menu-text">Home</span></a></li>
-                            <li class="has-children"><a href="<?= urlOf('pages/propertylist.php') ?>"><span class="menu-text">Property</span></a></li>
-                            <li class="has-children"><a href="<?= urlOf('pages/about.php') ?>"><span class="menu-text">About</span></a></li>
-                            <li class="has-children"><a href="<?= urlOf('pages/contact.php') ?>"><span class="menu-text">Contact Us</span></a></li>
+                            <li class=""><a href="<?= urlOf('index.php') ?>"><span class="menu-text">Home</span></a></li>
+                            <li class=""><a href="<?= urlOf('pages/propertylist.php') ?>"><span class="menu-text">Property</span></a></li>
+                            <li class=""><a href="<?= urlOf('pages/about.php') ?>"><span class="menu-text">About</span></a></li>
+                            <li class=""><a href="<?= urlOf('pages/contact.php') ?>"><span class="menu-text">Contact Us</span></a></li>
                         </ul>
                     </nav>
                 </div>
@@ -29,11 +29,10 @@
                 <div class="col">
                     <div class="header-tools justify-content-end">
                         <div class="header-login">
-<<<<<<< HEAD
                             <a href="<?= urlOf('pages/acc.php') ?>"><i class="far fa-user"></i></a>
-=======
-                            <a href="<?= urlOf('pages/login.php') ?>"><i class="far fa-user"></i></a>
->>>>>>> f1458268061487b9a8a64f8277c2a8d3edb8ff4a
+                        </div>
+                        <div class="header-wishlist">
+                            <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="far fa-heart"></i></a>
                         </div>
                         <div class="header-cart">
                             <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
@@ -65,10 +64,10 @@
                 <div class="col">
                     <nav class="site-main-menu justify-content-center">
                         <ul>
-                            <li class="has-children"><a href="<?= urlOf('index.php') ?>"><span class="menu-text">Home</span></a></li>
-                            <li class="has-children"><a href="<?= urlOf('pages/propertylist.php') ?>"><span class="menu-text">Property</span></a></li>
-                            <li class="has-children"><a href="<?= urlOf('pages/about.php') ?>"><span class="menu-text">About</span></a></li>
-                            <li class="has-children"><a href="<?= urlOf('pages/contact.php') ?>"><span class="menu-text">Contact Us</span></a></li>
+                            <li class=""><a href="<?= urlOf('index.php') ?>"><span class="menu-text">Home</span></a></li>
+                            <li class=""><a href="<?= urlOf('pages/propertylist.php') ?>"><span class="menu-text">Property</span></a></li>
+                            <li class=""><a href="<?= urlOf('pages/about.php') ?>"><span class="menu-text">About</span></a></li>
+                            <li class=""><a href="<?= urlOf('pages/contact.php') ?>"><span class="menu-text">Contact Us</span></a></li>
                         </ul>
                     </nav>
                 </div>
@@ -78,11 +77,10 @@
                 <div class="col">
                     <div class="header-tools justify-content-end">
                         <div class="header-login">
-<<<<<<< HEAD
                             <a href="<?= urlOf('pages/acc.php') ?>"><i class="far fa-user"></i></a>
-=======
-                            <a href="<?= urlOf('pages/login.php') ?>"><i class="far fa-user"></i></a>
->>>>>>> f1458268061487b9a8a64f8277c2a8d3edb8ff4a
+                        </div>
+                        <div class="header-wishlist">
+                            <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="far fa-heart"></i></a>
                         </div>
                         <div class="header-cart">
                             <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
@@ -203,6 +201,49 @@
         </div>
     </div>
     <!-- OffCanvas Search End -->
+    <!-- OffCanvas Wishlist Start -->
+    <div id="offcanvas-wishlist" class="offcanvas offcanvas-wishlist">
+        <div class="inner">
+            <div class="head">
+                <span class="title">Wishlist</span>
+                <button class="offcanvas-close">×</button>
+            </div>
+            <div class="body customScroll">
+                <ul class="minicart-product-list">
+                    <li>
+                        <a href="product-details.html" class="image"><img src="assets/images/product/cart-product-1.webp" alt="Cart product Image"></a>
+                        <div class="content">
+                            <a href="product-details.html" class="title">Walnut Cutting Board</a>
+                            <span class="quantity-price">1 x <span class="amount">$100.00</span></span>
+                            <a href="#" class="remove">×</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="product-details.html" class="image"><img src="assets/images/product/cart-product-2.webp" alt="Cart product Image"></a>
+                        <div class="content">
+                            <a href="product-details.html" class="title">Lucky Wooden Elephant</a>
+                            <span class="quantity-price">1 x <span class="amount">$35.00</span></span>
+                            <a href="#" class="remove">×</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="product-details.html" class="image"><img src="assets/images/product/cart-product-3.webp" alt="Cart product Image"></a>
+                        <div class="content">
+                            <a href="product-details.html" class="title">Fish Cut Out Set</a>
+                            <span class="quantity-price">1 x <span class="amount">$9.00</span></span>
+                            <a href="#" class="remove">×</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="foot">
+                <div class="buttons">
+                    <a href="wishlist.html" class="btn btn-dark btn-hover-primary">view wishlist</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- OffCanvas Wishlist End -->
     <!-- OffCanvas Cart Start -->
     <div id="offcanvas-cart" class="offcanvas offcanvas-cart">
         <div class="inner">
@@ -264,10 +305,10 @@
             </div>
             <div class="offcanvas-menu">
                 <ul>
-                    <li class="has-children"><a href="<?= urlOf('index.php') ?>"><span class="menu-text">Home</span></a></li>
-                    <li class="has-children"><a href="<?= urlOf('pages/propertylist.php') ?>"><span class="menu-text">Property</span></a></li>
-                    <li class="has-children"><a href="<?= urlOf('pages/about.php') ?>"><span class="menu-text">About</span></a></li>
-                    <li class="has-children"><a href="<?= urlOf('pages/contact.php') ?>"><span class="menu-text">Contact Us</span></a></li>
+                    <li class=""><a href="<?= urlOf('index.php') ?>"><span class="menu-text">Home</span></a></li>
+                    <li class=""><a href="<?= urlOf('pages/propertylist.php') ?>"><span class="menu-text">Property</span></a></li>
+                    <li class=""><a href="<?= urlOf('pages/about.php') ?>"><span class="menu-text">About</span></a></li>
+                    <li class=""><a href="<?= urlOf('pages/contact.php') ?>"><span class="menu-text">Contact Us</span></a></li>
                 </ul>
             </div>
             <div class="offcanvas-buttons">
@@ -275,6 +316,9 @@
                     <div class="header-login">
                         <a href="my-account.html"><i class="far fa-user"></i></a>
                     </div>
+                    <div class="header-wishlist">
+                            <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="far fa-heart"></i></a>
+                        </div>
                     <div class="header-cart">
                         <a href="shopping-cart.html"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
                     </div>
