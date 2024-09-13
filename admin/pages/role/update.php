@@ -1,5 +1,9 @@
 <?php
 require '../../includes/init.php';
+
+$Id = $_POST['Id'];
+$roles = selectOne("SELECT * FROM role WHERE Id = $Id");
+
 include pathof('includes/header.php');
 ?>
 
@@ -292,23 +296,18 @@ include pathof('includes/header.php');
                   <div class="card-header pb-0">
                   </div>
                   <div class="card-body">
-                    <form class="needs-validation" novalidate="">
-
+                  <input class="form-control" type="hidden" value="<?= $roles['Id']; ?>" id="Id" name="Id">
                         <div class="mb-3 row">
                             <label">Name</label>
                             <div class="col-sm-12">
-                              <input class="form-control" type="text">
+                              <input class="form-control" type="text" value="<?= $roles['Name']; ?>" id="Name" name="Name" autofocus>
                             </div>
                           </div>
-
                         <div class="card-footer text-end">
                             <div class="col-sm-9 offset-sm-3">
-                              <button class="btn btn-primary" type="submit">Submit</button>
-                              <input class="btn btn-light" type="reset" value="Cancel">
+                              <button class="btn btn-primary" type="submit" onclick="updateData()">Submit</button>
                             </div>
                         </div>
-
-                        </form>
                      </div>
                    </div>
                   </div>
@@ -323,8 +322,27 @@ include pathof('includes/header.php');
    
   </body>
 
-<!-- Mirrored from admin.pixelstrap.com/tivo/template/form-validation.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Aug 2024 06:31:11 GMT -->
 </html>
+
+<script>
+  function updateData() {
+    var Id = $('#Id').val();
+    var Name = $('#Name').val();
+    $.ajax({
+      type: 'POST',
+      url: '../../api/role/update.php',
+      data: {
+        Id: Id,
+        Name: Name
+      },
+      success: function(response) {
+          console.log(response.success);
+          alert("Role Updated");
+          window.location.href = './index.php';
+      }
+    });
+  }
+</script>
 
 <?php
 include pathof('includes/scripts.php');

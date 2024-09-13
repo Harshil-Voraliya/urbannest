@@ -292,7 +292,7 @@ include pathof('includes/header.php');
           <div class="col-sm-12">
                 <div class="card">
                   <div class="card-header pb-0">
-                    <a class="btn btn-outline-primary" href="./add.php">Add</a><span>
+                    <a class="btn btn-primary active" href="./add.php">Add</a><span>
                   </div>
                   <div class="card-body">
                     <div class="table-responsive theme-scrollbar">
@@ -311,8 +311,15 @@ include pathof('includes/header.php');
                             <tr>
                               <td><?= $index += 1 ?></td>
                               <td><?= $role['Name'] ?></td>
-                              <td>update</td>
-                              <td>delete</td>
+                              <form action="./update.php" method="post">
+                                  <td>
+                                      <input type="hidden" value="<?= $role['Id'] ?>" id="Id" name="Id">
+                                      <button type="submit" class="btn btn-success active">Update</button>
+                                  </td>
+                              </form>
+                              <td>
+                                  <button type="button" class="btn btn-danger active" onclick="deleteData(<?= $role['Id'] ?>)">Delete</button>
+                              </td>
                             </tr>
                           <?php } ?>
                         </tbody>
@@ -338,7 +345,27 @@ include pathof('includes/header.php');
    
   </body>
 
-<!-- Mirrored from admin.pixelstrap.com/tivo/template/form-validation.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Aug 2024 06:31:11 GMT -->
+<script>
+      function deleteData(Id) {
+        if(confirm("Are you sure you want to delete this role?")) {
+            $.ajax({
+                url: '../../api/role/delete.php',
+                type: 'POST',
+                data: {
+                    Id: Id
+                },
+                success: function(response) {
+                  if(response == response.success) {
+                    alert("Role deleted successfully");
+                    location.reload();
+                  } else {
+                    alert("Role not deleted");
+                  }
+                }
+            });
+        }
+      }
+    </script>
 </html>
 
 <?php
