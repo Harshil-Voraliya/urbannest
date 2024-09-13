@@ -19,7 +19,7 @@ CREATE TABLE `User` (
     `Password` VARCHAR(255) NOT NULL,
     `Email` VARCHAR(255) NOT NULL
 );
- 
+
 -- Create the state table
 CREATE TABLE State (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
@@ -43,16 +43,18 @@ CREATE TABLE TypeProperty (
 -- Create the propertydetails table
 CREATE TABLE PropertyDetails (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
-    `TypeId` INT,
-    `CityId` INT,
+    `TypeId` INT NOT NULL,
+    `CityId` INT NOT NULL,
+    `StateId` INT NOT NULL,
     `PropertyName` VARCHAR(255) NOT NULL,
     `Address` TEXT,
     `Sqft` VARCHAR(255) NOT NULL,
     `Description` TEXT,
     `Price` INT,
     `ImageFileName` VARCHAR(255) NOT NULL,
-    FOREIGN KEY (`TypeId`) REFERENCES TypeProperty(`Id`),
-    FOREIGN KEY (`CityId`) REFERENCES City(`Id`)
+    FOREIGN KEY (`TypeId`) REFERENCES `TypeProperty`(`Id`),
+    FOREIGN KEY (`CityId`) REFERENCES `City`(`Id`),
+    FOREIGN KEY (`StateId`) REFERENCES `State`(`Id`)
 );
 
 -- Create the appointment table
@@ -64,7 +66,15 @@ CREATE TABLE Appointment (
     `Phone` VARCHAR(15) NOT NULL,
     `Email` VARCHAR(255) NOT NULL,
     FOREIGN KEY (`UserId`) REFERENCES `User`(`Id`),
-    FOREIGN KEY (`PropertyId`) REFERENCES PropertyDetails(`Id`)
+    FOREIGN KEY (`PropertyId`) REFERENCES `PropertyDetails`(`Id`)
+);
+
+CREATE TABLE `Wishlist` (
+    `Id` INT AUTO_INCREMENT PRIMARY KEY,
+    `UserId` INT NOT NULL,
+    `PropertyId` INT NOT NULL,
+    FOREIGN KEY (`UserId`) REFERENCES `User`(`Id`),
+    FOREIGN KEY (`PropertyId`) REFERENCES `PropertyDetails`(`Id`),
 );
 
 -- Create the order table
@@ -102,6 +112,7 @@ INSERT INTO User (
     Password,
     Email
 )
+
 VALUES
     (
         'admin',
