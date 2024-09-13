@@ -216,8 +216,15 @@ include pathof('includes/header.php');
                           <tr>
                             <td><?= $index += 1 ?></td>
                             <td><?= $state['Name'] ?></td>
-                            <td>Update</td>
-                            <td>Delete</td>
+                            <form action="./update.php" method="post">
+                                  <td>
+                                      <input type="hidden" value="<?= $state['Id'] ?>" id="Id" name="Id">
+                                      <button type="submit" class="btn btn-success active">Update</button>
+                                  </td>
+                              </form>
+                            <td>
+                                <button type="button" class="btn btn-danger active" onclick="deleteData(<?= $state['Id'] ?>)">Delete</button>
+                            </td>
                           </tr>
                           <?php }?>
                         </tbody>
@@ -240,6 +247,26 @@ include pathof('includes/header.php');
       </div>
     </div>
   </body>
+  <script>
+        function deleteData(Id) {
+            if (confirm("sure you want to delete this state"));
+            $.ajax({
+                url: "../../api/state/delete.php",
+                method: "POST",
+                data: {
+                    Id: Id
+                },
+
+                success: function (response) {
+                    console.log(response);
+                    if (response.success != true)
+                        return alert('State Deleted');
+
+                    window.location.href = './index';
+                }
+            })
+        }
+    </script>
 </html>
 
 <?php

@@ -1,5 +1,9 @@
 <?php
 require '../../includes/init.php';
+
+$Id = $_POST['Id'];
+$states = selectOne("SELECT * FROM state WHERE Id = $Id");
+
 include pathof('includes/header.php');
 ?>
 
@@ -291,24 +295,19 @@ include pathof('includes/header.php');
                 <div class="card">
                   <div class="card-header pb-0">
                   </div>
+                  <input class="form-control" type="hidden" value="<?= $states['Id'] ?>" id="Id" name="Id">
                   <div class="card-body">
-                    <form class="needs-validation" novalidate="">
-
                         <div class="mb-3 row">
                             <label">Name</label>
                             <div class="col-sm-12">
-                              <input class="form-control" type="text">
+                              <input class="form-control" type="text" value="<?= $states['Name'] ?>" id="Name" name="Name" autofocus>
                             </div>
                           </div>
-
                         <div class="card-footer text-end">
                             <div class="col-sm-9 offset-sm-3">
-                              <button class="btn btn-primary" type="submit">Submit</button>
-                              <input class="btn btn-light" type="reset" value="Cancel">
+                              <button class="btn btn-primary" type="submit" onclick="updateData()">Submit</button>
                             </div>
                         </div>
-
-                        </form>
                      </div>
                    </div>
                   </div>
@@ -319,10 +318,26 @@ include pathof('includes/header.php');
         </div>
       </div>
     </div>
-
-   
   </body>
-
+  <script>
+  function updateData() {
+    var Id = $('#Id').val();
+    var Name = $('#Name').val();
+    $.ajax({
+      type: 'POST',
+      url: '../../api/state/update.php',
+      data: {
+        Id: Id,
+        Name: Name
+      },
+      success: function(response) {
+          console.log(response.success);
+          alert("State Updated");
+          window.location.href = './index.php';
+      }
+    });
+  }
+</script>
   
 </html>
 
