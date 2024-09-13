@@ -29,7 +29,11 @@
                 <div class="col">
                     <div class="header-tools justify-content-end">
                         <div class="header-login">
+<<<<<<< HEAD
                             <a href="<?= urlOf('pages/acc.php') ?>"><i class="far fa-user"></i></a>
+=======
+                            <a href="<?= urlOf('pages/login.php') ?>"><i class="far fa-user"></i></a>
+>>>>>>> f1458268061487b9a8a64f8277c2a8d3edb8ff4a
                         </div>
                         <div class="header-cart">
                             <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
@@ -74,7 +78,11 @@
                 <div class="col">
                     <div class="header-tools justify-content-end">
                         <div class="header-login">
+<<<<<<< HEAD
                             <a href="<?= urlOf('pages/acc.php') ?>"><i class="far fa-user"></i></a>
+=======
+                            <a href="<?= urlOf('pages/login.php') ?>"><i class="far fa-user"></i></a>
+>>>>>>> f1458268061487b9a8a64f8277c2a8d3edb8ff4a
                         </div>
                         <div class="header-cart">
                             <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
@@ -105,7 +113,7 @@
                 <div class="col-auto">
                     <div class="header-tools justify-content-end">
                         <div class="header-login d-none d-sm-block">
-                            <a href="my-account.html"><i class="far fa-user"></i></a>
+                            <a href="<?= urlOf('pages/login.php') ?>"><i class="far fa-user"></i></a>
                         </div>
                         <div class="header-cart">
                             <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
@@ -145,7 +153,7 @@
                 <div class="col-auto">
                     <div class="header-tools justify-content-end">
                         <div class="header-login d-none d-sm-block">
-                            <a href="my-account.html"><i class="far fa-user"></i></a>
+                            <a href="<?= urlOf('pages/login.php') ?>"><i class="far fa-user"></i></a>
                         </div>
                         <div class="header-cart">
                             <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
