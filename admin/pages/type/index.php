@@ -2,7 +2,7 @@
 require '../../includes/init.php';
 
 $index = 0;
-$typepropertys = select('SELECT * FROM typeproperty');
+$typepropertys = select('SELECT * FROM PropertyType');
 include pathof('includes/header.php');
 ?>
 
