@@ -6,18 +6,21 @@ CREATE DATABASE urbannest;
 -- Use the database
 USE urbannest;
 
--- Create the role table
-CREATE TABLE Role (
+-- Create the client table
+CREATE TABLE Admin (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
-    `Name` VARCHAR(255) NOT NULL
+    `UserName` VARCHAR(255) NOT NULL,
+    `Email` VARCHAR(255) NOT NULL UNIQUE,g
+    `Phone` VARCHAR(15)
 );
 
--- Create the user table
-CREATE TABLE `User` (
+-- Create the client table
+CREATE TABLE Client (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
-    `Username` VARCHAR(255) NOT NULL,
-    `Password` VARCHAR(255) NOT NULL,
-    `Email` VARCHAR(255) NOT NULL
+    `UserName` VARCHAR(255) NOT NULL,
+    `Email` VARCHAR(255) NOT NULL UNIQUE,
+    `Phone` VARCHAR(15),
+    `Address` TEXT,
 );
 
 -- Create the state table
@@ -35,7 +38,7 @@ CREATE TABLE City (
 );
 
 -- Create the typeproperty table
-CREATE TABLE TypeProperty (
+CREATE TABLE PropertyType (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
     `Name` VARCHAR(255) NOT NULL
 );
@@ -52,7 +55,7 @@ CREATE TABLE PropertyDetails (
     `Description` TEXT,
     `Price` INT,
     `ImageFileName` VARCHAR(255) NOT NULL,
-    FOREIGN KEY (`TypeId`) REFERENCES `TypeProperty`(`Id`),
+    FOREIGN KEY (`TypeId`) REFERENCES `PropertyType`(`Id`),
     FOREIGN KEY (`CityId`) REFERENCES `City`(`Id`),
     FOREIGN KEY (`StateId`) REFERENCES `State`(`Id`)
 );
@@ -74,7 +77,7 @@ CREATE TABLE `Wishlist` (
     `UserId` INT NOT NULL,
     `PropertyId` INT NOT NULL,
     FOREIGN KEY (`UserId`) REFERENCES `User`(`Id`),
-    FOREIGN KEY (`PropertyId`) REFERENCES `PropertyDetails`(`Id`),
+    FOREIGN KEY (`PropertyId`) REFERENCES `PropertyDetails`(`Id`)
 );
 
 -- Create the order table
@@ -119,3 +122,4 @@ VALUES
         'admin',
         'admin@gmail.com'
     );
+
