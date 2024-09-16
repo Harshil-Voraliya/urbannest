@@ -301,7 +301,8 @@ include pathof('includes/header.php');
                         <thead>
                           <tr>
                             <th>SR No.</th>
-                            <th>City</th>
+                            <th>City Name</th>
+                            <th>State Name</th>
                             <th>Update</th>
                             <th>Delete</th>
                           </tr>
@@ -311,9 +312,17 @@ include pathof('includes/header.php');
                          <?php foreach($cities as $city){?>
                           <tr>
                             <td><?= $index += 1 ?></td>
-                            <td><?= $cities['StateName']?></td>
-                            <tr>update</tr>
-                            <tr>delete</tr>
+                            <td><?= $city['Name']?></td>
+                            <td><?= $city['StateName']?></td>
+                            <form action="./update.php" method="post">
+                                  <td>
+                                      <input type="hidden" value="<?= $city['Id'] ?>" id="Id" name="Id">
+                                      <button type="submit" class="btn btn-success active">Update</button>
+                                  </td>
+                              </form>
+                              <td>
+                                <button type="button" class="btn btn-danger active" onclick="deleteData(<?= $city['Id'] ?>)">Delete</button>
+                            </td>
                           </tr>
                          <?php }?>
                         </tbody>

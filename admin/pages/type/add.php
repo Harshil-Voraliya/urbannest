@@ -292,22 +292,17 @@ include pathof('includes/header.php');
                   <div class="card-header pb-0">
                   </div>
                   <div class="card-body">
-                    <form class="needs-validation" novalidate="">
-
                         <div class="mb-3 row">
                             <label">Name</label>
                             <div class="col-sm-12">
                               <input class="form-control" type="text" id="Name" name="Name">
                             </div>
                           </div>
-
                           <div class="card-footer text-end">
                             <div class="col-sm-9 offset-sm-3">
                               <button class="btn btn-primary" type="submit" onclick="insertData()">Submit</button>
                             </div>
                         </div>
-
-                        </form>
                      </div>
                    </div>
                   </div>
