@@ -5,7 +5,7 @@
     $Id = $_POST['Id'];
     $Name = $_POST['Name'];
 
-    $query = "UPDATE typeproperty SET Name = ? WHERE Id = ?";
+    $query = "UPDATE PropertyType SET Name = ? WHERE Id = ?";
     $param = [$Name, $Id];
 
     $result = execute($query, $param);

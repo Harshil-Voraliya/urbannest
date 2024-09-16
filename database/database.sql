@@ -10,7 +10,8 @@ USE urbannest;
 CREATE TABLE Admin (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
     `UserName` VARCHAR(255) NOT NULL,
-    `Email` VARCHAR(255) NOT NULL UNIQUE,g
+    `Password` VARCHAR(255) NOT NULL,
+    `Email` VARCHAR(255) NOT NULL UNIQUE,
     `Phone` VARCHAR(15)
 );
 
@@ -20,7 +21,7 @@ CREATE TABLE Client (
     `UserName` VARCHAR(255) NOT NULL,
     `Email` VARCHAR(255) NOT NULL UNIQUE,
     `Phone` VARCHAR(15),
-    `Address` TEXT,
+    `Address` TEXT
 );
 
 -- Create the state table
@@ -63,33 +64,33 @@ CREATE TABLE PropertyDetails (
 -- Create the appointment table
 CREATE TABLE Appointment (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
-    `UserId` INT,
+    `ClientId` INT,
     `PropertyId` INT,
     `Date` DATE,
     `Phone` VARCHAR(15) NOT NULL,
     `Email` VARCHAR(255) NOT NULL,
-    FOREIGN KEY (`UserId`) REFERENCES `User`(`Id`),
+    FOREIGN KEY (`ClientId`) REFERENCES `Client`(`Id`),
     FOREIGN KEY (`PropertyId`) REFERENCES `PropertyDetails`(`Id`)
 );
 
 CREATE TABLE `Wishlist` (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
-    `UserId` INT NOT NULL,
+    `ClientId` INT NOT NULL,
     `PropertyId` INT NOT NULL,
-    FOREIGN KEY (`UserId`) REFERENCES `User`(`Id`),
+    FOREIGN KEY (`ClientId`) REFERENCES `Client`(`Id`),
     FOREIGN KEY (`PropertyId`) REFERENCES `PropertyDetails`(`Id`)
 );
 
 -- Create the order table
 CREATE TABLE `Order` (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
-    `UserId` INT,
+    `ClientId` INT,
     `PropertyId` INT,
     `Date` DATE,
     `TotalAmount` INT,
     `Status` VARCHAR(255),
-    FOREIGN KEY (`UserId`) REFERENCES `User`(`Id`),
-    FOREIGN KEY (`PropertyId`) REFERENCES PropertyDetails(`Id`)
+    FOREIGN KEY (`ClientId`) REFERENCES `Client`(`Id`),
+    FOREIGN KEY (`PropertyId`) REFERENCES `PropertyDetails`(`Id`)
 );
 
 -- Create the payment table
@@ -110,16 +111,18 @@ CREATE TABLE Feedback (
     `Message` TEXT
 );
 
-INSERT INTO User (
+INSERT INTO Admin (
     Username,
     Password,
-    Email
+    Email,
+    Phone
 )
 
 VALUES
     (
         'admin',
         'admin',
-        'admin@gmail.com'
+        'admin@gmail.com',
+        '987654321'
     );
 

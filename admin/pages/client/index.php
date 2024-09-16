@@ -2,7 +2,7 @@
 require '../../includes/init.php';
 
 $index = 0;
-$users = select('SELECT * FROM user');
+$clients = select('SELECT * FROM client');
 include pathof('includes/header.php');
 ?>
 
@@ -305,12 +305,12 @@ include pathof('includes/header.php');
                           </tr>
                         </thead>
                         <tbody>
-                          <?php foreach($users as $user) { ?>
+                          <?php foreach($clients as $client) { ?>
                           <tr>
                             <td><?= $index += 1 ?></td>
-                            <td><?= $user['Username'] ?></td>
-                            <td><?= $user['Password'] ?></td>
-                            <td><?= $user['Email'] ?></td>
+                            <td><?= $client['Username'] ?></td>
+                            <td><?= $client['Password'] ?></td>
+                            <td><?= $client['Email'] ?></td>
                            
                           </tr>
                           <?php }?>

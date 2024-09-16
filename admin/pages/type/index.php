@@ -302,7 +302,6 @@ include pathof('includes/header.php');
                             <th>Name</th>
                             <th>Update</th>
                             <th>Delete</th>
-                           
                           </tr>
                         </thead>
                         <tbody>

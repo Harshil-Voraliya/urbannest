@@ -1,8 +1,10 @@
 <?php
 require '../../includes/init.php';
+
+$index = 0;
+$propertydetails = select("SELECT * FROM propertydetails");
 include pathof('includes/header.php');
 ?>
-
   <body>
     <!-- tap on top starts-->
     <div class="tap-top"><i data-feather="chevrons-up"></i></div>
@@ -19,326 +21,342 @@ include pathof('includes/header.php');
     <!-- page-wrapper Start-->
     <div class="page-wrapper compact-wrapper" id="pageWrapper">
       <!-- Page Header Start-->
-      <div class="page-header">
-        <div class="header-wrapper row m-0">
-          <div class="header-logo-wrapper col-auto p-0">
-            <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i></div>
-            <div class="logo-header-main"><a href="index-2.html"><img class="img-fluid for-light img-100" src="<?= urlOf('assets/images/logo/logo2.png') ?>" alt=""><img class="img-fluid for-dark" src="../assets/images/logo/logo.png" alt=""></a></div>
-          </div>
-          <div class="left-header col horizontal-wrapper ps-0">
-            <div class="left-menu-header">
-              <ul class="app-list">
-                <li class="onhover-dropdown">
-                  <div class="app-menu"> <i data-feather="folder-plus"></i></div>
-                  <ul class="onhover-show-div left-dropdown">
-                    <li> <a href="file-manager.html">File Manager</a></li>
-                    <li> <a href="kanban.html"> Kanban board</a></li>
-                    <li> <a href="social-app.html"> Social App</a></li>
-                    <li> <a href="bookmark.html"> Bookmark</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <ul class="header-left"> 
-                <li class="onhover-dropdown"><span class="f-w-600">Dashboard</span><span><i class="middle" data-feather="chevron-down"></i></span>
-                </li>
-
-                <li class="onhover-dropdown"><span class="f-w-600">Application</span><span><i class="middle" data-feather="chevron-down"></i></span>
-                  <ul class="onhover-show-div left-dropdown">
-                    <li class="flyout-right"><a href="javascript:void(0)">Project</a>
-                    </li>
-                    <li><a href="file-manager.html">File manager</a></li>
-                    <li><a href="kanban.html">kanban</a></li>
-                    <li class="flyout-right"><a href="javascript:void(0)">Ecommerce</a>
-                      <ul>
-                        <li> <a href="product.html">Product</a></li>
-                        <li> <a href="product-page.html">Product Page</a></li>
-                        <li> <a href="list-products.html">Product List</a></li>
-                        <li> <a href="payment-details.html">Payment Details</a></li>
-                        <li> <a href="order-history.html">Order History</a></li>
-                        <li> <a href="invoice-template.html">Invoice</a></li>
-                        <li> <a href="cart.html">Cart</a></li>
-                        <li> <a href="list-wish.html">Wishlist</a></li>
-                        <li> <a href="checkout.html">Checkout</a></li>
-                        <li> <a href="pricing.html">Pricing </a></li>
-                      </ul>
-                    </li>
-                    <li class="flyout-right"><a href="javascript:void(0)">Email</a>
-                      <ul>
-                        <li> <a href="email_inbox.html">Mail Inbox</a></li>
-                        <li> <a href="email_read.html">Read Mail</a></li>
-                        <li> <a href="email_compose.html">Compose</a></li>
-                      </ul>
-                    </li>
-                    <li class="flyout-right"><a href="javascript:void(0)">Chat</a>
-                      <ul>
-                        <li> <a href="chat.html">Chat App</a></li>
-                        <li> <a href="chat-video.html">Video Chat</a></li>
-                      </ul>
-                    </li>
-                    <li class="flyout-right"><a href="javascript:void(0)">Users</a>
-                      <ul>
-                        <li> <a href="user-profile.html">User Profile</a></li>
-                        <li> <a href="edit-profile.html">Users Edit</a></li>
-                        <li> <a href="user-cards.html">User Cards</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="bookmark.html">Bookmarks</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
-                    <li><a href="social-app.html">Social App</a></li>
-                  </ul>
-                </li>
-                <li class="onhover-dropdown"> <span class="f-w-600">More pages</span><span><i class="middle" data-feather="chevron-down"></i></span>
-                  <ul class="onhover-show-div left-dropdown">
-                    <li><a href="landing-page.html">Landing Page</a></li>
-                    <li><a href="sample-page.html">Sample Page</a></li>
-                    <li><a href="internationalization.html">Internationalization</a></li>
-                    <li class="flyout-right"><a href="javascript:void(0)">Starter-Kit</a>
-                      <ul> 
-                        <li class="flyout-right"><a href="javascript:void(0)">Color version</a>
-                          <ul>
-                            <li> <a href="starter-kit/index.html">Layout Light</a></li>
-                            <li> <a href="starter-kit/layout-dark.html">Layout Dark</a></li>
-                          </ul>
-                        </li>
-                        <li class="flyout-right"><a href="javascript:void(0)">Page Layout</a>
-                          <ul>
-                            <li> <a href="starter-kit/boxed.html">Boxed</a></li>
-                            <li> <a href="starter-kit/layout-rtl.html">RTL</a></li>
-                          </ul>
-                        </li>
-                        <li> <a href="starter-kit/hide-on-scroll.html">Hide Menu On Scroll</a></li>
-                        <li class="flyout-right"><a href="javascript:void(0)">Footers</a>
-                          <ul>
-                            <li> <a href="starter-kit/footer-light.html">Footer Light</a></li>
-                            <li> <a href="starter-kit/footer-dark.html">Footer Dark </a></li>
-                            <li> <a href="starter-kit/footer-fixed.html">Footer Fixed</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="nav-right col-6 pull-right right-header p-0">
-            <ul class="nav-menus">
-              <li> 
-                <div class="right-header ps-0">
-                  <div class="input-group">
-                    <div class="input-group-prepend"><span class="input-group-text mobile-search"><i class="fa fa-search"></i></span></div>
-                    <input class="form-control" type="text" placeholder="Search Here........">
-                  </div>
-                </div>
-              </li>
-              <li class="serchinput">
-                <div class="serchbox"><i data-feather="search"></i></div>
-                <div class="form-group search-form">
-                  <input type="text" placeholder="Search here...">
-                </div>
-              </li>
-              <li>
-                <div class="mode"><i class="fa fa-moon-o"></i></div>
-              </li>
-              <li class="onhover-dropdown">
-                <div class="notification-box"><i data-feather="bell"></i></div>
-                <ul class="notification-dropdown onhover-show-div">
-                  <li><i data-feather="bell">            </i>
-                    <h6 class="f-18 mb-0">Notitications</h6>
-                  </li>
-                  <li>
-                    <div class="d-flex align-items-center">
-                      <div class="flex-shrink-0"><i data-feather="truck"></i></div>
-                      <div class="flex-grow-1">
-                        <p><a href="order-history.html">Delivery processing </a><span class="pull-right">6 hr</span></p>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="d-flex align-items-center">
-                      <div class="flex-shrink-0"><i data-feather="shopping-cart"></i></div>
-                      <div class="flex-grow-1">
-                        <p><a href="cart.html">Order Complete</a><span class="pull-right">3 hr</span></p>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="d-flex align-items-center">
-                      <div class="flex-shrink-0"><i data-feather="file-text"></i></div>
-                      <div class="flex-grow-1">
-                        <p><a href="invoice-template.html">Tickets Generated</a><span class="pull-right">1 hr</span></p>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="d-flex align-items-center">
-                      <div class="flex-shrink-0"><i data-feather="send"></i></div>
-                      <div class="flex-grow-1">
-                        <p><a href="email_inbox.html">Delivery Complete</a><span class="pull-right">45 min</span></p>
-                      </div>
-                    </div>
-                  </li>
-                  <li><a class="btn btn-primary" href="javascript:void(0)">Check all notification</a></li>
-                </ul>
-              </li>
-              <li class="onhover-dropdown">
-                <div class="message"><i data-feather="message-square"></i></div>
-                <ul class="message-dropdown onhover-show-div">
-                  <li><i data-feather="message-square">            </i>
-                    <h6 class="f-18 mb-0">Messages</h6>
-                  </li>
-                  <li>
-                    <div class="d-flex align-items-start">
-                      <div class="message-img bg-light-primary"><img src="../assets/images/user/3.jpg" alt=""></div>
-                      <div class="flex-grow-1">
-                        <h5 class="mb-1"><a href="email_inbox.html">Emay Walter</a></h5>
-                        <p>Do you want to go see movie?</p>
-                      </div>
-                      <div class="notification-right"><i data-feather="x"></i></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="d-flex align-items-start">
-                      <div class="message-img bg-light-primary"><img src="../assets/images/user/6.jpg" alt=""></div>
-                      <div class="flex-grow-1">
-                        <h5 class="mb-1"><a href="email_inbox.html">Jason Borne</a></h5>
-                        <p>Thank you for rating us.</p>
-                      </div>
-                      <div class="notification-right"><i data-feather="x"></i></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="d-flex align-items-start">
-                      <div class="message-img bg-light-primary"><img src="../assets/images/user/10.jpg" alt=""></div>
-                      <div class="flex-grow-1">
-                        <h5 class="mb-1"><a href="email_inbox.html">Sarah Loren</a></h5>
-                        <p>What`s the project report update?</p>
-                      </div>
-                      <div class="notification-right"><i data-feather="x"></i></div>
-                    </div>
-                  </li>
-                  <li><a class="btn btn-primary" href="email_inbox.html">Check Messages</a></li>
-                </ul>
-              </li>
-              <li class="maximize"><a href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize-2"></i></a></li>
-              <li class="language-nav">
-                <div class="translate_wrapper">
-                  <div class="current_lang">
-                    <div class="lang"><i data-feather="globe"></i></div>
-                  </div>
-                  <div class="more_lang">
-                    <div class="lang selected" data-value="en"><i class="flag-icon flag-icon-us"></i><span class="lang-txt">English<span> (US)</span></span></div>
-                    <div class="lang" data-value="de"><i class="flag-icon flag-icon-de"></i><span class="lang-txt">Deutsch</span></div>
-                    <div class="lang" data-value="es"><i class="flag-icon flag-icon-es"></i><span class="lang-txt">Espa&ntilde;ol</span></div>
-                    <div class="lang" data-value="fr"><i class="flag-icon flag-icon-fr"></i><span class="lang-txt">Fran&ccedil;ais</span></div>
-                    <div class="lang" data-value="pt"><i class="flag-icon flag-icon-pt"></i><span class="lang-txt">Portugu&ecirc;s<span> (BR)</span></span></div>
-                    <div class="lang" data-value="cn"><i class="flag-icon flag-icon-cn"></i><span class="lang-txt">&#x7B80;&#x4F53;&#x4E2D;&#x6587;</span></div>
-                    <div class="lang" data-value="ae"><i class="flag-icon flag-icon-ae"></i><span class="lang-txt">&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629; <span> (ae)</span></span></div>
-                  </div>
-                </div>
-              </li>
-              <li class="profile-nav onhover-dropdown">
-                <div class="account-user"><i data-feather="user"></i></div>
-                <ul class="profile-dropdown onhover-show-div">
-                  <li><a href="user-profile.html"><i data-feather="user"></i><span>Account</span></a></li>
-                  <li><a href="email_inbox.html"><i data-feather="mail"></i><span>Inbox</span></a></li>
-                  <li><a href="edit-profile.html"><i data-feather="settings"></i><span>Settings</span></a></li>
-                  <li><a href="login.html"><i data-feather="log-in"> </i><span>Log in</span></a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <script class="result-template" type="text/x-handlebars-template">
-            <div class="ProfileCard u-cf">                        
-            <div class="ProfileCard-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay m-0"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg></div>
-            <div class="ProfileCard-details">
-            <div class="ProfileCard-realName">{{name}}</div>
-            </div>
-            </div>
-          </script>
-          <script class="empty-template" type="text/x-handlebars-template"><div class="EmptyMessage">Your search turned up 0 results. This most likely means the backend is down, yikes!</div></script>
-        </div>
-      </div>
+      <?php include pathOf('includes/navbarTop.php') ?>
       <!-- Page Header Ends-->
       <!-- Page Body Start-->
       <div class="page-body-wrapper">
         <!-- Page Sidebar Start-->
-        <?php
-            include pathOf('includes/sidebar.php');
-        ?>
+        <?php include pathOf('includes/sidebar.php') ?>
         <!-- Page Sidebar Ends-->
         <div class="page-body">
           <div class="container-fluid">
             <div class="page-title">
               <div class="row">
                 <div class="col-sm-6">
-                  <h3>Order</h3>
+                  <h3>Product</h3>
                 </div>
                 <div class="col-sm-6">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index-2.html"><i data-feather="home"></i></a></li>
-                    <li class="breadcrumb-item"> Form Controls</li>
-                    <li class="breadcrumb-item active"> Validation Forms</li>
+                    <li class="breadcrumb-item">ECommerce</li>
+                    <li class="breadcrumb-item active">Product</li>
                   </ol>
                 </div>
               </div>
             </div>
           </div>
           <!-- Container-fluid starts-->
-          <div class="col-sm-12">
-                <div class="card">
-                  <div class="card-header pb-0">
-                    <a>Add</a><span>
+          <div class="container-fluid product-wrapper">
+            <div class="product-grid">
+              <div class="feature-products">
+                <div class="row m-b-10">
+                  <div class="col-md-3 col-sm-2 products-total">
+                    <div class="square-product-setting d-inline-block"><a class="icon-grid grid-layout-view" href="javascript:void(0)" data-original-title="" title=""><i data-feather="grid"></i></a></div>
+                    <div class="square-product-setting d-inline-block"><a class="icon-grid m-0 list-layout-view" href="javascript:void(0)" data-original-title="" title=""><i data-feather="list"></i></a></div>
+                    <div class="d-none-productlist filter-toggle">
+                      <h6 class="mb-0">Filters<span class="ms-2"><i class="toggle-data" data-feather="chevron-down"></i></span></h6>
+                    </div>
+                    
                   </div>
-                  <div class="card-body">
-                    <div class="table-responsive theme-scrollbar">
-                      <table class="display" id="basic-9">
-                        <thead>
-                          <tr>
-                            <th>SR No.</th>
-                            <th>Type</th>
-                            <th>City</th>
-                            <th>Property</th>
-                            <th>Address</th>
-                            <th>Sqft</th>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>Image</th>
-                            <th>Update</th>
-                            <th>Delete</th>
-                          </tr>
-                        </thead>
-                        
-                        <tfoot>
-                        <tr>
-                            <th>SR No.</th>
-                            <th>Type</th>
-                            <th>City</th>
-                            <th>Property</th>
-                            <th>Address</th>
-                            <th>Sqft</th>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>Image</th>
-                            <th>Update</th>
-                            <th>Delete</th>
-                          </tr>
-                        </tfoot>
-                      </table>
+                  <div class="col-md-9 col-sm-10 text-end"><span class="f-w-600 m-r-5">Showing Products 1 - 24 Of 200 Results</span>
+                    <div class="select2-drpdwn-product select-options d-inline-block">
+                      <select class="form-control btn-square" name="select">
+                        <option value="opt1">Featured</option>
+                        <option value="opt2">Highest Prices</option>
+                        <option value="opt3">Lowest Prices</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">                            
+                  <div class="col-md-12">
+                    <div class="pro-filter-sec">
+                      <div class="product-sidebar">
+                        <div class="filter-section">
+                          <div class="card">
+                            <div class="card-header">
+                              <h6 class="mb-0 f-w-600">Filters<span class="pull-right"><i class="fa fa-chevron-down toggle-data"></i></span></h6>
+                            </div>
+                            <div class="left-filter">
+                              <div class="card-body filter-cards-view animate-chk">
+                                <div class="product-filter">
+                                  <h6 class="f-w-600">Category</h6>
+                                  <div class="checkbox-animated mt-0">
+                                    <label class="d-block" for="edo-ani5">
+                                      <input class="checkbox_animated" id="edo-ani5" type="checkbox" data-original-title="" title="">Man Shirt
+                                    </label>
+                                    <label class="d-block" for="edo-ani6">
+                                      <input class="checkbox_animated" id="edo-ani6" type="checkbox" data-original-title="" title="">Man Jeans
+                                    </label>
+                                    <label class="d-block" for="edo-ani7">
+                                      <input class="checkbox_animated" id="edo-ani7" type="checkbox" data-original-title="" title="">Woman Top
+                                    </label>
+                                    <label class="d-block" for="edo-ani8">
+                                      <input class="checkbox_animated" id="edo-ani8" type="checkbox" data-original-title="" title="">Woman Jeans
+                                    </label>
+                                    <label class="d-block" for="edo-ani9">
+                                      <input class="checkbox_animated" id="edo-ani9" type="checkbox" data-original-title="" title="">Man T-shirt
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="product-filter">
+                                  <h6 class="f-w-600">Brand</h6>
+                                  <div class="checkbox-animated mt-0">
+                                    <label class="d-block" for="chk-ani">
+                                      <input class="checkbox_animated" id="chk-ani" type="checkbox" data-original-title="" title=""> Levi's
+                                    </label>
+                                    <label class="d-block" for="chk-ani1">
+                                      <input class="checkbox_animated" id="chk-ani1" type="checkbox" data-original-title="" title="">Diesel
+                                    </label>
+                                    <label class="d-block" for="chk-ani2">
+                                      <input class="checkbox_animated" id="chk-ani2" type="checkbox" data-original-title="" title="">Lee
+                                    </label>
+                                    <label class="d-block" for="chk-ani3">
+                                      <input class="checkbox_animated" id="chk-ani3" type="checkbox" data-original-title="" title="">Hudson
+                                    </label>
+                                    <label class="d-block" for="chk-ani4">
+                                      <input class="checkbox_animated" id="chk-ani4" type="checkbox" data-original-title="" title="">Denizen
+                                    </label>
+                                    <label class="d-block" for="chk-ani5">
+                                      <input class="checkbox_animated" id="chk-ani5" type="checkbox" data-original-title="" title="">Spykar
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="product-filter slider-product">
+                                  <h6 class="f-w-600">Colors</h6>
+                                  <div class="color-selector">
+                                    <ul>
+                                      <li class="active white"></li>
+                                      <li class="bg-primary">                                              </li>
+                                      <li class="bg-secondary"></li>
+                                      <li class="bg-success"></li>
+                                      <li class="bg-warning"></li>
+                                      <li class="bg-danger"></li>
+                                      <li class="blue"></li>
+                                      <li class="red"></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="product-filter pb-0">
+                                  <h6 class="f-w-600">Price</h6>
+                                  <input id="u-range-03" type="text">
+                                  <h6 class="f-w-600">New Products</h6>
+                                </div>
+                                <div class="product-filter pb-0 new-products">
+                                  <div class="owl-carousel owl-theme" id="testimonial">
+                                    <div class="item">
+                                      <div class="product-box">
+                                        <div class="d-flex">
+                                          <div class="product-img me-3"><img class="img-fluid" src="../assets/images/ecommerce/01.jpg" alt="" data-original-title="" title=""></div>
+                                          <div class="flex-grow-1">
+                                            <div class="product-details">
+                                              <div>                                                  
+                                                <ul>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                </ul>
+                                                <p class="mb-0 f-w-700">Fancy Shirt</p>
+                                                <div class="f-w-500">$100.00</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="product-box">
+                                        <div class="d-flex">
+                                          <div class="product-img me-3"><img class="img-fluid" src="../assets/images/ecommerce/02.jpg" alt="" data-original-title="" title=""></div>
+                                          <div class="flex-grow-1">
+                                            <div class="product-details">
+                                              <div>                                                  
+                                                <ul>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                </ul>
+                                                <p class="mb-0 f-w-700">Fancy Shirt</p>
+                                                <div class="f-w-500">$100.00</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="product-box">
+                                        <div class="d-flex">
+                                          <div class="product-img me-3"><img class="img-fluid" src="../assets/images/ecommerce/03.jpg" alt="" data-original-title="" title=""></div>
+                                          <div class="flex-grow-1">
+                                            <div class="product-details">
+                                              <div>                                                  
+                                                <ul>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                </ul>
+                                                <p class="mb-0 f-w-700">Fancy Shirt</p>
+                                                <div class="f-w-500">$100.00</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="item">
+                                      <div class="product-box">
+                                        <div class="d-flex">
+                                          <div class="product-img me-3"><img class="img-fluid" src="../assets/images/ecommerce/01.jpg" alt="" data-original-title="" title=""></div>
+                                          <div class="flex-grow-1">
+                                            <div class="product-details">
+                                              <div>                                                  
+                                                <ul>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                </ul>
+                                                <p class="mb-0 f-w-700">Fancy Shirt</p>
+                                                <div class="f-w-500">$100.00</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="product-box">
+                                        <div class="d-flex">
+                                          <div class="product-img me-3"><img class="img-fluid" src="../assets/images/ecommerce/02.jpg" alt="" data-original-title="" title=""></div>
+                                          <div class="flex-grow-1">
+                                            <div class="product-details">
+                                              <div>                                                  
+                                                <ul>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                </ul>
+                                                <p class="mb-0 f-w-700">Fancy Shirt</p>
+                                                <div class="f-w-500">$100.00</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="product-box">
+                                        <div class="d-flex">
+                                          <div class="product-img me-3"><img class="img-fluid" src="../assets/images/ecommerce/03.jpg" alt="" data-original-title="" title=""></div>
+                                          <div class="flex-grow-1">
+                                            <div class="product-details">
+                                              <div>                                                  
+                                                <ul>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                  <li><i class="fa fa-star font-warning"></i></li>
+                                                </ul>
+                                                <p class="mb-0 f-w-700">Fancy Shirt</p>
+                                                <div class="f-w-500">$100.00</div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="product-filter text-center"><img class="img-fluid banner-product" src="../assets/images/ecommerce/banner.jpg" alt="" data-original-title="" title=""></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-      </div>
+              <div class="product-wrapper-grid">
+                <div class="row">
+                  <?php foreach ($propertydetails as $propertydetail) { ?>
+                  <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="card">
+                      <div class="product-box">
+                        <div class="product-img"><img class="img-fluid" src=<?= urlOf('assets/images/uploads/') . $propertydetail['ImageFileName'] ?> alt="">
+                          <div class="product-hover">
+                            <ul>
+                              <li><a href="cart.html"><i class="icon-shopping-cart"></i></a></li>
+                              <li><a data-bs-toggle="modal" data-bs-target="#exampleModalCenter16"><i class="icon-eye"></i></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="modal fade" id="exampleModalCenter16">
+                          <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <div class="product-box row">
+                                  <div class="product-img col-lg-6"><img class="img-fluid" src=<?= urlOf('assets/images/uploads/') . $propertydetail['ImageFileName'] ?> alt=""></div>
+                                  <div class="col-lg-6 text-start">
+                                    <div class="product-details"><a href="product-page.html">
+                                        <h4><?= $propertydetail['PropertyName'] ?></h4></a>
+                                      <div class="product-price">$50.00
+                                      </div>
+                                      <div class="product-view">
+                                        <h6 class="f-w-600"><?= $propertydetail['Address'] ?></h6>
+                                        <p class="mb-0"><?= $propertydetail['Details'] ?></p>
+                                      </div>
+                                      <div class="product-size">
+                                        <ul>
+                                          <li> 
+                                            <button class="btn" type="button">M</button>
+                                          </li>
+                                          <li> 
+                                            <button class="btn" type="button">L</button>
+                                          </li>
+                                          <li> 
+                                            <button class="btn" type="button">Xl</button>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div class="product-qnty">
+                                        <h6 class="f-w-600">Quantity</h6>
+                                        <fieldset>
+                                          <div class="input-group">
+                                            <input class="touchspin text-center" type="text" value="5">
+                                          </div>
+                                        </fieldset>
+                                        <div class="addcart-btn"><a class="btn btn-primary me-2" href="cart.html">Add to Cart                                                     </a><a class="btn btn-primary" href="product-page.html">View Details</a></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-details"><a href="product-page.html">
+                            <h4><?= $propertydetail['PropertyName'] ?></h4></a>
+                          <p><?= $propertydetail['Address'] ?></p>
+                          <div class="product-price"><?= $propertydetail['Price'] ?></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <?php }?>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Container-fluid Ends-->
         </div>
       </div>
     </div>
-
-   
-  </body>
-
-<!-- Mirrored from admin.pixelstrap.com/tivo/template/form-validation.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Aug 2024 06:31:11 GMT -->
-</html>
 
 <?php
 include pathof('includes/scripts.php');

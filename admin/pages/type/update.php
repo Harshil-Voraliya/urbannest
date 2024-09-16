@@ -2,7 +2,7 @@
 require '../../includes/init.php';
 
 $Id = $_POST['Id'];
-$typepropertys = selectOne("SELECT * FROM typeproperty WHERE Id = $Id");
+$typepropertys = selectOne("SELECT * FROM PropertyType WHERE Id = $Id");
 
 include pathof('includes/header.php');
 ?>

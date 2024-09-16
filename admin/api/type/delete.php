@@ -4,7 +4,7 @@
 
     $Id = $_POST['Id'];
 
-    $query = "DELETE FROM typeproperty WHERE Id = ?";
+    $query = "DELETE FROM PropertyType WHERE Id = ?";
     $param = [$Id];
 
     $result = execute($query, $param);

@@ -6,7 +6,7 @@ require '../../includes/init.php';
 
 $Name = $_POST["Name"];
 
-$query = "INSERT INTO typeproperty (Name) VALUES (?)";
+$query = "INSERT INTO PropertyType (Name) VALUES (?)";
 $param = [$Name];
 
 execute($query, $param);

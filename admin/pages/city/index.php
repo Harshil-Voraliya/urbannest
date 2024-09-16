@@ -2,7 +2,8 @@
 require '../../includes/init.php';
 
 $index = 0;
-$cities = select('SELECT * FROM City');
+$cities = select("SELECT City.Id, City.Name, State.Name AS StateName FROM State INNER JOIN City ON City.StateId = State.Id");
+
 include pathof('includes/header.php');
 ?>
 
@@ -310,7 +311,7 @@ include pathof('includes/header.php');
                          <?php foreach($cities as $city){?>
                           <tr>
                             <td><?= $index += 1 ?></td>
-                            <td><?= $cities['Name']?></td>
+                            <td><?= $cities['StateName']?></td>
                             <tr>update</tr>
                             <tr>delete</tr>
                           </tr>
