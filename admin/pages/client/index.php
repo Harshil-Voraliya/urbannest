@@ -1,9 +1,8 @@
 <?php
 require '../../includes/init.php';
 
-$Id = $_POST['Id'];
-$typepropertys = selectOne("SELECT * FROM typeproperty WHERE Id = $Id");
-
+$index = 0;
+$users = select('SELECT * FROM user');
 include pathof('includes/header.php');
 ?>
 
@@ -276,7 +275,7 @@ include pathof('includes/header.php');
             <div class="page-title">
               <div class="row">
                 <div class="col-sm-6">
-                  <h3>Update Property</h3>
+                  <h3>Appointmet</h3>
                 </div>
                 <div class="col-sm-6">
                   <ol class="breadcrumb">
@@ -289,60 +288,55 @@ include pathof('includes/header.php');
             </div>
           </div>
           <!-- Container-fluid starts-->
-          <div class="container-fluid form-validate">
-            <div class="row">
-              <div class="col-sm-12">
+          <div class="col-sm-12">
                 <div class="card">
                   <div class="card-header pb-0">
                   </div>
                   <div class="card-body">
-                  <input class="form-control" type="hidden" value="<?= $typepropertys['Id']; ?>" id="Id" name="Id">
-                        <div class="mb-3 row">
-                            <label">Name</label>
-                            <div class="col-sm-12">
-                              <input class="form-control" type="text" value="<?= $typepropertys['Name']; ?>" id="Name" name="Name" autofocus>
-                            </div>
-                          </div>
-                        <div class="card-footer text-end">
-                            <div class="col-sm-9 offset-sm-3">
-                              <button class="btn btn-primary" type="submit" onclick="updateData()">Submit</button>
-                            </div>
-                        </div>
-                     </div>
-                   </div>
+                    <div class="table-responsive theme-scrollbar">
+                      <table class="display" id="basic-9">
+                        <thead>
+                          <tr>
+                            <th>SR No.</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Email</th>
+                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <?php foreach($users as $user) { ?>
+                          <tr>
+                            <td><?= $index += 1 ?></td>
+                            <td><?= $user['Username'] ?></td>
+                            <td><?= $user['Password'] ?></td>
+                            <td><?= $user['Email'] ?></td>
+                           
+                          </tr>
+                          <?php }?>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <th>SR No.</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Email</th>
+                          
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </div>  
+         </div>
         </div>
       </div>
     </div>
-
-   
   </body>
-
 </html>
-
-<script>
-  function updateData() {
-    var Id = $('#Id').val();
-    var Name = $('#Name').val();
-    $.ajax({
-      type: 'POST',
-      url: '../../api/type/update.php',
-      data: {
-        Id: Id,
-        Name: Name
-      },
-      success: function(response) {
-          console.log(response.success);
-          alert("Role Updated");
-          window.location.href = './index.php';
-      }
-    });
-  }
-</script>
 
 <?php
 include pathof('includes/scripts.php');

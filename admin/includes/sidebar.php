@@ -60,6 +60,13 @@
                         </li>
                         <li class="sidebar-list">
                             <i class="fa fa-thumb-tack"></i>
+                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/type/index.php')?>">
+                                <i data-feather="box"></i>
+                                <span>Property Type</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-list">
+                            <i class="fa fa-thumb-tack"></i>
                             <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/city/index.php')?>">
                                 <i data-feather="map-pin"></i>
                                 <span>City</span>
@@ -70,13 +77,6 @@
                             <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/state/index.php')?>">
                                 <i data-feather="map"></i>
                                 <span>State</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-list">
-                            <i class="fa fa-thumb-tack"></i>
-                            <a class="sidebar-link sidebar-title link-nav" href="<?= urlOf('pages/role/index.php')?>">
-                                <i data-feather="shield"></i>
-                                <span>Role</span>
                             </a>
                         </li>
                         <li class="sidebar-list">
@@ -102,9 +102,9 @@
                         </li>
                         <li class="sidebar-list">
                             <i class="fa fa-thumb-tack"></i>
-                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/user/index.php')?>">
+                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/client/index.php')?>">
                                 <i data-feather="users"></i>
-                                <span>Users</span>
+                                <span>Client</span>
                             </a>
                         </li>
                     </ul>

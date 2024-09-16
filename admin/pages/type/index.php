@@ -275,7 +275,7 @@ include pathof('includes/header.php');
             <div class="page-title">
               <div class="row">
                 <div class="col-sm-6">
-                  <h3>Appointmet</h3>
+                  <h3>Property Type</h3>
                 </div>
                 <div class="col-sm-6">
                   <ol class="breadcrumb">
@@ -328,7 +328,6 @@ include pathof('includes/header.php');
                             <th>Username</th>
                             <th>Update</th>
                             <th>Delete</th>
-                          
                           </tr>
                         </tfoot>
                       </table>

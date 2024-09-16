@@ -6,7 +6,7 @@ header("Content-type:application/json");
 $Username = $_POST['Username'];
 $Password = $_POST['Password'];
 
-$query = "SELECT * FROM User WHERE Username =? AND Password =?";
+$query = "SELECT * FROM admin WHERE Username =? AND Password =?";
 $params = [$Username, $Password];
 
 $result = selectOne($query, $params);
