@@ -20,8 +20,7 @@ CREATE TABLE Client (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
     `UserName` VARCHAR(255) NOT NULL,
     `Email` VARCHAR(255) NOT NULL UNIQUE,
-    `Phone` VARCHAR(15),
-    `Address` TEXT
+    `Password` VARCHAR(200)
 );
 
 -- Create the state table
