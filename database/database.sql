@@ -92,6 +92,28 @@ CREATE TABLE `Order` (
     FOREIGN KEY (`PropertyId`) REFERENCES `PropertyDetails`(`Id`)
 );
 
+CREATE TABLE `Cart` (
+    `Id` int(11) NOT NULL,
+    `PropertyId` int(11) NOT NULL,
+    `ClientId` int(11) NOT NULL,
+    `TotalPrice` int(11) NOT NULL
+    `Date` DATE NOT NULL,
+    FOREIGN KEY (`PropertyId`) REFERENCES `PropertyDetails`(`Id`),
+    FOREIGN KEY (`ClientId`) REFERENCES `Client`(`Id`)
+);
+
+CREATE TABLE Checkout (
+    `Id` INT AUTO_INCREMENT PRIMARY KEY,
+    `FirstName` VARCHAR(255) NOT NULL,
+    `LastName` VARCHAR(255) NOT NULL,
+    `Address` VARCHAR(255) NOT NULL,
+    `City` VARCHAR(255) NOT NULL,
+    `State` VARCHAR(255) NOT NULL,
+    `PinCode` VARCHAR(255) NOT NULL,
+    `Phone` VARCHAR(255) NOT NULL,
+    `Email` VARCHAR(255) NOT NULL
+);
+
 -- Create the payment table
 CREATE TABLE Payment (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
