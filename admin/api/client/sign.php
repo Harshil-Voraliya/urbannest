@@ -13,5 +13,5 @@ $param = [$UserName, $Email, $Password];
 
 execute($query, $param);
 
-echo json_encode(["status" => "success", "message" => "Role Added"]);
+echo json_encode(["status" => "success", "message" => "Client Added"]);
 ?>

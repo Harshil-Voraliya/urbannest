@@ -308,7 +308,7 @@ include pathof('includes/header.php');
                           <?php foreach($clients as $client) { ?>
                           <tr>
                             <td><?= $index += 1 ?></td>
-                            <td><?= $client['Username'] ?></td>
+                            <td><?= $client['UserName'] ?></td>
                             <td><?= $client['Password'] ?></td>
                             <td><?= $client['Email'] ?></td>
                            

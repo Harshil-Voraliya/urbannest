@@ -343,6 +343,26 @@ include pathof('includes/header.php');
         </div>
       </div>
     </div>
+    <script>
+        function deleteData(Id) {
+            if (confirm("sure you want to delete this City"));
+            $.ajax({
+                url: "../../api/city/delete.php",
+                method: "POST",
+                data: {
+                    Id: Id
+                },
+
+                success: function (response) {
+                    console.log(response);
+                    if (response.success != true)
+                        return alert('City Deleted');
+
+                    window.location.href = './index.php';
+                }
+            })
+        }
+    </script>
   </body>
 </html>
 

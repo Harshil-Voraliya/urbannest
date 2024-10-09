@@ -1,8 +1,9 @@
 <?php
 require '../../includes/init.php';
-
 $index = 0;
-$propertydetails = select("SELECT * FROM propertydetails");
+// $propertydetails = select("SELECT Propertydetails.Id, Propertydetails.PropertyName, Propertydetails.Address, Propertydetails.Sqft, Propertydetails.Description, PropertyType.Name AS 'PropertyTypeName', City.Name AS 'CityName', State.Name AS 'StateName' FROM PropertyType INNER JOIN Propertydetails ON Propertydetails.TypeId = PropertyType.Id INNER JOIN City ON Propertydetails.CityId = City.Id INNER JOIN State ON Propertydetails.StateId = State.Id");
+$propertydetails = select("SELECT * FROM PropertyDetails");
+
 include pathof('includes/header.php');
 ?>
   <body>
@@ -66,10 +67,10 @@ include pathof('includes/header.php');
                 </div>
               </div>
               <div class="product-wrapper-grid">
-                <div class="row">
-                  <?php foreach ($propertydetails as $propertydetail) { ?>
-                  <div class="col-xl-3 col-lg-4 col-sm-6">
+                <?php foreach ($propertydetails as $propertydetail) { ?>
+                <div class="col-sm-6 col-lg-3">
                     <div class="card">
+                      <input type="hidden" value="<?= $propertydetail['Id'] ?>">
                       <div class="product-box">
                         <div class="product-img"><img class="img-fluid" src=<?= urlOf('assets/images/uploads/') . $propertydetail['ImageFileName'] ?> alt="">
                         </div>
@@ -109,13 +110,30 @@ include pathof('includes/header.php');
                   </div>
                   <?php }?>
                 </div>
-              </div>
             </div>
           </div>
           <!-- Container-fluid Ends-->
         </div>
       </div>
     </div>
+
+    <script>
+    function deleteProduct(Id) {
+      if (confirm("Are you sure you want to delete this Property?")) {
+        $.ajax({
+          url: "../../api/property/delete.php",
+          method: "POST",
+          data: {
+            Id: Id
+          },
+          success: function(response) {
+            alert('Property deleted!');
+            window.location.href = './index.php';
+          }
+        });
+      }
+    }
+  </script>
 
 <?php
 include pathof('includes/scripts.php');
