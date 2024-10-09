@@ -4,7 +4,7 @@
 
     $Id = $_POST['Id'];
 
-    $query = "DELETE FROM wishlists WHERE Id = ?";
+    $query = "DELETE FROM wishlist WHERE Id = ?";
     $param = [$Id];
 
     $result = execute($query, $param);

@@ -76,11 +76,11 @@
             })
         }
 
-        function addToCart() {
+        function addToCart(PropertyId) {
             // Properly embed the PHP value into JavaScript as a boolean
             var isLoggedIn = <?= isset($_SESSION['UserId']) ? 'true' : 'false' ?>;
             var UserId = <?= isset($_SESSION['UserId']) ? $_SESSION['UserId'] : 'null' ?>;
-            console.log();
+            console.log(PropertyId);
             console.log(UserId);
 
             if (!isLoggedIn) {
@@ -93,12 +93,13 @@
                 url: '../admin/api/carts/insert.php',
                 type: 'POST',
                 data: {
-                    : ,
+                    PropertyId: PropertyId,
                     UserId: UserId
                 },
                 success: function(response) {
                     console.log(response.success);
-                    alert("Product added to Wishlist");
+                    alert("Product added to Cart");
+                    // deleteWishlistItem(PropertyId); 
                     location.reload();
                 }
             });

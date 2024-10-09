@@ -94,12 +94,10 @@ include pathOf('includes/navbar.php');
                         <div class="grid-item col featured">
                             <div class="product">
                                 <div class="product-thumb">
-                                    <a href="product-details.html" class="image">
                                         <img src="<?= urlOf('admin/assets/images/uploads/') . $propertydetail['ImageFileName'] ?>" alt="Product Image">
-                                    </a>
                                 </div>
                                 <div class="product-info">
-                                    <h6 class="title"><a href="product-details.html"><?= $propertydetail['PropertyName'] ?></a></h6>
+                                    <h6 class="title"><a href="./propertydetails.php"><?= $propertydetail['PropertyName'] ?></a></h6>
                                     <span class="price">
                                         ₹<?= $propertydetail['Price'] ?>
                                     </span>
