@@ -81,18 +81,6 @@ CREATE TABLE Wishlist (
     FOREIGN KEY (`PropertyId`) REFERENCES `PropertyDetails`(`Id`)
 );
 
--- Create the order table
-CREATE TABLE `Order` (
-    `Id` INT AUTO_INCREMENT PRIMARY KEY,
-    `ClientId` INT,
-    `PropertyId` INT,
-    `Date` DATE,
-    `TotalAmount` INT,
-    `Status` VARCHAR(255),
-    FOREIGN KEY (`ClientId`) REFERENCES `Client`(`Id`),
-    FOREIGN KEY (`PropertyId`) REFERENCES `PropertyDetails`(`Id`)
-);
-
 -- Create the cart table
 CREATE TABLE Cart (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
@@ -100,6 +88,15 @@ CREATE TABLE Cart (
     `ClientId` INT NOT NULL,
     FOREIGN KEY (`PropertyId`) REFERENCES `PropertyDetails`(`Id`),
     FOREIGN KEY (`ClientId`) REFERENCES `Client`(`Id`)
+);
+
+-- Create the order table
+CREATE TABLE `Order` (
+    `Id` INT AUTO_INCREMENT PRIMARY KEY,
+    `CartId` INT,
+    `TotalAmount` INT,
+    `Status` VARCHAR(255),  
+    FOREIGN KEY (`CartId`) REFERENCES `Cart`(`Id`)
 );
 
 -- Create the checkout table
@@ -114,6 +111,7 @@ CREATE TABLE Checkout (
     `PinCode` VARCHAR(10) NOT NULL,
     `Phone` VARCHAR(15) NOT NULL,
     `Email` VARCHAR(255) NOT NULL,
+    `TotalPrice` INT NOT NULL,
     FOREIGN KEY (`CartId`) REFERENCES `Cart`(`Id`)
 );
 
