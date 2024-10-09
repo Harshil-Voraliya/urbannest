@@ -1,3 +1,5 @@
+<?php
+?>
 
     <!-- Header Section Start -->
     <div class="header-section header-transparent header-menu-center section section-fluid bg-white d-none d-xl-block">
@@ -11,7 +13,6 @@
                     </div>
                 </div>
                 <!-- Header Logo End -->
-
                 <!-- Search Start -->
                 <div class="col">
                     <nav class="site-main-menu menu-height-100 justify-content-center">
@@ -24,7 +25,6 @@
                     </nav>
                 </div>
                 <!-- Search End -->
-
                 <!-- Header Tools Start -->
                 <div class="col">
                     <div class="header-tools justify-content-end">
@@ -32,7 +32,7 @@
                             <a href="<?= urlOf('pages/acc.php') ?>"><i class="far fa-user"></i></a>
                         </div>
                         <div class="header-wishlist">
-                            <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="far fa-heart"></i></a>
+                            <a href="<?= urlOf('pages/wishlist.php') ?>"><span class="wishlist-count">3</span><i class="far fa-heart"></i></a>
                         </div>
                         <div class="header-cart">
                             <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
@@ -80,7 +80,7 @@
                             <a href="<?= urlOf('pages/acc.php') ?>"><i class="far fa-user"></i></a>
                         </div>
                         <div class="header-wishlist">
-                            <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="far fa-heart"></i></a>
+                            <a href="#offcanvas-wishlist"><span class="wishlist-count">3</span><i class="far fa-heart"></i></a>
                         </div>
                         <div class="header-cart">
                             <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
@@ -201,49 +201,6 @@
         </div>
     </div>
     <!-- OffCanvas Search End -->
-    <!-- OffCanvas Wishlist Start -->
-    <div id="offcanvas-wishlist" class="offcanvas offcanvas-wishlist">
-        <div class="inner">
-            <div class="head">
-                <span class="title">Wishlist</span>
-                <button class="offcanvas-close">×</button>
-            </div>
-            <div class="body customScroll">
-                <ul class="minicart-product-list">
-                    <li>
-                        <a href="product-details.html" class="image"><img src="assets/images/product/cart-product-1.webp" alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="product-details.html" class="title">Walnut Cutting Board</a>
-                            <span class="quantity-price">1 x <span class="amount">$100.00</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="product-details.html" class="image"><img src="assets/images/product/cart-product-2.webp" alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="product-details.html" class="title">Lucky Wooden Elephant</a>
-                            <span class="quantity-price">1 x <span class="amount">$35.00</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="product-details.html" class="image"><img src="assets/images/product/cart-product-3.webp" alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="product-details.html" class="title">Fish Cut Out Set</a>
-                            <span class="quantity-price">1 x <span class="amount">$9.00</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="foot">
-                <div class="buttons">
-                    <a href="wishlist.html" class="btn btn-dark btn-hover-primary">view wishlist</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- OffCanvas Wishlist End -->
     <!-- OffCanvas Cart Start -->
     <div id="offcanvas-cart" class="offcanvas offcanvas-cart">
         <div class="inner">
@@ -253,22 +210,6 @@
             </div>
             <div class="body customScroll">
                 <ul class="minicart-product-list">
-                    <li>
-                        <a href="product-details.html" class="image"><img src="assets/images/product/cart-product-1.webp" alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="product-details.html" class="title">Walnut Cutting Board</a>
-                            <span class="quantity-price">1 x <span class="amount">$100.00</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="product-details.html" class="image"><img src="assets/images/product/cart-product-2.webp" alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="product-details.html" class="title">Lucky Wooden Elephant</a>
-                            <span class="quantity-price">1 x <span class="amount">$35.00</span></span>
-                            <a href="#" class="remove">×</a>
-                        </div>
-                    </li>
                     <li>
                         <a href="product-details.html" class="image"><img src="assets/images/product/cart-product-3.webp" alt="Cart product Image"></a>
                         <div class="content">
@@ -285,10 +226,8 @@
                     <span class="amount">$144.00</span>
                 </div>
                 <div class="buttons">
-                    <a href="shopping-cart.html" class="btn btn-dark btn-hover-primary">view cart</a>
                     <a href="checkout.html" class="btn btn-outline-dark">checkout</a>
                 </div>
-                <p class="minicart-message">Free Shipping on All Orders Over $100!</p>
             </div>
         </div>
     </div>
@@ -317,7 +256,7 @@
                         <a href="my-account.html"><i class="far fa-user"></i></a>
                     </div>
                     <div class="header-wishlist">
-                            <a href="#offcanvas-wishlist" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="far fa-heart"></i></a>
+                            <a href="<?= urlOf('pages/wishlist.php') ?>" class="offcanvas-toggle"><span class="wishlist-count">3</span><i class="far fa-heart"></i></a>
                         </div>
                     <div class="header-cart">
                         <a href="shopping-cart.html"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
