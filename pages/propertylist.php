@@ -1,10 +1,10 @@
 <?php
-    require '../includes/init.php';
+require '../includes/init.php';
 
-    $propertydetails = select("SELECT * FROM Propertydetails");
+$propertydetails = select("SELECT * FROM propertydetails");
 
-    include pathOf('includes/header.php');
-    include pathOf('includes/navbar.php');
+include pathOf('includes/header.php');
+include pathOf('includes/navbar.php');
 ?>
 
 <body>
@@ -81,130 +81,65 @@
         </div>
         <!-- Shop Toolbar End -->
 
-        <!-- Product Filter Start -->
-        <div id="product-filter" class="product-filter bg-light">
-            <div class="container">
-                <div class="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2 row-cols-1 learts-mb-n30">
 
-                    <!-- Sort by Start -->
-                    <div class="col learts-mb-30">
-                        <h3 class="widget-title product-filter-widget-title">Sort by</h3>
-                        <ul class="widget-list product-filter-widget customScroll">
-                            <li><a href="#">Popularity</a></li>
-                            <li><a href="#">Average rating</a></li>
-                            <li><a href="#">Newness</a></li>
-                            <li><a href="#">Price: low to high</a></li>
-                            <li><a href="#">Price: high to low</a></li>
-                        </ul>
-                    </div>
-                    <!-- Sort by End -->
-
-                    <!-- Price filter Start -->
-                    <div class="col learts-mb-30">
-                        <h3 class="widget-title product-filter-widget-title">Price filter</h3>
-                        <ul class="widget-list product-filter-widget customScroll">
-                            <li> <a href="#">All</a></li>
-                            <li> <a href="#"><span class="amount"><span class="cur-symbol">£</span>0.00</span> - <span class="amount"><span class="cur-symbol">£</span>80.00</span></a></li>
-                            <li> <a href="#"><span class="amount"><span class="cur-symbol">£</span>80.00</span> - <span class="amount"><span class="cur-symbol">£</span>160.00</span></a></li>
-                            <li> <a href="#"><span class="amount"><span class="cur-symbol">£</span>160.00</span> - <span class="amount"><span class="cur-symbol">£</span>240.00</span></a></li>
-                            <li> <a href="#"><span class="amount"><span class="cur-symbol">£</span>240.00</span> - <span class="amount"><span class="cur-symbol">£</span>320.00</span></a></li>
-                            <li> <a href="#"><span class="amount"><span class="cur-symbol">£</span>320.00</span> +</a></li>
-                        </ul>
-                    </div>
-                    <!-- Price filter End -->
-
-                    <!-- Categories Start -->
-                    <div class="col learts-mb-30">
-                        <h3 class="widget-title product-filter-widget-title">Categories</h3>
-                        <ul class="widget-list product-filter-widget customScroll">
-                            <li><a href="#">Gift ideas</a> <span class="count">16</span></li>
-                            <li><a href="#">Home Decor</a> <span class="count">16</span></li>
-                            <li><a href="#">Kids &amp; Babies</a> <span class="count">6</span></li>
-                            <li><a href="#">Kitchen</a> <span class="count">15</span></li>
-                            <li><a href="#">Kniting &amp; Sewing</a> <span class="count">4</span></li>
-                            <li><a href="#">Pots</a> <span class="count">4</span></li>
-                            <li><a href="#">Toys</a> <span class="count">6</span></li>
-                        </ul>
-                    </div>
-                    <!-- Categories End -->
-
-                    <!-- Filters by colors Start -->
-                    <div class="col learts-mb-30">
-                        <h3 class="widget-title product-filter-widget-title">Filters by colors</h3>
-                        <ul class="widget-colors product-filter-widget customScroll">
-                            <li><a href="#" class="hintT-top" data-hint="Black"><span data-bg-color="#000000">Black</span></a></li>
-                            <li><a href="#" class="hintT-top" data-hint="White"><span data-bg-color="#FFFFFF">White</span></a></li>
-                            <li><a href="#" class="hintT-top" data-hint="Dark Red"><span data-bg-color="#b2483c">Dark Red</span></a></li>
-                            <li><a href="#" class="hintT-top" data-hint="Flaxen"><span data-bg-color="#d5b85a">Flaxen</span></a></li>
-                            <li><a href="#" class="hintT-top" data-hint="Pine"><span data-bg-color="#01796f">Pine</span></a></li>
-                            <li><a href="#" class="hintT-top" data-hint="Tortilla"><span data-bg-color="#997950">Tortilla</span></a></li>
-                        </ul>
-                    </div>
-                    <!-- Filters by colors End -->
-
-                    <!-- Brands Start -->
-                    <div class="col learts-mb-30">
-                        <h3 class="widget-title product-filter-widget-title">Brands</h3>
-                        <ul class="widget-list product-filter-widget customScroll">
-                            <li><a href="#">Alexander</a> <span class="count">(2)</span></li>
-                            <li><a href="#">Carmella</a> <span class="count">(4)</span></li>
-                            <li><a href="#">Danielle</a> <span class="count">(7)</span></li>
-                            <li><a href="#">Diana Day</a> <span class="count">(13)</span></li>
-                            <li><a href="#">Emilia</a> <span class="count">(2)</span></li>
-                            <li><a href="#">Gasmine</a> <span class="count">(15)</span></li>
-                            <li><a href="#">Jack &amp; Ella</a> <span class="count">(7)</span></li>
-                            <li><a href="#">Juliette</a> <span class="count">(11)</span></li>
-                        </ul>
-                    </div>
-                    <!-- Brands End -->
-
-                </div>
-            </div>
-        </div>
-        <!-- Product Filter End -->
 
         <div class="section learts-mt-70">
             <div class="container">
                 <!-- Products Start -->
                 <div id="shop-products" class="products isotope-grid row row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
 
+                    <input type="hidden" value="<?= $UserId ?>" id="UserId">
                     <div class="grid-sizer col-1"></div>
-                    <?php foreach($propertydetails as $propertydetail) { ?>
-                    <div class="grid-item col featured">
-                        <div class="product">
-                            <div class="product-thumb">
-                                <a href="product-details.html" class="image">
-                                    <img src="<?= urlOf('admin/assets/images/uploads/') . $propertydetail['ImageFileName'] ?>" alt="Product Image">
-                                    <img class="image-hover " src="<?= urlOf('admin/assets/images/uploads/') . $propertydetail['ImageFileName'] ?>" alt="Product Image">
-                                </a>
-                                <a href="wishlist.html" class="add-to-wishlist hintT-left" data-hint="Add to wishlist"><i class="far fa-heart"></i></a>
-                            </div>
-                            <div class="product-info">
-                                <h6 class="title"><a href="product-details.html"><?= $propertydetail['PropertyName'] ?></a></h6>
-                                <span class="price">
-                                ₹<?= $propertydetail['Price'] ?>
-                                </span>
-                                <div class="product-buttons">
-                                    <a href="#quickViewModal" data-bs-toggle="modal" class="product-button hintT-top" data-hint="Quick View"><i class="fas fa-search"></i></a>
-                                    <a href="#" class="product-button hintT-top" data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></a>
-                                    <a href="#" class="product-button hintT-top" data-hint="Compare"><i class="fas fa-random"></i></a>
+                    <?php foreach ($propertydetails as $propertydetail) { ?>
+                        <div class="grid-item col featured">
+                            <div class="product">
+                                <div class="product-thumb">
+                                    <a href="product-details.html" class="image">
+                                        <img src="<?= urlOf('admin/assets/images/uploads/') . $propertydetail['ImageFileName'] ?>" alt="Product Image">
+                                    </a>
+                                </div>
+                                <div class="product-info">
+                                    <h6 class="title"><a href="product-details.html"><?= $propertydetail['PropertyName'] ?></a></h6>
+                                    <span class="price">
+                                        ₹<?= $propertydetail['Price'] ?>
+                                    </span>
+                                    <div class="product-buttons">
+                                        <button onclick="addToWishlist()" class="product-button hintT-top" data-hint="Wishlist"><i class="fas fa-heart"></i></button>
+                                        <form action="./propertydetails.php" method="post">
+                                            <input type="hidden" value="<?= $propertydetail['Id'] ?>" id="Id" name="Id">
+                                            <button type="submit" class="product-button hintT-top" data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     <?php } ?>
-                </div>
-                <!-- Products End -->
-                <div class="text-center learts-mt-70">
-                    <a href="#" class="btn btn-dark btn-outline-hover-dark"><i class="ti-plus"></i> More</a>
                 </div>
             </div>
         </div>
-
     </div>
     <!-- Shop Products Section End -->
-<?php
+    <script>
+        function addToCart(Id) {
+            $.ajax({
+                url: './cart.php',
+                type: 'POST',
+                data: {
+                    Id: Id
+                },
+                success: function(response) {
+                    console.log(response);
+                    alert('Product added to cart!');
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+
+    <?php
     include pathOf('includes/footer.php');
     include pathOf('includes/scripts.php');
     include pathOf('includes/pageend.php');
-?>
+    ?>
