@@ -61,17 +61,14 @@
                 <h2 class="title">Cart totals</h2>
                 <table>
                     <tbody>
-                        <tr class="subtotal">
-                            <th>Subtotal</th>
-                            <td><span class="amount">£242.00</span></td>
-                        </tr>
+                        
                         <tr class="total">
                             <th>Total</th>
-                            <td><strong><span class="amount">£242.00</span></strong></td>
+                            <td><strong><span class="amount">₹<?= $cart['Price'] ?></span></strong></td>
                         </tr>
                     </tbody>
                 </table>
-                <a href="checkout.html" class="btn btn-dark btn-outline-hover-dark">Proceed to checkout</a>
+                <a href="./checkout.php" class="btn btn-dark btn-outline-hover-dark">Proceed to checkout</a>
             </div>
         </div>
 

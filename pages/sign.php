@@ -13,7 +13,6 @@ include pathOf('includes/header.php');
                     <p class="desc">If you don’t have an account, register now!</p>
                 </div>
                 <div class="login-register-form">
-                    <form action="#">
                         <div class="row">
                             <div class="col-12 mb-3">
                                 <label for="registerEmail">User Name<abbr class="required">*</abbr></label>
@@ -31,7 +30,6 @@ include pathOf('includes/header.php');
                                 <button class="btn btn-dark btn-outline-hover-dark w-100" onclick="insertData()">Register</button>
                             </div>
                         </div>
-                    </form>
                 </div>
             </div>
         </div>
