@@ -6,7 +6,7 @@ CREATE DATABASE urbannest;
 -- Use the database
 USE urbannest;
 
--- Create the client table
+-- Create the admin table
 CREATE TABLE Admin (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
     `UserName` VARCHAR(255) NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE Client (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
     `UserName` VARCHAR(255) NOT NULL,
     `Email` VARCHAR(255) NOT NULL UNIQUE,
-    `Password` VARCHAR(200)
+    `Password` VARCHAR(255)
 );
 
 -- Create the state table
@@ -37,13 +37,13 @@ CREATE TABLE City (
     FOREIGN KEY (`StateId`) REFERENCES State(`Id`)
 );
 
--- Create the typeproperty table
+-- Create the property type table
 CREATE TABLE PropertyType (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
     `Name` VARCHAR(255) NOT NULL
 );
 
--- Create the propertydetails table
+-- Create the property details table
 CREATE TABLE PropertyDetails (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
     `TypeId` INT NOT NULL,
@@ -72,7 +72,8 @@ CREATE TABLE Appointment (
     FOREIGN KEY (`PropertyId`) REFERENCES `PropertyDetails`(`Id`)
 );
 
-CREATE TABLE `Wishlist` (
+-- Create the wishlist table
+CREATE TABLE Wishlist (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
     `ClientId` INT NOT NULL,
     `PropertyId` INT NOT NULL,
@@ -92,26 +93,28 @@ CREATE TABLE `Order` (
     FOREIGN KEY (`PropertyId`) REFERENCES `PropertyDetails`(`Id`)
 );
 
-CREATE TABLE `Cart` (
-    `Id` int(11) NOT NULL,
-    `PropertyId` int(11) NOT NULL,
-    `ClientId` int(11) NOT NULL,
-    `TotalPrice` int(11) NOT NULL
-    `Date` DATE NOT NULL,
+-- Create the cart table
+CREATE TABLE Cart (
+    `Id` INT AUTO_INCREMENT PRIMARY KEY,
+    `PropertyId` INT NOT NULL,
+    `ClientId` INT NOT NULL,
     FOREIGN KEY (`PropertyId`) REFERENCES `PropertyDetails`(`Id`),
     FOREIGN KEY (`ClientId`) REFERENCES `Client`(`Id`)
 );
 
+-- Create the checkout table
 CREATE TABLE Checkout (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
+    `CartId` INT NOT NULL,
     `FirstName` VARCHAR(255) NOT NULL,
     `LastName` VARCHAR(255) NOT NULL,
     `Address` VARCHAR(255) NOT NULL,
     `City` VARCHAR(255) NOT NULL,
     `State` VARCHAR(255) NOT NULL,
-    `PinCode` VARCHAR(255) NOT NULL,
-    `Phone` VARCHAR(255) NOT NULL,
-    `Email` VARCHAR(255) NOT NULL
+    `PinCode` VARCHAR(10) NOT NULL,
+    `Phone` VARCHAR(15) NOT NULL,
+    `Email` VARCHAR(255) NOT NULL,
+    FOREIGN KEY (`CartId`) REFERENCES `Cart`(`Id`)
 );
 
 -- Create the payment table
@@ -132,18 +135,6 @@ CREATE TABLE Feedback (
     `Message` TEXT
 );
 
-INSERT INTO Admin (
-    Username,
-    Password,
-    Email,
-    Phone
-)
-
-VALUES
-    (
-        'admin',
-        'admin',
-        'admin@gmail.com',
-        '987654321'
-    );
-
+-- Seed admin user
+INSERT INTO Admin (Username, Password, Email, Phone)
+VALUES ('admin', 'admin', 'admin@gmail.com', '987654321');
