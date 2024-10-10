@@ -1,5 +1,9 @@
 <?php
 require '../../includes/init.php';
+
+$index = 0;
+$orders = select("SELECT Order.TotalAmount, Order.Status, Cart.PropertyId AS 'PropertyId', Cart.ClientId AS 'ClientId', Client.UserName AS 'ClientName', PropertyDetails.PropertyName AS 'PropertyName' FROM `Order` INNER JOIN Cart ON Order.CartId = Cart.Id INNER JOIN Client ON Cart.ClientId = Client.Id INNER JOIN PropertyDetails ON Cart.PropertyId = PropertyDetails.Id");
+
 include pathof('includes/header.php');
 ?>
 
@@ -299,24 +303,28 @@ include pathof('includes/header.php');
                             <th>SR No.</th>
                             <th>User</th>
                             <th>Property</th>
-                            <th>Date</th>
                             <th>Total Amount</th>
                             <th>Status</th>
-                            <th>Update</th>
-                            <th>Delete</th>
                           </tr>
                         </thead>
-                        
+                        <tbody>
+                          <?php foreach($orders as $order): ?>
+                          <tr>
+                              <td><?= $index += 1 ?></td>
+                              <td><?= $order['ClientName'] ?></td>
+                              <td><?= $order['PropertyName'] ?></td>
+                              <td><?= $order['TotalAmount'] ?></td>
+                              <td><?= $order['Status'] ?></td>
+                          </tr>
+                          <?php endforeach;?>
+                        </tbody>
                         <tfoot>
                         <tr>
                            <th>SR No.</th>
                             <th>User</th>
                             <th>Property</th>
-                            <th>Date</th>
                             <th>Total Amount</th>
                             <th>Status</th>
-                            <th>Update</th>
-                            <th>Delete</th>
                           </tr>
                         </tfoot>
                       </table>
