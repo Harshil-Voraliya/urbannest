@@ -102,7 +102,7 @@ include pathOf('includes/navbar.php');
                                         ₹<?= $propertydetail['Price'] ?>
                                     </span>
                                     <div class="product-buttons">
-                                        <button onclick="addToWishlist()" class="product-button hintT-top" data-hint="Wishlist"><i class="fas fa-heart"></i></button>
+                                        <button onclick="addToWishlist(<?= $propertydetail['Id'] ?>)" class="product-button hintT-top" data-hint="Wishlist"><i class="fas fa-heart"></i></button>
                                         <form action="./propertydetails.php" method="post">
                                             <input type="hidden" value="<?= $propertydetail['Id'] ?>" id="Id" name="Id">
                                             <button type="submit" class="product-button hintT-top" data-hint="Add to Cart"><i class="fas fa-shopping-cart"></i></button>
@@ -116,6 +116,11 @@ include pathOf('includes/navbar.php');
             </div>
         </div>
     </div>
+
+    <?php
+    include pathOf('includes/footer.php');
+    include pathOf('includes/scripts.php');
+    ?>
     <!-- Shop Products Section End -->
     <script>
         function addToCart(Id) {
@@ -134,10 +139,36 @@ include pathOf('includes/navbar.php');
                 }
             });
         }
+
+        function addToWishlist(PropertyId) {
+            // Properly embed the PHP value into JavaScript as a boolean
+            var isLoggedIn = <?= isset($_SESSION['UserId']) ? 'true' : 'false' ?>;
+            var UserId = <?= isset($_SESSION['UserId']) ? $_SESSION['UserId'] : 'null' ?>;
+
+            // Check if the user is not logged in
+            if (!isLoggedIn) {
+                alert("Please log in to add products to the wishlist.");
+                window.location.href = "./login.php";
+                return;
+            }
+
+            $.ajax({
+                url: '../admin/api/wishlists/insert.php',
+                type: 'POST',
+                data: {
+                    PropertyId: PropertyId,
+                    UserId: UserId
+                },
+                success: function(response) {
+                    console.log(response.success);
+                    alert("Product added to Wishlist");
+                    location.reload();
+                }
+            });
+        }
+
     </script>
 
     <?php
-    include pathOf('includes/footer.php');
-    include pathOf('includes/scripts.php');
     include pathOf('includes/pageend.php');
     ?>
