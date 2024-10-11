@@ -18,8 +18,8 @@ if (!isset($_SESSION['LoggedIn'])) {
     <meta name="description" content="tivo admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Tivo admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
-    <link rel="icon" href="<?= urlOf('assets/images/favicon/favicon.png') ?>" type="image/x-icon">
-    <link rel="shortcut icon" href="<?= urlOf('assets/images/favicon/favicon.png') ?>" type="image/x-icon">
+    <link rel="icon" href="<?= urlOf('assets/images/logo/black.png') ?>" type="image/x-icon">
+    <link rel="shortcut icon" href="<?= urlOf('assets/images/logo/black.png') ?>" type="image/x-icon">
     <title>Urban Nest</title>
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>

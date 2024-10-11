@@ -18,14 +18,21 @@ require '../../includes/init.php';
     <link rel="stylesheet" type="text/css" href="<?= urlOf('assets/css/responsive.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= urlOf('assets/css/vendors/datatables.css') ?>">
   <body>
+
+  <style>
+    .logo{
+      height: 250px;
+    }
+  </style>
+
     <!-- Loader starts-->
-    <!-- <div class="loader-wrapper">
+    <div class="loader-wrapper">
       <div class="dot"></div>
       <div class="dot"></div>
       <div class="dot"></div>
       <div class="dot"> </div>
       <div class="dot"></div>
-    </div> -->
+    </div>
     <!-- Loader ends-->
     <!-- login page start-->
     <div class="container-fluid p-0">
@@ -33,7 +40,7 @@ require '../../includes/init.php';
         <div class="col-12 p-0">    
           <div class="login-card">
             <div>
-              <div><a class="logo" href="index.html"><img class="img-fluid for-light" src="<?= urlOf('assets/images/logo/logo2.png')?>" alt="looginpage"></a></div>
+              <div><a class="logo" href="index.html"><img style="height:350px;" src="<?= urlOf('assets/images/logo/white.png')?>" alt="looginpage"></a></div>
               <div class="login-main"> 
                   <h4 class="text-center">Sign in to account</h4>
                   <p class="text-center">Enter your email & password to login</p>

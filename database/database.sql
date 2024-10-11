@@ -60,18 +60,6 @@ CREATE TABLE PropertyDetails (
     FOREIGN KEY (`StateId`) REFERENCES `State`(`Id`)
 );
 
--- Create the appointment table
-CREATE TABLE Appointment (
-    `Id` INT AUTO_INCREMENT PRIMARY KEY,
-    `ClientId` INT,
-    `PropertyId` INT,
-    `Date` DATE,
-    `Phone` VARCHAR(15) NOT NULL,
-    `Email` VARCHAR(255) NOT NULL,
-    FOREIGN KEY (`ClientId`) REFERENCES `Client`(`Id`),
-    FOREIGN KEY (`PropertyId`) REFERENCES `PropertyDetails`(`Id`)
-);
-
 -- Create the wishlist table
 CREATE TABLE Wishlist (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,

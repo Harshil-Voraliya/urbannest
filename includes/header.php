@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="<?= urlOf('assets/images/favicon.webp') ?>">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= urlOf('assets/images/logo/black.png') ?>">
 
     <link rel="stylesheet" href="<?= urlOf('assets/css/vendor/bootstrap.min.css') ?>">
     <link rel="stylesheet" href="<?= urlOf('assets/css/vendor/fontawesome.min.css') ?>">

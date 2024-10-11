@@ -7,23 +7,36 @@
     <title>Sidebar with Icons</title>
     <!-- Include Font Awesome Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Your CSS -->
     <style>
         /* Your custom styles here */
     </style>
 </head>
 
+<style>
+    .logo{
+        width: 150px;
+        margin-left: 45px;
+        /* height: 200px; */
+        /* margin-bottom: 500px; */
+    }
+    /* .white{ */
+        /* color: white: */
+    /* } */
+  </style>
+
 <body>
     <div class="sidebar-wrapper">
         <div>
             <div class="logo-wrapper">
-                <a href="index.html">
-                    <img class="img-fluid for-light" src="<?= urlOf('assets/images/logo/logo.png') ?>" alt="">
+                <a href="#">
+                    <img class="img-fluid for-light logo " src="<?= urlOf('assets/images/logo/black.png') ?>" alt="">
                 </a>
                 <div class="back-btn"><i data-feather="grid"></i></div>
-                <div class="toggle-sidebar icon-box-sidebar">
+                <!-- <div class="toggle-sidebar icon-box-sidebar">
                     <i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i>
-                </div>
+                </div> -->
             </div>
             <div class="logo-icon-wrapper">
                 <a href="index.html">
@@ -81,16 +94,17 @@
                         </li>
                         <li class="sidebar-list">
                             <i class="fa fa-thumb-tack"></i>
-                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/payment/index.php')?>">
-                                <i data-feather="credit-card"></i>
-                                <span>Payment</span>
+                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/order/index.php')?>">
+                                <!-- <i class="fas fa-shopping-cart white"></i> -->
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Order</span>
                             </a>
                         </li>
                         <li class="sidebar-list">
                             <i class="fa fa-thumb-tack"></i>
-                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/appointment/index.php')?>">
-                                <i data-feather="calendar"></i>
-                                <span>Appointment</span>
+                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/payment/index.php')?>">
+                                <i data-feather="credit-card"></i>
+                                <span>Payment</span>
                             </a>
                         </li>
                         <li class="sidebar-list">

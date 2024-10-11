@@ -1,3 +1,10 @@
+<style>
+    .white{
+        width: 97px !important;
+        
+    }
+</style>
+
 <?php
 ?>
 
@@ -9,7 +16,7 @@
                 <!-- Header Logo Start -->
                 <div class="col">
                     <div class="header-logo">
-                        <a href="index-2.html"><img src="<?= urlOf('assets/images/logo/logo-2.webp') ?>" alt="Learts Logo"></a>
+                        <a href="index-2.html"><img src="<?= urlOf('assets/images/logo/black.png') ?>" alt="Learts Logo"></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->
@@ -54,8 +61,8 @@
 
                 <!-- Header Logo Start -->
                 <div class="col">
-                    <div class="header-logo">
-                        <a href="index-2.html"><img src="assets/images/logo/logo-2.webp" alt="Learts Logo"></a>
+                    <div class="header-logo white">
+                        <a href="index-2.html"><img src="assets/images/logo/white.png" alt="Learts Logo"></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->
@@ -102,7 +109,7 @@
                 <!-- Header Logo Start -->
                 <div class="col">
                     <div class="header-logo">
-                        <a href="index-2.html"><img src="assets/images/logo/logo-2.webp" alt="Learts Logo"></a>
+                        <a href="index-2.html"><img src="assets/images/logo/black.png" alt="Learts Logo"></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->
@@ -142,7 +149,7 @@
                 <!-- Header Logo Start -->
                 <div class="col">
                     <div class="header-logo">
-                        <a href="index-2.html"><img src="assets/images/logo/logo-2.webp" alt="Learts Logo"></a>
+                        <a href="index-2.html"><img src="assets/images/logo/black.png" alt="Learts Logo"></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->
