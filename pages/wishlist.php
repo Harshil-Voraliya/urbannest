@@ -11,20 +11,15 @@
     <!-- Page Title/Header Start -->
     <div class="page-title-section section" data-bg-image="assets/images/bg/page-title-1.webp">
         <div class="container">
-            <div class="row">
+           <div class="row">
                 <div class="col">
-
                     <div class="page-title">
-                        <h1 class="title">Cart</h1>
+                        <h1 class="title">Wishlist</h1>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
-                            <li class="breadcrumb-item active">Cart</li>
+                            <li class="breadcrumb-item active">Wishlist</li>
                         </ul>
                     </div>
-
-                </div>
-            </div>
-        </div>
     </div>
     <!-- Page Title/Header End -->
 

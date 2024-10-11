@@ -1,7 +1,9 @@
 <style>
     .white{
-        width: 97px !important;
-        
+        width: 97px;
+    }
+    .menu-text{
+        color: black;
     }
 </style>
 

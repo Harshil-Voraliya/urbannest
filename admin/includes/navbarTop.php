@@ -23,8 +23,9 @@
                 <div class="mode"><i class="fa fa-moon-o"></i></div>
               </li>
               <li class="profile-nav onhover-dropdown">
-                <a href="">
-                <div class="account-user"><i data-feather="log-out"></i></div>
+                <a href="../api/logout/logout.php">
+                <i data-feather="log-out"></i>
+                </a>
                 </a>
               </li>
             </ul>
