@@ -1,0 +1,28 @@
+/* btn btn-outline-danger
+btn btn-outline-success */
+
+/* <link rel="stylesheet" href="../../assets/css/button.css"> */
+
+.btn-outline-success {
+    color: green !important; /* Default font color */
+    border-color: green !important; /* Border color */
+}
+
+.btn-outline-success:hover {
+    background-color: green !important; /* Background color on hover */
+    color: white !important; /* Font color on hover */
+    transition: background-color 0.3s ease, color 0.3s ease !important; /* Smooth transition effect */
+}
+
+.btn-outline-danger {
+    color: red !important;/* Default font color */
+    border-color: red !important; /* Border color */
+}
+
+.btn-outline-danger:hover {
+    background-color: red !important; /* Background color on hover */
+    color: white !important; /* Font color on hover */
+    transition: background-color 0.3s ease, color 0.3s ease !important; /* Smooth transition */
+}
+
+

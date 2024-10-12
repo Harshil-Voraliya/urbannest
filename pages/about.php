@@ -12,15 +12,12 @@ include pathOf('includes/navbar.php');
                 <div class="col">
 
                     <div class="page-title">
-                        <h1 class="title">About us 02</h1>
+                        <h1 class="title">About us</h1>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
-                            <li class="breadcrumb-item active">About us 02</li>
+                            <li class="breadcrumb-item active">About us</li>
                         </ul>
                     </div>
-
-                </div>
-            </div>
         </div>
     </div>
     <!-- Page Title/Header End -->
@@ -31,7 +28,7 @@ include pathOf('includes/navbar.php');
             <div class="row learts-mb-n30">
                 <div class="col-lg-4 col-12 align-self-center learts-mb-30">
                     <div class="about-us4">
-                        <span class="sub-title">LEARTS STORE</span>
+                        <span class="sub-title">Urbannest</span>
                         <h2 class="title">Aspiration Inspired Happiness</h2>
                     </div>
                 </div>
@@ -75,7 +72,7 @@ include pathOf('includes/navbar.php');
                                     <div class="inner">
                                         <div class="content">
                                             <h6 class="title">PHONE</h6>
-                                            <p>Mobile: (+88) – 1990 – 6886 <br> Hotline: 1800 – 1102</p>
+                                            <p>Mobile: (+91) 1234567899 <br> Office: 02888 1102</p>
                                         </div>
                                     </div>
                                 </div>
@@ -85,7 +82,7 @@ include pathOf('includes/navbar.php');
                                     <div class="inner">
                                         <div class="content">
                                             <h6 class="title">EMAIL</h6>
-                                            <p>contact@leartsstore.com</p>
+                                            <p>contact@urbannest.com</p>
                                         </div>
                                     </div>
                                 </div>
@@ -180,7 +177,7 @@ include pathOf('includes/navbar.php');
                 <div class="col align-self-center learts-mb-50 order-lg-2">
                     <div class="section-title3 text-center m-0" data-bg-image="<?= urlOf('assets/images/title/title-3.webp') ?>">
                         <h2 class="title">Follow us on Instagram</h2>
-                        <p class="desc">@learts_shop</p>
+                        <p class="desc">@urban_nest</p>
                     </div>
                 </div>
 

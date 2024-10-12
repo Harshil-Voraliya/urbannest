@@ -6,6 +6,10 @@ $typepropertys = select('SELECT * FROM PropertyType');
 include pathof('includes/header.php');
 ?>
 
+
+</style>
+
+  <link rel="stylesheet" href="../../assets/css/button.css">
   <body>
     <!-- tap on top starts-->
     <div class="tap-top"><i data-feather="chevrons-up"></i></div>
@@ -51,7 +55,7 @@ include pathof('includes/header.php');
           <div class="col-sm-12">
                 <div class="card">
                   <div class="card-header pb-0">
-                  <a class="btn btn-primary active" href="./add.php">Add</a><span>
+                  <a class="btn btn-outline-primary" href="./add.php">Add</a><span>
                   </div>
                   <div class="card-body">
                     <div class="table-responsive theme-scrollbar">
@@ -72,11 +76,13 @@ include pathof('includes/header.php');
                             <form action="./update.php" method="post">
                                 <td>
                                     <input type="hidden" value="<?= $typeproperty['Id'] ?>" id="Id" name="Id">
-                                    <button type="submit" class="btn btn-success active">Update</button>
+                                    <button type="submit" class="btn btn-outline-success">Update</button>
+
+
                                 </td>
                             </form>
                             <td>
-                                <button type="button" class="btn btn-danger active" onclick="deleteData(<?= $typeproperty['Id'] ?>)">Delete</button>
+                                <button type="button" class="btn btn-outline-danger" onclick="deleteData(<?= $typeproperty['Id'] ?>)">Delete</button>
                             </td>
                           </tr>
                           <?php }?>

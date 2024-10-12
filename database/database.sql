@@ -45,7 +45,7 @@ CREATE TABLE PropertyType (
 
 -- Create the property details table
 CREATE TABLE PropertyDetails (
-    `Id` INT AUTO_INCREMENT PRIMARY KEY,
+    `Id` INT AUTO_INCREMENT PRIMARY KEY,    
     `TypeId` INT NOT NULL,
     `CityId` INT NOT NULL,
     `StateId` INT NOT NULL,
@@ -109,7 +109,6 @@ CREATE TABLE Payment (
     `OrderId` INT,
     `Date` DATE,
     `Amount` INT,
-    `Method` VARCHAR(255),
     `Status` VARCHAR(255),
     FOREIGN KEY (`OrderId`) REFERENCES `Order`(`Id`)
 );

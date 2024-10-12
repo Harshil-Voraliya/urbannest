@@ -122,7 +122,7 @@ include pathof('includes/header.php');
 
                                     <div class="card-footer text-end">
                                         <div class="col-sm-9 offset-sm-3">
-                                            <button class="btn btn-primary" type="submit" onclick="sendData()">Submit</button>
+                                            <button class="btn btn-outline-primary" type="submit" onclick="sendData()">Submit</button>
                                         </div>
                                     </div>
                                 </div>

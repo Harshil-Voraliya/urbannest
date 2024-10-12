@@ -7,6 +7,7 @@ include pathof('includes/header.php');
 ?>
 
   <body>
+  <link rel="stylesheet" href="../../assets/css/button.css">
     <!-- tap on top starts-->
     <div class="tap-top"><i data-feather="chevrons-up"></i></div>
     <!-- tap on tap ends-->
@@ -74,11 +75,11 @@ include pathof('includes/header.php');
                             <form action="./update.php" method="post">
                                   <td>
                                       <input type="hidden" value="<?= $state['Id'] ?>" id="Id" name="Id">
-                                      <button type="submit" class="btn btn-success active">Update</button>
+                                      <button type="submit" class="btn btn-outline-success">Update</button>
                                   </td>
                               </form>
                             <td>
-                                <button type="button" class="btn btn-danger active" onclick="deleteData(<?= $state['Id'] ?>)">Delete</button>
+                                <button type="button" class="btn btn-outline-danger" onclick="deleteData(<?= $state['Id'] ?>)">Delete</button>
                             </td>
                           </tr>
                           <?php }?>

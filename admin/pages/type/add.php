@@ -4,6 +4,8 @@ include pathof('includes/header.php');
 ?>
 
   <body>
+  <link rel="stylesheet" href="../../assets/css/button.css">
+
     <!-- tap on top starts-->
     <div class="tap-top"><i data-feather="chevrons-up"></i></div>
     <!-- tap on tap ends-->
@@ -62,7 +64,7 @@ include pathof('includes/header.php');
                           </div>
                           <div class="card-footer text-end">
                             <div class="col-sm-9 offset-sm-3">
-                              <button class="btn btn-primary" type="submit" onclick="insertData()">Submit</button>
+                              <button class="btn btn-outline-primary" type="submit" onclick="insertData()">Submit</button>
                             </div>
                         </div>
                      </div>

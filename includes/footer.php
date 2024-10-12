@@ -32,7 +32,7 @@
                 <!-- Footer Menu & Copyright Start -->
                 <div class="col-12 learts-mb-30">
                     <div class="footer5-copyright">
-                        <p class="copyright text-center">&copy; 2023 learts. All Rights Reserved | <strong>(+00) 123 567990</strong> | <a href="mailto:contact@learts.com">contact@learts.com</a></p>
+                        <p class="copyright text-center">&copy; 2024 Urbannest. All Rights Reserved | <strong>(+91) 1234567899</strong> | <a href="mailto:contact@urbannest.com">contact@urbannest.com</a></p>
                     </div>
                 </div>
                 <!-- Footer Menu & Copyright End -->

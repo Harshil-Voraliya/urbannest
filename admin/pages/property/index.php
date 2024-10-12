@@ -7,6 +7,7 @@ $propertydetails = select("SELECT * FROM PropertyDetails");
 include pathof('includes/header.php');
 ?>
   <body>
+  <link rel="stylesheet" href="../../assets/css/button.css">
     <!-- tap on top starts-->
     <div class="tap-top"><i data-feather="chevrons-up"></i></div>
     <!-- tap on tap ends-->
@@ -54,13 +55,8 @@ include pathof('includes/header.php');
                   <div class="col-md-12">
                     <div class="pro-filter-sec">
                       <div class="product-sidebar">
-                        <div class="filter-section">
-                          <div class="card">
-                            <div class="card-header">
                               <h6 class="mb-0 f-w-600"><a class="btn btn-outline-primary" href="./add.php">Add</a></h6>
-                            </div>
-                          </div>
-                        </div>
+                              <br><br>
                       </div>
                     </div>
                   </div>

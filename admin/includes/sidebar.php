@@ -15,16 +15,17 @@
 </head>
 
 <style>
-    .logo{
+    .logo {
         width: 150px;
         margin-left: 45px;
         /* height: 200px; */
         /* margin-bottom: 500px; */
     }
+
     /* .white{ */
-        /* color: white: */
+    /* color: white: */
     /* } */
-  </style>
+</style>
 
 <body>
     <div class="sidebar-wrapper">
@@ -59,64 +60,64 @@
                         <hr>
                         <li class="sidebar-list">
                             <i class="fa fa-thumb-tack"></i>
-                            <a class="sidebar-link sidebar-title" href="<?= urlOf('index.php')?>">
-                                <i data-feather="home"></i>
+                            <a class="sidebar-link sidebar-title" href="<?= urlOf('index.php') ?>">
+                                <i data-feather="grid"></i>
                                 <span class="lan-3">Dashboard</span>
                             </a>
                         </li>
                         <li class="sidebar-list">
                             <i class="fa fa-thumb-tack"></i>
-                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/property/index.php')?>">
-                                <i data-feather="box"></i>
+                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/property/index.php') ?>">
+                                <i data-feather="home"></i>
                                 <span>Property</span>
                             </a>
                         </li>
                         <li class="sidebar-list">
                             <i class="fa fa-thumb-tack"></i>
-                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/type/index.php')?>">
-                                <i data-feather="box"></i>
+                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/type/index.php') ?>">
+                                <i data-feather="layers"></i>
                                 <span>Property Type</span>
                             </a>
                         </li>
                         <li class="sidebar-list">
                             <i class="fa fa-thumb-tack"></i>
-                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/city/index.php')?>">
-                                <i data-feather="map-pin"></i>
-                                <span>City</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-list">
-                            <i class="fa fa-thumb-tack"></i>
-                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/state/index.php')?>">
+                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/state/index.php') ?>">
                                 <i data-feather="map"></i>
                                 <span>State</span>
                             </a>
                         </li>
                         <li class="sidebar-list">
                             <i class="fa fa-thumb-tack"></i>
-                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/order/index.php')?>">
-                                <!-- <i class="fas fa-shopping-cart white"></i> -->
-                                <i class="fa-solid fa-cart-shopping"></i>
-                                <span>Order</span>
+                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/city/index.php') ?>">
+                                <i data-feather="map-pin"></i>
+                                <span>City</span>
                             </a>
                         </li>
                         <li class="sidebar-list">
                             <i class="fa fa-thumb-tack"></i>
-                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/payment/index.php')?>">
+                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/order/index.php') ?>">
+                                <i data-feather="shopping-cart"></i>
+                                <span>Order</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-list">
+                            <i class="fa fa-thumb-tack"></i>
+                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/payment/index.php') ?>">
                                 <i data-feather="credit-card"></i>
                                 <span>Payment</span>
                             </a>
                         </li>
                         <li class="sidebar-list">
                             <i class="fa fa-thumb-tack"></i>
-                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/feedback/index.php')?>">
+                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/feedback/index.php') ?>">
                                 <i data-feather="message-circle"></i>
                                 <span>Feedback</span>
                             </a>
                         </li>
                         <li class="sidebar-list">
                             <i class="fa fa-thumb-tack"></i>
-                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/client/index.php')?>">
+                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/client/index.php') ?>">
                                 <i data-feather="users"></i>
                                 <span>Client</span>
                             </a>

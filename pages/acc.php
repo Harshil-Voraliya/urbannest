@@ -50,7 +50,7 @@ include pathOf('includes/navbar.php');
                         <!-- Single Tab Content Start -->
                         <div class="tab-pane fade show active" id="dashboad">
                             <div class="myaccount-content dashboad">
-                                <p>Hello <strong>didiv91396</strong> (not <strong>didiv91396</strong>? <a href="login-register.html">Log out</a>)</p>
+                                <p>Hello, <strong>Harshil Voraliya</strong></p>
                                 <p>From your account dashboard you can view your <span>recent orders</span>, manage your <span>shipping and billing addresses</span>, and <span>edit your password and account details</span>.</p>
                             </div>
                         </div>
@@ -135,24 +135,23 @@ include pathOf('includes/navbar.php');
                         <!-- Single Tab Content Start -->
                         <div class="tab-pane fade" id="address">
                             <div class="myaccount-content address">
-                                <p>The following addresses will be used on the checkout page by default.</p>
                                 <div class="row learts-mb-n30">
                                     <div class="col-md-6 col-12 learts-mb-30">
                                         <h4 class="title">Billing Address <a href="#" class="edit-link">edit</a></h4>
                                         <address>
-                                            <p><strong>Alex Tuntuni</strong></p>
+                                            <p><strong>Harshil Voraliya</strong></p>
                                             <p>1355 Market St, Suite 900 <br>
-                                                San Francisco, CA 94103</p>
-                                            <p>Mobile: (123) 456-7890</p>
+                                                Near DY Patil Stadium</p>
+                                            <p>Mobile: (+91) 1234567899</p>
                                         </address>
                                     </div>
                                     <div class="col-md-6 col-12 learts-mb-30">
                                         <h4 class="title">Shipping Address <a href="#" class="edit-link">edit</a></h4>
                                         <address>
-                                            <p><strong>Alex Tuntuni</strong></p>
-                                            <p>1355 Market St, Suite 900 <br>
-                                                San Francisco, CA 94103</p>
-                                            <p>Mobile: (123) 456-7890</p>
+                                            <p><strong>Jinal Varu</strong></p>
+                                            <p>1225 Main Market <br>
+                                                New Mumbai</p>
+                                            <p>Mobile: (+91) 9876543211</p>
                                         </address>
                                     </div>
                                 </div>
@@ -180,12 +179,12 @@ include pathOf('includes/navbar.php');
                                             </div>
                                             <div class="col-12 learts-mb-30">
                                                 <label for="display-name">Display Name <abbr class="required">*</abbr></label>
-                                                <input type="text" id="display-name" value="didiv91396">
+                                                <input type="text" id="display-name" value="Harshil Voraliya">
                                                 <p>This will be how your name will be displayed in the account section and in reviews</p>
                                             </div>
                                             <div class="col-12 learts-mb-30">
                                                 <label for="email">Email Addres <abbr class="required">*</abbr></label>
-                                                <input type="email" id="email" value="didiv91396@ismailgul.net">
+                                                <input type="email" id="email" value="harshil22@gmail.com">
                                             </div>
                                             <div class="col-12 learts-mb-30 learts-mt-30">
                                                 <fieldset>
