@@ -1,4 +1,3 @@
-
     <script src=<?= urlOf('assets/js/vendor/modernizr-3.6.0.min.js') ?>></script>
     <script src=<?= urlOf('assets/js/vendor/jquery-3.4.1.min.js') ?>></script>
     <script src=<?= urlOf('assets/js/vendor/jquery-migrate-3.1.0.min.js') ?>></script>
@@ -25,4 +24,6 @@
     <script src=<?= urlOf('assets/js/plugins/jquery.scrollUp.min.js') ?>></script>
     <script src=<?= urlOf('assets/js/plugins/scrollax.min.js') ?>></script>
     <script src=<?= urlOf('assets/js/main.js') ?>></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+    <script src="<?= urlOf('assets/js/vendor/vendor.min.js') ?>"></script>
+    <script src="<?= urlOf('assets/js/plugins/plugins.min.js') ?>"></script>

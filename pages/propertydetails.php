@@ -38,16 +38,35 @@
                 <div class="col-lg-6 col-12 learts-mb-40">
                     <div class="product-images">
                         <div class="product-gallery-slider">
+                            <div class="product-zoom" data-image="assets/images/product/single/1/product-zoom-1.webp">
+                                <img src="<?= urlOf('admin/assets/images/uploads/') . $propertydetails['ImageFileName'] ?>" alt="">
+                            </div>
+                            <div class="product-zoom" data-image="assets/images/product/single/1/product-zoom-2.webp">
+                                <img src="<?= urlOf('admin/assets/images/uploads/') . $propertydetails['ImageFileName2'] ?>" alt="">
+                            </div>
+                            <div class="product-zoom" data-image="assets/images/product/single/1/product-zoom-3.webp">
+                                <img src="<?= urlOf('admin/assets/images/uploads/') . $propertydetails['ImageFileName3'] ?>" alt="">
+                            </div>
+                            <div class="product-zoom" data-image="assets/images/product/single/1/product-zoom-4.webp">
+                                <img src="<?= urlOf('admin/assets/images/uploads/') . $propertydetails['ImageFileName4'] ?>" alt="">
+                            </div>
                         </div>
                         <div class="product-thumb-slider">
                             <div class="item">
                                 <img src="<?= urlOf('admin/assets/images/uploads/') . $propertydetails['ImageFileName'] ?>" alt="">
                             </div>
+                            <div class="item">
+                                <img src="<?= urlOf('admin/assets/images/uploads/') . $propertydetails['ImageFileName2'] ?>" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="<?= urlOf('admin/assets/images/uploads/') . $propertydetails['ImageFileName3'] ?>" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="<?= urlOf('admin/assets/images/uploads/') . $propertydetails['ImageFileName4'] ?>" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Product Images End -->
-
                 <!-- Product Summery Start -->
                 <div class="col-lg-6 col-12 learts-mb-40">
                     <div class="product-summery">
@@ -90,7 +109,9 @@
 
     </div>
     <!-- Single Products Section End -->
-
+<?php
+    include pathOf('includes/scripts.php');
+?>
 
     <script>
         function addToCart(PropertyId) {

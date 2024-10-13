@@ -55,6 +55,10 @@ CREATE TABLE PropertyDetails (
     `Description` TEXT,
     `Price` INT,
     `ImageFileName` VARCHAR(255) NOT NULL,
+    `ImageFileName2` VARCHAR(255) NOT NULL,
+    `ImageFileName3` VARCHAR(255) NOT NULL,
+    `ImageFileName4` VARCHAR(255) NOT NULL,
+    `ImageFileName5` VARCHAR(255) NOT NULL,
     FOREIGN KEY (`TypeId`) REFERENCES `PropertyType`(`Id`),
     FOREIGN KEY (`CityId`) REFERENCES `City`(`Id`),
     FOREIGN KEY (`StateId`) REFERENCES `State`(`Id`)

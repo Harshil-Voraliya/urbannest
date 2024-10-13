@@ -119,6 +119,30 @@ include pathof('includes/header.php');
                                                 <input class="form-control" type="file" id="Image" name="Image">
                                             </div>
                                     </div>
+                                    <div class="mb-3 row">
+                                        <label">Second Image</label>
+                                            <div class="col-sm-12">
+                                                <input class="form-control" type="file" id="Image2" name="Image2">
+                                            </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label">Third Image</label>
+                                            <div class="col-sm-12">
+                                                <input class="form-control" type="file" id="Image3" name="Image3">
+                                            </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label">Fourth Image</label>
+                                            <div class="col-sm-12">
+                                                <input class="form-control" type="file" id="Image4" name="Image4">
+                                            </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label">Fifth Image</label>
+                                            <div class="col-sm-12">
+                                                <input class="form-control" type="file" id="Image5" name="Image5">
+                                            </div>
+                                    </div>
 
                                     <div class="card-footer text-end">
                                         <div class="col-sm-9 offset-sm-3">
@@ -147,6 +171,10 @@ include pathof('includes/header.php');
             form.append('Description', $('#Description').val());
             form.append('Price', $('#Price').val());
             form.append('Image', $('#Image')[0].files[0]);
+            form.append('Image2', $('#Image2')[0].files[0]);
+            form.append('Image3', $('#Image3')[0].files[0]);
+            form.append('Image4', $('#Image4')[0].files[0]);
+            form.append('Image5', $('#Image5')[0].files[0]);
 
             $.ajax({
                 url: '../../api/property/insert.php',
