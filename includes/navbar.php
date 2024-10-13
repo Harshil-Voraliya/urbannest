@@ -1,3 +1,8 @@
+<?php
+    if (isset($_SESSION['UserId'])) {
+        $ClientId = $_SESSION['UserId'];
+    }
+?>
 <style>
     .white{
         width: 97px;
@@ -38,13 +43,18 @@
                 <div class="col">
                     <div class="header-tools justify-content-end">
                         <div class="header-login">
-                            <a href="<?= urlOf('pages/acc.php') ?>"><i class="far fa-user"></i></a>
+                            <?php if (!isset($_SESSION['UserId'])) { ?>
+                                <a href="<?= urlOf('pages/sign.php') ?>"><i class="far fa-user"></i></a>
+                                <?php } ?>
+                                <?php if (isset($_SESSION['UserId'])) { ?>
+                                    <a href="<?= urlOf('admin/api/logout/logout.php') ?>"><i class="fa-solid fa-right-from-bracket"></i></a>
+							<?php } ?>
                         </div>
                         <div class="header-wishlist">
-                            <a href="<?= urlOf('pages/wishlist.php') ?>"><span class="wishlist-count">3</span><i class="far fa-heart"></i></a>
+                            <a href="<?= urlOf('pages/wishlist.php') ?>"><i class="far fa-heart"></i></a>
                         </div>
                         <div class="header-cart">
-                            <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
+                            <a href="<?= urlOf('pages/cart.php') ?>" class="offcanvas-toggle"><i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
@@ -86,13 +96,13 @@
                 <div class="col">
                     <div class="header-tools justify-content-end">
                         <div class="header-login">
-                            <a href="<?= urlOf('pages/acc.php') ?>"><i class="far fa-user"></i></a>
+                            <a href="<?= urlOf('pages/sign.php') ?>"><i class="far fa-user"></i></a>
                         </div>
                         <div class="header-wishlist">
-                            <a href="#offcanvas-wishlist"><span class="wishlist-count">3</span><i class="far fa-heart"></i></a>
+                            <a href="<?= urlOf('pages/wishlist.php') ?>"><i class="far fa-heart"></i></a>
                         </div>
                         <div class="header-cart">
-                            <a href="#offcanvas-cart" class="offcanvas-toggle"><span class="cart-count">3</span><i class="fas fa-shopping-cart"></i></a>
+                            <a href="<?= urlOf('pages/cart.php') ?>" class="offcanvas-toggle"><i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
