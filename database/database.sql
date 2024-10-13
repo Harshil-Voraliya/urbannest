@@ -109,6 +109,7 @@ CREATE TABLE Payment (
     `OrderId` INT,
     `Date` DATE,
     `Amount` INT,
+    `Method` VARCHAR(255) NOT NULL,
     `Status` VARCHAR(255),
     FOREIGN KEY (`OrderId`) REFERENCES `Order`(`Id`)
 );
