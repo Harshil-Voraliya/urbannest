@@ -75,7 +75,7 @@ include pathof('includes/header.php');
                             <form action="./update.php" method="post">
                                   <td>
                                       <input type="hidden" value="<?= $state['Id'] ?>" id="Id" name="Id">
-                                      <button type="submit" class="btn btn-outline-success">Update</button>
+                                      <button type="submit" class="btn btn-outline-successx">Update</button>
                                   </td>
                               </form>
                             <td>

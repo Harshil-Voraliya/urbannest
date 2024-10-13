@@ -13,7 +13,6 @@ include pathOf('includes/navbar.php');
         <div class="container">
             <div class="row">
                 <div class="col">
-
                     <div class="page-title">
                         <h1 class="title">Shop</h1>
                         <ul class="breadcrumb">

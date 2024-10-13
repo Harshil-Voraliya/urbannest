@@ -90,7 +90,6 @@ include pathof('includes/header.php');
                           </tr>
                          <?php }?>
                         </tbody>
-
                         <tfoot>
                         <tr>
                             <th>SR No.</th>

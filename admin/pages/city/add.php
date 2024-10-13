@@ -59,7 +59,7 @@ include pathof('includes/header.php');
                 <div class="card-body">
                     <div class="mb-3 row">
                       <label class="form-label">State</label>
-                      <select class="form-select" id="StateId" name="StateId">
+                      <select class="form-select" id="StateId" name="StateId" autofocus>
                         <?php foreach ($states as $state): ?>
                           <option value="<?= $state['Id'] ?>"><?= $state['Name'] ?></option>
                         <?php endforeach; ?>

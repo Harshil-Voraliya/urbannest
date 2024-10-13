@@ -20,8 +20,6 @@ include pathOf('includes/navbar.php');
                         </ul>
                     </div>
 
-                </div>
-            </div>
         </div>
     </div>
     <!-- Page Title/Header End -->
