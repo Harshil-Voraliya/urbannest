@@ -88,6 +88,7 @@ CREATE TABLE `Order` (
     `CartId` INT,
     `TotalAmount` INT,
     `Status` VARCHAR(255),  
+    `Date` DATE NOT NULL,
     FOREIGN KEY (`CartId`) REFERENCES `Cart`(`Id`)
 );
 

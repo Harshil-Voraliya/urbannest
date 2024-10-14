@@ -14,6 +14,7 @@ $Phone = $_POST['Phone'];
 $Email = $_POST['Email'];
 $TotalPrice = $_POST['TotalPrice'];
 
+$currentDate = date('Y-m-d');
 // Insert into checkout
 $query = "INSERT INTO checkout (CartId, FirstName, LastName, Address, City, State, PinCode, Phone, Email) VALUES (?,?,?,?,?,?,?,?,?)";
 $param = [$CartId, $FirstName, $LastName, $Address, $City, $State, $PinCode, $Phone, $Email];    
@@ -22,8 +23,8 @@ echo json_encode(["status" => "success", "message" => "Checkout Submitted Succes
 
 // Order API
 $cartData = select("SELECT * FROM Cart WHERE Id = $CartId");
-$query = "INSERT INTO `Order` (CartId, TotalAmount, Status) VALUES (?,?,?)";  // Enclose Order in backticks
-$param = [$CartId, $TotalPrice, "Pending"];
+$query = "INSERT INTO `Order` (CartId, TotalAmount, Status, Date) VALUES (?,?,?,?)";  // Enclose Order in backticks
+$param = [$CartId, $TotalPrice, "Pending", $currentDate];
 execute($query, $param);
 echo json_encode(["status" => "success", "message" => "Order Submitted Successfully"]);
 
