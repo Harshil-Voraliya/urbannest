@@ -93,7 +93,7 @@
                 },
                 success: function(response) {
                     console.log(response.success);
-                    alert("Product added to Cart");
+                    alert("Property added to Cart");
                     // deleteWishlistItem(PropertyId); 
                     location.reload();
                 }

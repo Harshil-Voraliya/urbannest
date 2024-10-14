@@ -38,9 +38,9 @@ include pathof('includes/header.php');
                 </div>
                 <div class="col-sm-6">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index-2.html"><i data-feather="home"></i></a></li>
-                    <li class="breadcrumb-item"> Form Controls</li>
-                    <li class="breadcrumb-item active"> Validation Forms</li>
+                    <li class="breadcrumb-item"><a href="<?= urlOf('index.php') ?>"><i data-feather="home"></i></a></li>
+                    <li class="breadcrumb-item"> State</li>
+                    <li class="breadcrumb-item"> Add State</li>
                   </ol>
                 </div>
               </div>

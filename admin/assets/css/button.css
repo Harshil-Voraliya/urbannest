@@ -26,3 +26,23 @@ btn btn-outline-success */
 }
 
 
+/* Center the Add button */
+.custom-btn {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Align product box content using flexbox */
+  .product-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Adjust button spacing within the card */
+  .product-box .btn {
+    margin-top: 10px;
+  }
+  
+

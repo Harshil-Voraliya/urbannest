@@ -42,9 +42,8 @@ include pathof('includes/header.php');
               </div>
               <div class="col-sm-6">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index-2.html"><i data-feather="home"></i></a></li>
-                  <li class="breadcrumb-item"> Form Controls</li>
-                  <li class="breadcrumb-item active"> Validation Forms</li>
+                  <li class="breadcrumb-item"><a href=" <?= urlOf('index.php') ?>"><i data-feather="home"></i></a></li>
+                  <li class="breadcrumb-item "> Order </li>
                 </ol>
               </div>
             </div>
@@ -55,7 +54,7 @@ include pathof('includes/header.php');
         <div class="col-sm-12">
           <div class="card">
             <div class="card-header pb-0">
-              <a>Add</a><span>
+                  ` 
             </div>
             <div class="card-body">
               <div class="table-responsive theme-scrollbar">
@@ -79,7 +78,7 @@ include pathof('includes/header.php');
                         <td><?= $order['TotalAmount'] ?></td>
                         <td><?= $order['Status'] ?></td>
                         <input type="hidden" value="<?= $order['TotalAmount'] ?>" id="TotalAmount">
-                        <td><button class="btn btn-outline-success" onclick="insertData(<?= $order['Id'] ?>)">Delevered</button></td>
+                        <td><button class="btn btn-outline-success" onclick="insertData(<?= $order['Id'] ?>)">Dlevered</button></td>
                       </tr>
                     <?php endforeach; ?>
                   </tbody>
@@ -117,7 +116,7 @@ include pathof('includes/header.php');
           TotalAmount: TotalAmount
         },
         success: function(response) {
-          alert("Order Successful");
+          alert("Order Successfully Added !");
           location.reload();
         },
         error: function(response) {

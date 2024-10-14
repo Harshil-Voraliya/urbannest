@@ -62,13 +62,12 @@ include pathof('includes/header.php');
             <div class="page-title">
               <div class="row">
                 <div class="col-sm-6">
-                  <h3>Order</h3>
+                  <h3>Payment</h3>
                 </div>
                 <div class="col-sm-6">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index-2.html"><i data-feather="home"></i></a></li>
-                    <li class="breadcrumb-item"> Form Controls</li>
-                    <li class="breadcrumb-item active"> Validation Forms</li>
+                    <li class="breadcrumb-item"><a href= <?= urlOf('index.php') ?>><i data-feather="home"></i></a></li>
+                    <li class="breadcrumb-item"> Payment </li>
                   </ol>
                 </div>
               </div>
@@ -79,7 +78,6 @@ include pathof('includes/header.php');
           <div class="col-sm-12">
                 <div class="card">
                   <div class="card-header pb-0">
-                    <a>Add</a><span>
                   </div>
                   <div class="card-body">
                     <div class="table-responsive theme-scrollbar">
@@ -129,7 +127,6 @@ include pathof('includes/header.php');
    
   </body>
 
-<!-- Mirrored from admin.pixelstrap.com/tivo/template/form-validation.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Aug 2024 06:31:11 GMT -->
 </html>
 
 <?php

@@ -14,14 +14,8 @@ include pathOf('includes/navbar.php');
             <div class="row">
                 <div class="col">
                     <div class="page-title">
-                        <h1 class="title">Shop</h1>
-                        <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="<?= urlOf('index.php') ?>">Home</a></li>
-                            <li class="breadcrumb-item active">Products</li>
-                        </ul>
+                        <h1 class="title">Property</h1>
                     </div>
-
-                </div>
             </div>
         </div>
     </div>
@@ -34,33 +28,8 @@ include pathOf('includes/navbar.php');
         <div class="shop-toolbar border-bottom">
             <div class="container">
                 <div class="row learts-mb-n20">
-
-                    <!-- Isotop Filter Start -->
-                    <div class="col-md col-12 align-self-center learts-mb-20">
-                        <div class="isotope-filter shop-product-filter" data-target="#shop-products">
-                            <button class="active" data-filter="*">all</button>
-                            <button data-filter=".featured">Hot Products</button>
-                            <button data-filter=".new">New Products</button>
-                            <button data-filter=".sales">Sales Products</button>
-                        </div>
-                    </div>
-                    <!-- Isotop Filter End -->
-
-                    <div class="col-md-auto col-12 learts-mb-20">
+                <div class="col-md-auto col-12 learts-mb-20">
                         <ul class="shop-toolbar-controls">
-
-                            <li>
-                                <div class="product-sorting">
-                                    <select class="nice-select">
-                                        <option value="menu_order" selected="selected">Default sorting</option>
-                                        <option value="popularity">Sort by popularity</option>
-                                        <option value="rating">Sort by average rating</option>
-                                        <option value="date">Sort by latest</option>
-                                        <option value="price">Sort by price: low to high</option>
-                                        <option value="price-desc">Sort by price: high to low</option>
-                                    </select>
-                                </div>
-                            </li>
                             <li>
                                 <div class="product-column-toggle d-none d-xl-flex">
                                     <button class="toggle active hintT-top" data-hint="5 Column" data-column="5"><i class="ti-layout-grid4-alt"></i></button>
@@ -68,10 +37,6 @@ include pathOf('includes/navbar.php');
                                     <button class="toggle hintT-top" data-hint="3 Column" data-column="3"><i class="ti-layout-grid2-alt"></i></button>
                                 </div>
                             </li>
-                            <li>
-                                <a class="product-filter-toggle" href="#product-filter">Filters</a>
-                            </li>
-
                         </ul>
                     </div>
 

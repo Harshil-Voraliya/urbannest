@@ -16,15 +16,6 @@
 
                     <div class="page-title">
                         <h1 class="title">Cart</h1>
-                        <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
-                            <li class="breadcrumb-item active">Cart</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </div>
     </div>
     <!-- Page Title/Header End -->
 
