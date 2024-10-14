@@ -35,13 +35,12 @@ include pathof('includes/header.php');
             <div class="page-title">
               <div class="row">
                 <div class="col-sm-6">
-                  <h3>Product</h3>
+                  <h3>Property</h3>
                 </div>
                 <div class="col-sm-6">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index-2.html"><i data-feather="home"></i></a></li>
-                    <li class="breadcrumb-item">ECommerce</li>
-                    <li class="breadcrumb-item active">Product</li>
+                    <li class="breadcrumb-item"><a href="<?= urlOf('index.php') ?>"><i data-feather="home"></i></a></li>
+                    <li class="breadcrumb-item active">Property</li>
                   </ol>
                 </div>
               </div>
@@ -98,7 +97,7 @@ include pathof('includes/header.php');
                           <p><?= $propertydetail['Address'] ?></p>
                           <div class="product-price"><?= $propertydetail['Price'] ?></div>
                           <a class="btn btn-outline-success" href="./update.php">Update</a>
-                          <a class="btn btn-outline-danger" href="./add.php">Delete</a>
+                          <button type="button" class="btn btn-outline-danger" onclick="deleteData(<?= $propertydetail['Id'] ?>)">Delete</button>
                           </div>
                         </div>
                       </div>
@@ -114,7 +113,7 @@ include pathof('includes/header.php');
     </div>
 
     <script>
-    function deleteProduct(Id) {
+    function deleteData(Id) {
       if (confirm("Are you sure you want to delete this Property?")) {
         $.ajax({
           url: "../../api/property/delete.php",

@@ -1,8 +1,6 @@
 <?php
 require '../../includes/init.php';
 
-$Id = $_POST['Id'];
-$propertys = selectOne("SELECT * FROM Propertydetail WHERE Id = $Id");
 $types = select("SELECT * FROM PropertyType");
 $cities = select("SELECT * FROM City");
 $states = select("SELECT * FROM State");
@@ -41,13 +39,14 @@ include pathof('includes/header.php');
                     <div class="page-title">
                         <div class="row">
                             <div class="col-sm-6">
-                                <h3>Add Role</h3>
+                                <h3>Update Property</h3>
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index-2.html"><i data-feather="home"></i></a></li>
-                                    <li class="breadcrumb-item"> Form Controls</li>
-                                    <li class="breadcrumb-item active"> Validation Forms</li>
+                                    <li class="breadcrumb-item"><a href="<?= urlOf('index.php') ?>"><i data-feather="home"></i></a></li>
+                                    <li class="breadcrumb-item "> Property </li>
+                                    <li class="breadcrumb-item active"> Update Property </li>
+
                                 </ol>
                             </div>
                         </div>
@@ -121,10 +120,34 @@ include pathof('includes/header.php');
                                                 <input class="form-control" type="file" id="Image" name="Image">
                                             </div>
                                     </div>
+                                    <div class="mb-3 row">
+                                        <label">Second Image</label>
+                                            <div class="col-sm-12">
+                                                <input class="form-control" type="file" id="Image2" name="Image2">
+                                            </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label">Third Image</label>
+                                            <div class="col-sm-12">
+                                                <input class="form-control" type="file" id="Image3" name="Image3">
+                                            </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label">Fourth Image</label>
+                                            <div class="col-sm-12">
+                                                <input class="form-control" type="file" id="Image4" name="Image4">
+                                            </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label">Fifth Image</label>
+                                            <div class="col-sm-12">
+                                                <input class="form-control" type="file" id="Image5" name="Image5">
+                                            </div>
+                                    </div>
 
                                     <div class="card-footer text-end">
                                         <div class="col-sm-9 offset-sm-3">
-                                            <button class="btn btn-primary" type="submit" onclick="sendData()">Submit</button>
+                                            <button class="btn btn-outline-primary" type="submit" onclick="sendData()">Submit</button>
                                         </div>
                                     </div>
                                 </div>
@@ -138,7 +161,7 @@ include pathof('includes/header.php');
     </div>
     </div>
     <script>
-        function updateData() {
+        function sendData() {
             var form = new FormData();
             form.append('TypeId', $('#TypeId').val());
             form.append('CityId', $('#CityId').val());
@@ -149,23 +172,21 @@ include pathof('includes/header.php');
             form.append('Description', $('#Description').val());
             form.append('Price', $('#Price').val());
             form.append('Image', $('#Image')[0].files[0]);
+            form.append('Image2', $('#Image2')[0].files[0]);
+            form.append('Image3', $('#Image3')[0].files[0]);
+            form.append('Image4', $('#Image4')[0].files[0]);
+            form.append('Image5', $('#Image5')[0].files[0]);
 
-
-            // console.log(form);
             $.ajax({
-                url: '../../api/property/update.php',
+                url: '../../api/property/insert.php',
                 method: 'POST',
                 data: form,
                 processData: false,
                 contentType: false,
                 success: function(response) {
-                    console.log(response.success);
-                    if (response.success !== true)
-                        return;
-                    alert('Property Updated!');
+                    alert("Product Added");
                     window.location.href = './index.php';
                 }
-
             })
         }
     </script>

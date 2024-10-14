@@ -46,12 +46,12 @@ require '../../includes/init.php';
                   <p class="text-center">Enter your email & password to login</p>
                   <div class="form-group">
                     <label class="col-form-label">User Name</label>
-                    <input class="form-control" type="text" id="Username" name="Username">
+                    <input class="form-control" type="text" id="Username" name="Username" autofocus>
                   </div>
                   <div class="form-group">
                     <label class="col-form-label">Password</label>
                     <div class="form-input position-relative">
-                      <input class="form-control" type="password" id="Password" name="Password">
+                      <input class="form-control" type="password" id="Password" name="Password" autofocus>
                     </div>
                   </div>
                   <div class="form-group mb-0">

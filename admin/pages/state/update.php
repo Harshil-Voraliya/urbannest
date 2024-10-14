@@ -1,9 +1,5 @@
 <?php
 require '../../includes/init.php';
-
-$Id = $_POST['Id'];
-$states = selectOne("SELECT * FROM state WHERE Id = $Id");
-
 include pathof('includes/header.php');
 ?>
 
@@ -42,9 +38,9 @@ include pathof('includes/header.php');
                 </div>
                 <div class="col-sm-6">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index-2.html"><i data-feather="home"></i></a></li>
-                    <li class="breadcrumb-item"> Form Controls</li>
-                    <li class="breadcrumb-item active"> Validation Forms</li>
+                    <li class="breadcrumb-item"><a href="<?= urlOf('index.php') ?>"><i data-feather="home"></i></a></li>
+                    <li class="breadcrumb-item"> State</li>
+                    <li class="breadcrumb-item"> Update State</li>
                   </ol>
                 </div>
               </div>
@@ -57,17 +53,16 @@ include pathof('includes/header.php');
                 <div class="card">
                   <div class="card-header pb-0">
                   </div>
-                  <input class="form-control" type="hidden" value="<?= $states['Id'] ?>" id="Id" name="Id">
                   <div class="card-body">
                         <div class="mb-3 row">
                             <label">Name</label>
                             <div class="col-sm-12">
-                              <input class="form-control" type="text" value="<?= $states['Name'] ?>" id="Name" name="Name" autofocus>
+                              <input class="form-control" type="text" id="Name" name="Name" autofocus placeholder="Enter state ">
                             </div>
                           </div>
                         <div class="card-footer text-end">
                             <div class="col-sm-9 offset-sm-3">
-                              <button class="btn btn-primary" type="submit" onclick="updateData()">Submit</button>
+                              <button class="btn btn-outline-primary" type="submit" onclick="insertData()">Submit</button>
                             </div>
                         </div>
                      </div>
@@ -80,27 +75,28 @@ include pathof('includes/header.php');
         </div>
       </div>
     </div>
-  </body>
-  <script>
-  function updateData() {
-    var Id = $('#Id').val();
-    var Name = $('#Name').val();
-    $.ajax({
-      type: 'POST',
-      url: '../../api/state/update.php',
-      data: {
-        Id: Id,
-        Name: Name
-      },
-      success: function(response) {
-          console.log(response.success);
-          alert("State Updated");
-          window.location.href = './index.php';
+
+    <script>
+      function insertData() {
+        var Name = $("#Name").val();
+
+        $.ajax({
+          url: '../../api/state/insert.php',
+          type: 'POST',
+          data: {
+            Name: Name
+          }, 
+          success: function (response) {
+                console.log(response.success);
+                alert("State Added");
+                window.location.href = './index.php';
+            }
+        });
       }
-    });
-  }
-</script>
-  
+    </script>
+   
+  </body>
+
 </html>
 
 <?php

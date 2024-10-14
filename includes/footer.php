@@ -2,22 +2,9 @@
     <!-- Footer Section Start -->
     <div class="section section-padding bg-light">
         <div class="container">
-            <div class="row learts-mb-n30">
+            <div class="row learts-mb-n30"> 
 
-                <!-- Footer Menu & Copyright Start -->
-                <div class="col-12 learts-mb-30">
-                    <div class="footer5-menu">
-                        <ul class="widget-menu justify-content-center">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">Policy</a></li>
-                            <li><a href="#">FAQs</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Footer Menu & Copyright End -->
-
+             
                 <!-- Footer Social Start -->
                 <div class="footer5-social align-self-end col-12 learts-mb-30">
                     <ul class="widget-social justify-content-center">

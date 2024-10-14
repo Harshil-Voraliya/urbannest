@@ -67,6 +67,13 @@
                         </li>
                         <li class="sidebar-list">
                             <i class="fa fa-thumb-tack"></i>
+                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/client/index.php') ?>">
+                                <i data-feather="users"></i>
+                                <span>Client</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-list">
+                            <i class="fa fa-thumb-tack"></i>
                             <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/property/index.php') ?>">
                                 <i data-feather="home"></i>
                                 <span>Property</span>
@@ -103,6 +110,13 @@
 
                         <li class="sidebar-list">
                             <i class="fa fa-thumb-tack"></i>
+                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/checkouts/index.php') ?>">
+                                <i data-feather="shopping-bag"></i>
+                                <span>Checkout</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-list">
+                            <i class="fa fa-thumb-tack"></i>
                             <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/payment/index.php') ?>">
                                 <i data-feather="credit-card"></i>
                                 <span>Payment</span>
@@ -113,13 +127,6 @@
                             <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/feedback/index.php') ?>">
                                 <i data-feather="message-circle"></i>
                                 <span>Feedback</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-list">
-                            <i class="fa fa-thumb-tack"></i>
-                            <a class="sidebar-link sidebar-title" href="<?= urlOf('pages/client/index.php') ?>">
-                                <i data-feather="users"></i>
-                                <span>Client</span>
                             </a>
                         </li>
                     </ul>

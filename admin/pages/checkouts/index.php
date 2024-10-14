@@ -40,13 +40,12 @@ include pathof('includes/header.php');
                     <div class="page-title">
                         <div class="row">
                             <div class="col-sm-6">
-                                <h3>City</h3>
+                                <h3>Checkout</h3>
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index-2.html"><i data-feather="home"></i></a></li>
-                                    <li class="breadcrumb-item"> Form Controls</li>
-                                    <li class="breadcrumb-item active"> Validation Forms</li>
+                                    <li class="breadcrumb-item"><a href="<?= urlOf('index.php') ?>"><i data-feather="home"></i></a></li>
+                                    <li class="breadcrumb-item"> Checkout</li>
                                 </ol>
                             </div>
                         </div>
