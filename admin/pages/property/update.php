@@ -1,6 +1,8 @@
 <?php
 require '../../includes/init.php';
 
+$Id = $_POST['Id'];
+$property = selectOne("SELECT * FROM propertydetails WHERE Id = $Id");
 $types = select("SELECT * FROM PropertyType");
 $cities = select("SELECT * FROM City");
 $states = select("SELECT * FROM State");
@@ -60,6 +62,7 @@ include pathof('includes/header.php');
                                 <div class="card-header pb-0">
                                 </div>
                                 <div class="card-body">
+                                <input type="hidden" id="Id" name="Id" value="<?= $property['Id'] ?>">
                                     <div class="mb-3 row">
                                         <label class="form-label" for="validationCustom04">Type</label>
                                         <select class="form-select" id="TypeId" name="TypeId">
@@ -87,64 +90,68 @@ include pathof('includes/header.php');
                                     <div class="mb-3 row">
                                         <label">Name</label>
                                             <div class="col-sm-12">
-                                                <input class="form-control" type="text" id="PropertyName" name="PropertyName">
+                                                <input class="form-control" type="text" id="PropertyName" name="PropertyName" value="<?= $property['PropertyName'] ?>">
                                             </div>
                                     </div>
                                     <div class="mb-3 row">
                                         <label">Address</label>
                                             <div class="col-sm-12">
-                                                <input class="form-control" type="text" id="Address" name="Address">
+                                                <input class="form-control" type="text" id="Address" name="Address" value="<?= $property['Address'] ?>">
                                             </div>
                                     </div>
                                     <div class="mb-3 row">
                                         <label">Sqft</label>
                                             <div class="col-sm-12">
-                                                <input class="form-control" type="number" id="Sqft" name="Sqft">
+                                                <input class="form-control" type="number" id="Sqft" name="Sqft" value="<?= $property['Sqft'] ?>">
                                             </div>
                                     </div>
                                     <div class="mb-3 row">
                                         <label">Description</label>
                                             <div class="col-sm-12">
-                                                <input class="form-control" type="text" id="Description" name="Description">
+                                                <input class="form-control" type="text" id="Description" name="Description" value="<?= $property['Description'] ?>">
                                             </div>
                                     </div>
                                     <div class="mb-3 row">
                                         <label">Price</label>
                                             <div class="col-sm-12">
-                                                <input class="form-control" type="number" id="Price" name="Price">
+                                                <input class="form-control" type="number" id="Price" name="Price" value="<?= $property['Price'] ?>">
                                             </div>
                                     </div>
                                     <div class="mb-3 row">
                                         <label">Image</label>
                                             <div class="col-sm-12">
-                                                <input class="form-control" type="file" id="Image" name="Image">
+                                    <img src="<?= urlOf('assets/images/uploads/') . $property['ImageFileName'] ?>" style="height: 250px; width: 350px;">
+                                                <input class="form-control" type="file" id="Image" name="Image" value="<?= $property['ImageFileName'] ?>">
                                             </div>
                                     </div>
                                     <div class="mb-3 row">
                                         <label">Second Image</label>
                                             <div class="col-sm-12">
-                                                <input class="form-control" type="file" id="Image2" name="Image2">
+                                    <img src="<?= urlOf('assets/images/uploads/') . $property['ImageFileName2'] ?>" style="height: 250px; width: 350px;">
+                                                <input class="form-control" type="file" id="Image2" name="Image2" value="<?= $property['ImageFileName2'] ?>">
                                             </div>
                                     </div>
                                     <div class="mb-3 row">
                                         <label">Third Image</label>
                                             <div class="col-sm-12">
-                                                <input class="form-control" type="file" id="Image3" name="Image3">
+                                    <img src="<?= urlOf('assets/images/uploads/') . $property['ImageFileName3'] ?>" style="height: 250px; width: 350px;">
+                                                <input class="form-control" type="file" id="Image3" name="Image3" value="<?= $property['ImageFileName3'] ?>">
                                             </div>
                                     </div>
                                     <div class="mb-3 row">
                                         <label">Fourth Image</label>
                                             <div class="col-sm-12">
-                                                <input class="form-control" type="file" id="Image4" name="Image4">
+                                    <img src="<?= urlOf('assets/images/uploads/') . $property['ImageFileName4'] ?>" style="height: 250px; width: 350px;">
+                                                <input class="form-control" type="file" id="Image4" name="Image4" value="<?= $property['ImageFileName4'] ?>">
                                             </div>
                                     </div>
                                     <div class="mb-3 row">
                                         <label">Fifth Image</label>
                                             <div class="col-sm-12">
-                                                <input class="form-control" type="file" id="Image5" name="Image5">
+                                    <img src="<?= urlOf('assets/images/uploads/') . $property['ImageFileName5'] ?>" style="height: 250px; width: 350px;">
+                                                <input class="form-control" type="file" id="Image5" name="Image5" value="<?= $property['ImageFileName5'] ?>">
                                             </div>
                                     </div>
-
                                     <div class="card-footer text-end">
                                         <div class="col-sm-9 offset-sm-3">
                                             <button class="btn btn-outline-primary" type="submit" onclick="sendData()">Submit</button>
@@ -163,6 +170,7 @@ include pathof('includes/header.php');
     <script>
         function sendData() {
             var form = new FormData();
+            form.append('Id', $('#Id').val());
             form.append('TypeId', $('#TypeId').val());
             form.append('CityId', $('#CityId').val());
             form.append('StateId', $('#StateId').val());
@@ -178,7 +186,7 @@ include pathof('includes/header.php');
             form.append('Image5', $('#Image5')[0].files[0]);
 
             $.ajax({
-                url: '../../api/property/insert.php',
+                url: '../../api/property/update.php',
                 method: 'POST',
                 data: form,
                 processData: false,
@@ -194,7 +202,7 @@ include pathof('includes/header.php');
                         setTimeout(function() {
                             location.reload();
                         }, 2000);
-                    }
+                   }
             })
         }
     </script>
