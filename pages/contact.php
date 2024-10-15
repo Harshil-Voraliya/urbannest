@@ -77,10 +77,10 @@ include pathOf('includes/navbar.php');
                     <div class="contact-form">
                         <form action="https://htmldemo.net/learts/learts/assets/php/contact-mail.php" id="contact-form" method="post">
                             <div class="row learts-mb-n30">
-                                <div class="col-md-6 col-12 learts-mb-30"><input type="text" placeholder="Your Name *" name="name"></div>
-                                <div class="col-md-6 col-12 learts-mb-30"><input type="email" placeholder="Email *" name="email"></div>
-                                <div class="col-12 learts-mb-30"><textarea name="message" placeholder="Message"></textarea></div>
-                                <div class="col-12 text-center learts-mb-30"><button class="btn btn-dark btn-outline-hover-dark">Submit</button></div>
+                                <div class="col-md-6 col-12 learts-mb-30"><input type="text" placeholder="Your Name *" name="name" id="Name"></div>
+                                <div class="col-md-6 col-12 learts-mb-30"><input type="email" placeholder="Email *" name="email" id="Email"></div>
+                                <div class="col-12 learts-mb-30"><textarea name="message" placeholder="Message" id="Message"></textarea></div>
+                                <div class="col-12 text-center learts-mb-30"><button class="btn btn-dark btn-outline-hover-dark" onclick="insertData()">Submit</button></div>
                             </div>
                         </form>
                         <p class="form-messege"></p>
@@ -100,7 +100,16 @@ include pathOf('includes/navbar.php');
             Email = $("#Email").val();
             Message = $("#Message").val();
             $.ajax({
-                url: "../admin/api/feedback/insert.php"
+                url: "../admin/api/feedback/insert.php",
+                type: 'POST',
+                data: {
+                    Name: Name,
+                    Email: Email,
+                    Message: Message
+                },
+                success: function(response){
+                    alert("Success!");
+                }
             });
         }
     </script>

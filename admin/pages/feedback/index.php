@@ -1,5 +1,7 @@
 <?php
 require '../../includes/init.php';
+$index = 0;
+$feedbacks = select("SELECT * FROM feedback");
 include pathof('includes/header.php');
 ?>
 
@@ -56,26 +58,27 @@ include pathof('includes/header.php');
                         <thead>
                           <tr>
                             <th>SR No.</th>
-                            <th>User</th>
-                            <th>Property</th>
-                            <th>Rating</th>
-                            <th>Comments</th>
-                            <th>Date</th>
-                            <th>Update</th>
-                            <th>Delete</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Message</th>
                           </tr>
                         </thead>
-                        
+                        <tbody>
+                          <?php foreach($feedbacks as $feedback) { ?>
+                            <tr>
+                              <td><?= $index += 1 ?></td>
+                              <td><?= $feedback['Name'] ?></td>
+                              <td><?= $feedback['Email'] ?></td>
+                              <td><?= $feedback['Message'] ?></td>
+                            </tr>
+                            <?php } ?>
+                        </tbody>
                         <tfoot>
                         <tr>
                             <th>SR No.</th>
-                            <th>User</th>
-                            <th>Property</th>
-                            <th>Rating</th>
-                            <th>Comments</th>
-                            <th>Date</th>
-                            <th>Update</th>
-                            <th>Delete</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Message</th>
                           </tr>
                         </tfoot>
                       </table>

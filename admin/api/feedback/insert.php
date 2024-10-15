@@ -7,7 +7,7 @@
     $Email = $_POST['Email'];
     $Message = $_POST['Message'];
 
-    $query = "INSERT INTO feedbacks (Name,Email, Message) VALUES (?, ?, ?)";
+    $query = "INSERT INTO feedback (Name,Email, Message) VALUES (?, ?, ?)";
     $param = [$Name, $Email, $Message];
 
     execute($query, $param);

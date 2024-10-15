@@ -26,7 +26,8 @@ CREATE TABLE Client (
 -- Create the state table
 CREATE TABLE State (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
-    `Name` VARCHAR(255) NOT NULL
+    `Name` VARCHAR(255) NOT NULL,
+    `IsDeleted` VARCHAR(255) DEFAULT 1
 );
 
 -- Create the city table
@@ -34,13 +35,15 @@ CREATE TABLE City (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
     `StateId` INT,
     `Name` VARCHAR(255) NOT NULL,
+    `IsDeleted` VARCHAR(255) DEFAULT 1,
     FOREIGN KEY (`StateId`) REFERENCES State(`Id`)
 );
 
 -- Create the property type table
 CREATE TABLE PropertyType (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
-    `Name` VARCHAR(255) NOT NULL
+    `Name` VARCHAR(255) NOT NULL,
+    `IsDeleted` VARCHAR(255) DEFAULT 1
 );
 
 -- Create the property details table
@@ -59,6 +62,7 @@ CREATE TABLE PropertyDetails (
     `ImageFileName3` VARCHAR(255) NOT NULL,
     `ImageFileName4` VARCHAR(255) NOT NULL,
     `ImageFileName5` VARCHAR(255) NOT NULL,
+    `IsDeleted` VARCHAR(255) DEFAULT 1,
     FOREIGN KEY (`TypeId`) REFERENCES `PropertyType`(`Id`),
     FOREIGN KEY (`CityId`) REFERENCES `City`(`Id`),
     FOREIGN KEY (`StateId`) REFERENCES `State`(`Id`)
@@ -69,6 +73,7 @@ CREATE TABLE Wishlist (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
     `ClientId` INT NOT NULL,
     `PropertyId` INT NOT NULL,
+    `IsDeleted` VARCHAR(255) DEFAULT 1,
     FOREIGN KEY (`ClientId`) REFERENCES `Client`(`Id`),
     FOREIGN KEY (`PropertyId`) REFERENCES `PropertyDetails`(`Id`)
 );
@@ -78,6 +83,7 @@ CREATE TABLE Cart (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
     `PropertyId` INT NOT NULL,
     `ClientId` INT NOT NULL,
+    `IsDeleted` VARCHAR(255) DEFAULT 1,
     FOREIGN KEY (`PropertyId`) REFERENCES `PropertyDetails`(`Id`),
     FOREIGN KEY (`ClientId`) REFERENCES `Client`(`Id`)
 );
@@ -123,6 +129,7 @@ CREATE TABLE Payment (
 CREATE TABLE Feedback (
     `Id` INT AUTO_INCREMENT PRIMARY KEY,
     `Name` VARCHAR(50) NOT NULL,
+    `Email` VARCHAR(50) NOT NULL,
     `Message` TEXT
 );
 
