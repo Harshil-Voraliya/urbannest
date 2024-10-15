@@ -8,7 +8,7 @@
 
     <!-- Parallax Banner Start -->
     <div class="parallax-banner parallax-banner-1" data-scrollax-parent="true">
-        <div class="parallax-image" data-scrollax="properties: { translateY: '30%' }"><img src="assets/images/out/4.jpg" alt="parallax-1" /></div>
+        <div class="parallax-image" data-scrollax="properties: { translateY: '30%' }"><img src="assets/images/out/20.jpg" alt="parallax-1" /></div>
         <div class="content text-center" data-scrollax="properties: { opacity: '2' }">
             <!-- <span class="sub-title">Large</span> -->
             <!-- <a href="shop.html" class="btn btn-light btn-hover-dark">shop now</a> -->
@@ -42,7 +42,7 @@
     <br>
     <!-- Parallax Banner Start -->
     <div class="parallax-banner parallax-banner-4" data-scrollax-parent="true">
-        <div class="parallax-image" data-scrollax="properties: { translateY: '30%' }"><img src="assets/images/out/4.jpg" alt="parallax-4" /></div>
+        <div class="parallax-image" data-scrollax="properties: { translateY: '30%' }"><img src="assets/images/out/3.jpg" alt="parallax-4" /></div>
         <div class="content">
             <span class="sub-title">made for you</span>
             <h2 class="title">Salmon Cutting Board Blue Stone</h2>

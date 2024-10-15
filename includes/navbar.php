@@ -5,10 +5,10 @@
 ?>
 <style>
     .white{
-        width: 97px;
+        width: 140px;
     }
     .menu-text{
-        color: black;
+        color: white;
     }
 </style>
 
@@ -23,7 +23,7 @@
                 <!-- Header Logo Start -->
                 <div class="col">
                     <div class="header-logo">
-                        <a href="index-2.html"><img src="<?= urlOf('assets/images/logo/black.png') ?>" alt="Learts Logo"></a>
+                        <a href="#"><img src="<?= urlOf('assets/images/logo/black.png') ?>" alt="Learts Logo"></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->
@@ -44,17 +44,17 @@
                     <div class="header-tools justify-content-end">
                         <div class="header-login">
                             <?php if (!isset($_SESSION['UserId'])) { ?>
-                                <a href="<?= urlOf('pages/sign.php') ?>"><i class="far fa-user"></i></a>
+                                <a href="<?= urlOf('pages/sign.php') ?>"><i class="far fa-user" style="color: #ffffff;"></i></a>
                                 <?php } ?>
                                 <?php if (isset($_SESSION['UserId'])) { ?>
-                                    <a href="<?= urlOf('admin/api/logout/logout.php') ?>"><i class="fa-solid fa-right-from-bracket"></i></a>
+                                    <a href="<?= urlOf('admin/api/logout/logout.php') ?>"><i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i></a>
 							<?php } ?>
                         </div>
                         <div class="header-wishlist">
-                            <a href="<?= urlOf('pages/wishlist.php') ?>"><i class="far fa-heart"></i></a>
+                            <a href="<?= urlOf('pages/wishlist.php') ?>"><i class="far fa-heart" style="color: #ffffff;"></i></a>
                         </div>
                         <div class="header-cart">
-                            <a href="<?= urlOf('pages/cart.php') ?>" class="offcanvas-toggle"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="<?= urlOf('pages/cart.php') ?>" class="offcanvas-toggle"><i class="fas fa-shopping-cart" style="color: #ffffff;"></i></a>
                         </div>
                     </div>
                 </div>
@@ -67,21 +67,22 @@
     <!-- Header Section End -->
 
     <!-- Header Sticky Section Start -->
-    <div class="sticky-header header-menu-center section section-fluid bg-white d-none d-xl-block">
+    <div class="sticky-header header-menu-center section section-fluid bg-black d-none d-xl-block">
         <div class="container">
             <div class="row align-items-center">
 
                 <!-- Header Logo Start -->
                 <div class="col">
                     <div class="header-logo white">
-                        <a href="index-2.html"><img src="<?= urlOf('assets/images/logo/white.png') ?>" alt="Logo"></a>
+                        <a href="#"><img src="<?= urlOf('assets/images/logo/black.png') ?>" alt="Logo"></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->
 
                 <!-- Search Start -->
+                 
                 <div class="col">
-                    <nav class="site-main-menu justify-content-center">
+                    <nav class="site-main-menu justify-content-center nav">
                         <ul>
                             <li class=""><a href="<?= urlOf('index.php') ?>"><span class="menu-text">Home</span></a></li>
                             <li class=""><a href="<?= urlOf('pages/propertylist.php') ?>"><span class="menu-text">Property</span></a></li>
@@ -96,13 +97,13 @@
                 <div class="col">
                     <div class="header-tools justify-content-end">
                         <div class="header-login">
-                            <a href="<?= urlOf('pages/sign.php') ?>"><i class="far fa-user"></i></a>
+                            <a href="<?= urlOf('pages/sign.php') ?>"><i class="far fa-user" style="color: #ffffff;"></i></a>
                         </div>
                         <div class="header-wishlist">
-                            <a href="<?= urlOf('pages/wishlist.php') ?>"><i class="far fa-heart"></i></a>
+                            <a href="<?= urlOf('pages/wishlist.php') ?>"><i class="far fa-heart" style="color: #ffffff;"></i></a>
                         </div>
                         <div class="header-cart">
-                            <a href="<?= urlOf('pages/cart.php') ?>" class="offcanvas-toggle"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="<?= urlOf('pages/cart.php') ?>" class="offcanvas-toggle"><i class="fas fa-shopping-cart" style="color: #ffffff;"></i></a>
                         </div>
                     </div>
                 </div>
@@ -121,7 +122,7 @@
                 <!-- Header Logo Start -->
                 <div class="col">
                     <div class="header-logo">
-                        <a href="index-2.html"><img src="assets/images/logo/black.png" alt="Learts Logo"></a>
+                        <a href="#"><img src="assets/images/logo/black.png" alt="Learts Logo"></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->
@@ -161,7 +162,7 @@
                 <!-- Header Logo Start -->
                 <div class="col">
                     <div class="header-logo">
-                        <a href="index-2.html"><img src="assets/images/logo/black.png" alt="Learts Logo"></a>
+                        <a href="#"><img src="assets/images/logo/black.png" alt="Learts Logo"></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->

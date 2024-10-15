@@ -15,6 +15,11 @@ $totalMonthlySales = selectOne("SELECT SUM(TotalAmount) as total FROM `Order` WH
 $totalYearlySales = selectOne("SELECT SUM(TotalAmount) as total FROM `Order` WHERE YEAR(Date) = YEAR(CURRENT_DATE)");
 ?>
 
+<style>
+  .card-header {
+    font-weight: bold;
+}
+</style>
 <body onload="startTime()">
     <div class="page-wrapper compact-wrapper" id="pageWrapper">
       <?php include pathOf('includes/navbarTop.php'); ?> <!-- Navbar -->
@@ -33,7 +38,7 @@ $totalYearlySales = selectOne("SELECT SUM(TotalAmount) as total FROM `Order` WHE
               <!-- Total Properties Card -->
               <div class="col-lg-3">
                 <div class="card">
-                  <div class="card-header">Total Properties</div>
+                  <div class="card-header">Total Properties </div>
                   <div class="card-body">
                     <h4><?php echo $totalProperties['total']; ?></h4>
                   </div>
@@ -43,7 +48,7 @@ $totalYearlySales = selectOne("SELECT SUM(TotalAmount) as total FROM `Order` WHE
               <!-- Total Clients Card -->
               <div class="col-lg-3">
                 <div class="card">
-                  <div class="card-header">Total Clients</div>
+                  <div class="card-header">Total Clients </div>
                   <div class="card-body">
                     <h4><?php echo $totalClients['total']; ?></h4>
                   </div>
@@ -53,9 +58,19 @@ $totalYearlySales = selectOne("SELECT SUM(TotalAmount) as total FROM `Order` WHE
               <!-- Total Orders Card -->
               <div class="col-lg-3">
                 <div class="card">
-                  <div class="card-header">Total Orders</div>
+                  <div class="card-header">Total Orders </div>
                   <div class="card-body">
                     <h4><?php echo $totalOrders['total']; ?></h4>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Total Types Card -->
+              <div class="col-lg-3">
+                <div class="card">
+                  <div class="card-header">Total Property Types </div>
+                  <div class="card-body">
+                    <h4><?php echo $totalTypes['total']; ?></h4>
                   </div>
                 </div>
               </div>
@@ -63,27 +78,18 @@ $totalYearlySales = selectOne("SELECT SUM(TotalAmount) as total FROM `Order` WHE
               <!-- Total Payments Card -->
               <div class="col-lg-3">
                 <div class="card">
-                  <div class="card-header">Total Payments</div>
+                  <div class="card-header">Total Payments </div>
                   <div class="card-body">
                     <h4><?php echo $totalPayments['total'] ?? 0; ?></h4>
                   </div>
                 </div>
               </div>
 
-              <!-- Total Types Card -->
-              <div class="col-lg-3">
-                <div class="card">
-                  <div class="card-header">Total Property Types</div>
-                  <div class="card-body">
-                    <h4><?php echo $totalTypes['total']; ?></h4>
-                  </div>
-                </div>
-              </div>
 
               <!-- Total Weekly Sales Card -->
               <div class="col-lg-3">
                 <div class="card">
-                  <div class="card-header">Total Weekly Sales</div>
+                  <div class="card-header">Total Weekly Sales </div>
                   <div class="card-body">
                     <h4><?php echo $totalWeeklySales['total'] ?? 0; ?></h4>
                   </div>
@@ -93,7 +99,7 @@ $totalYearlySales = selectOne("SELECT SUM(TotalAmount) as total FROM `Order` WHE
               <!-- Total Monthly Sales Card -->
               <div class="col-lg-3">
                 <div class="card">
-                  <div class="card-header">Total Monthly Sales</div>
+                  <div class="card-header">Total Monthly Sales </div>
                   <div class="card-body">
                     <h4><?php echo $totalMonthlySales['total'] ?? 0; ?></h4>
                   </div>
@@ -103,7 +109,7 @@ $totalYearlySales = selectOne("SELECT SUM(TotalAmount) as total FROM `Order` WHE
               <!-- Total Yearly Sales Card -->
               <div class="col-lg-3">
                 <div class="card">
-                  <div class="card-header">Total Yearly Sales</div>
+                  <div class="card-header">Total Yearly Sales </div>
                   <div class="card-body">
                     <h4><?php echo $totalYearlySales['total'] ?? 0; ?></h4>
                   </div>
