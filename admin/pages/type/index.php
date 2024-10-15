@@ -116,13 +116,17 @@ include pathof('includes/header.php');
                     Id: Id
                 },
                 success: function(response) {
-                  if(response == response.success) {
-                    alert("Type deleted successfully");
-                    location.reload();
-                  } else {
-                    alert("Type not deleted");
-                  }
-                }
+                        $("#success").modal('show');
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    },
+                    error: function(response) {
+                        $("#success").modal('show');
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    }
             });
         }
       }

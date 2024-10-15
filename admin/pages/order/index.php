@@ -8,6 +8,7 @@ include pathof('includes/header.php');
 ?>
 
 <body>
+  <link rel="stylesheet" href="../../assets/css/button.css">
   <!-- tap on top starts-->
   <div class="tap-top"><i data-feather="chevrons-up"></i></div>
   <!-- tap on tap ends-->
@@ -65,8 +66,8 @@ include pathof('includes/header.php');
                       <th>User</th>
                       <th>Property</th>
                       <th>Total Amount</th>
+                      <th>Process</th>
                       <th>Status</th>
-                      <th></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -78,7 +79,7 @@ include pathof('includes/header.php');
                         <td><?= $order['TotalAmount'] ?></td>
                         <td><?= $order['Status'] ?></td>
                         <input type="hidden" value="<?= $order['TotalAmount'] ?>" id="TotalAmount">
-                        <td><button class="btn btn-outline-success" onclick="insertData(<?= $order['Id'] ?>)">Dlevered</button></td>
+                        <td><button class="btn btn-outline-success" onclick="insertData(<?= $order['Id'] ?>)">Booked</button></td>
                       </tr>
                     <?php endforeach; ?>
                   </tbody>
@@ -116,13 +117,17 @@ include pathof('includes/header.php');
           TotalAmount: TotalAmount
         },
         success: function(response) {
-          alert("Order Successfully Added !");
-          location.reload();
-        },
-        error: function(response) {
-          alert("Order Error");
-          location.reload();
-        }
+                        $("#success").modal('show');
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    },
+                    error: function(response) {
+                        $("#success").modal('show');
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    }
       });
     }
   </script>

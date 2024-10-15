@@ -60,7 +60,7 @@ include pathof('includes/header.php');
                                 <div class="card-body">
                                     <div class="mb-3 row">
                                         <label class="form-label" for="validationCustom04">Type</label>
-                                        <select class="form-select" id="TypeId" name="TypeId">
+                                        <select class="form-select" id="TypeId" name="TypeId" >
                                             <?php foreach ($types as $type): ?>
                                                 <option value="<?= $type['Id'] ?>"><?= $type['Name'] ?></option>
                                             <?php endforeach; ?>
@@ -85,7 +85,7 @@ include pathof('includes/header.php');
                                     <div class="mb-3 row">
                                         <label">Name</label>
                                             <div class="col-sm-12">
-                                                <input class="form-control" type="text" id="PropertyName" name="PropertyName">
+                                                <input class="form-control" type="text" id="PropertyName" name="PropertyName" autofocus>
                                             </div>
                                     </div>
                                     <div class="mb-3 row">
@@ -182,9 +182,17 @@ include pathof('includes/header.php');
                 processData: false,
                 contentType: false,
                 success: function(response) {
-                    alert("Product Added");
-                    window.location.href = './index.php';
-                }
+                        $("#success").modal('show');
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    },
+                    error: function(response) {
+                        $("#success").modal('show');
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    }
             })
         }
     </script>

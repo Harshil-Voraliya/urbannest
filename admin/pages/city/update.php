@@ -99,11 +99,18 @@ include pathof('includes/header.php');
             StateId: StateId,
             Name: Name
           }, 
-          success: function (response) {
-                console.log(response.success);
-                alert("State Added");
-                window.location.href = './index.php';
-            }
+          success: function(response) {
+                        $("#success").modal('show');
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    },
+                    error: function(response) {
+                        $("#success").modal('show');
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    }
         });
       }
     </script>

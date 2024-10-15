@@ -111,12 +111,17 @@ include pathof('includes/header.php');
                 },
 
                 success: function(response) {
-                    console.log(response);
-                    if (response.success != true)
-                        return alert('City Deleted');
-
-                    window.location.href = './index.php';
-                }
+                        $("#success").modal('show');
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    },
+                    error: function(response) {
+                        $("#success").modal('show');
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    }
             })
         }
     </script>

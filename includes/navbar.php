@@ -54,7 +54,7 @@
                             <a href="<?= urlOf('pages/wishlist.php') ?>"><i class="far fa-heart" style="color: #ffffff;"></i></a>
                         </div>
                         <div class="header-cart">
-                            <a href="<?= urlOf('pages/cart.php') ?>" class="offcanvas-toggle"><i class="fas fa-shopping-cart" style="color: #ffffff;"></i></a>
+                            <a href="<?= urlOf('pages/cart.php') ?>" class=""><i class="fas fa-shopping-cart" style="color: #ffffff;"></i></a>
                         </div>
                     </div>
                 </div>

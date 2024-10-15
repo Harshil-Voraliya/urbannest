@@ -13,23 +13,23 @@ include pathOf('includes/header.php');
                     <p class="desc">If you don’t have an account, register now!</p>
                 </div>
                 <div class="login-register-form">
-                        <div class="row">
-                            <div class="col-12 mb-3">
-                                <label for="registerEmail">User Name<abbr class="required">*</abbr></label>
-                                <input type="text" id="UserName" class="form-control">
-                            </div>
-                            <div class="col-12 mb-3">
-                                <label for="registerEmail">Email address <abbr class="required">*</abbr></label>
-                                <input type="email" id="Email" class="form-control">
-                            </div>
-                            <div class="col-12 mb-3">
-                                <label for="registerEmail">Password<abbr class="required">*</abbr></label>
-                                <input type="password" id="Password" class="form-control">
-                            </div>
-                            <div class="col-12 text-center">
-                                <button class="btn btn-dark btn-outline-hover-dark w-100" onclick="insertData()">Register</button>
-                            </div>
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <label for="registerEmail">User Name<abbr class="required">*</abbr></label>
+                            <input type="text" id="UserName" class="form-control">
                         </div>
+                        <div class="col-12 mb-3">
+                            <label for="registerEmail">Email address <abbr class="required">*</abbr></label>
+                            <input type="email" id="Email" class="form-control">
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="registerEmail">Password<abbr class="required">*</abbr></label>
+                            <input type="password" id="Password" class="form-control">
+                        </div>
+                        <div class="col-12 text-center">
+                            <button class="btn btn-dark btn-outline-hover-dark w-100" onclick="insertData()">Register</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -51,10 +51,17 @@ include pathOf('includes/header.php');
                 Email: Email,
                 Password: Password
             },
-            success: function (response) {
-                console.log(response.success);
-                alert("Client Registered");
-                window.location.href = './login.php';
+            success: function(response) {
+                $("#success").modal('show');
+                setTimeout(function() {
+                    location.reload();
+                }, 2000);
+            },
+            error: function(response) {
+                $("#success").modal('show');
+                setTimeout(function() {
+                    location.reload();
+                }, 2000);
             }
         });
     }

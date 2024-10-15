@@ -122,9 +122,17 @@ include pathof('includes/header.php');
             Id: Id
           },
           success: function(response) {
-            alert('Property deleted!');
-            window.location.href = './index.php';
-          }
+                        $("#success").modal('show');
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    },
+                    error: function(response) {
+                        $("#success").modal('show');
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    }
         });
       }
     }

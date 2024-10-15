@@ -1,12 +1,13 @@
 <?php
-    require '../includes/init.php';
+require '../includes/init.php';
 
-    $PropertyId = $_POST['Id'];
-    $propertydetails = selectOne("SELECT * FROM propertydetails WHERE Id = $PropertyId");
+$PropertyId = $_POST['Id'];
+$propertydetails = selectOne("SELECT * FROM propertydetails WHERE Id = $PropertyId");
 
-    include pathOf('includes/header.php');
-    include pathOf('includes/navbar.php');
+include pathOf('includes/header.php');
+include pathOf('includes/navbar.php');
 ?>
+
 <body>
     <!-- Page Title/Header Start -->
     <div class="page-title-section section" data-bg-image="assets/images/bg/page-title-1.webp">
@@ -109,9 +110,9 @@
 
     </div>
     <!-- Single Products Section End -->
-<?php
+    <?php
     include pathOf('includes/scripts.php');
-?>
+    ?>
 
     <script>
         function addToCart(PropertyId) {
@@ -135,9 +136,16 @@
                     UserId: UserId
                 },
                 success: function(response) {
-                    console.log(response.success);
-                    alert("Product added to Wishlist");
-                    location.reload();
+                    $("#success").modal('show');
+                    setTimeout(function() {
+                        location.reload();
+                    }, 2000);
+                },
+                error: function(response) {
+                    $("#success").modal('show');
+                    setTimeout(function() {
+                        location.reload();
+                    }, 2000);
                 }
             });
         }
@@ -164,15 +172,22 @@
                     UserId: UserId
                 },
                 success: function(response) {
-                    console.log(response.success);
-                    alert("Product added to Wishlist");
-                    location.reload();
-                }
+                        $("#success").modal('show');
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    },
+                    error: function(response) {
+                        $("#success").modal('show');
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    }
             });
         }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<?php
+    <?php
     include pathOf('includes/footer.php');
     include pathOf('includes/pageend.php');
-?>
+    ?>

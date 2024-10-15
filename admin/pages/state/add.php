@@ -57,7 +57,7 @@ include pathof('includes/header.php');
                         <div class="mb-3 row">
                             <label">Name</label>
                             <div class="col-sm-12">
-                              <input class="form-control" type="text" id="Name" name="Name" autofocus placeholder="Enter state ">
+                              <input class="form-control" type="text" id="Name" name="Name" placeholder="Enter state" autofocus>
                             </div>
                           </div>
                         <div class="card-footer text-end">
@@ -86,11 +86,18 @@ include pathof('includes/header.php');
           data: {
             Name: Name
           }, 
-          success: function (response) {
-                console.log(response.success);
-                alert("State Added");
-                window.location.href = './index.php';
-            }
+          success: function(response) {
+                        $("#success").modal('show');
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    },
+                    error: function(response) {
+                        $("#success").modal('show');
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    }
         });
       }
     </script>
