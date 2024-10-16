@@ -1,8 +1,9 @@
 <?php
 require '../../includes/init.php';
 
+$Id = $_POST['Id'];
+$cities = selectOne("SELECT * FROM City WHERE Id = $Id");
 $states = select("SELECT * FROM State");
-
 include pathof('includes/header.php');
 ?>
 
@@ -67,7 +68,8 @@ include pathof('includes/header.php');
                     <div class="mb-3 row">
                       <label">Name</label>
                         <div class="col-sm-12">
-                          <input class="form-control" type="text" id="Name" name="Name">
+                          <input class="form-control" type="text" id="Name" name="Name" value="<?= $cities['Name'] ?>">
+                          <input class="form-control" type="hidden" id="Id" name="Id" value="<?= $cities['Id'] ?>">
                         </div>
                     </div>
                     <div class="card-footer text-end">
@@ -84,33 +86,56 @@ include pathof('includes/header.php');
     </div>
   </div>
   </div>
-
-
-
+  <div class="modal" tabindex="-1" id="success">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header text-white">
+                        <h5 class="modal-title">City Updated !</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-success">Success</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" tabindex="-1" id="error">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header text-white">
+                        <h5 class="modal-title">City Not Updated !</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-danger">Error</button>
+                    </div>
+                </div>
+            </div>
+        </div>
   <script>
       function insertData() {
+        var Id = $("#Id").val();
         var StateId = $("#StateId").val();
         var Name = $("#Name").val();
 
         $.ajax({
-          url: '../../api/city/insert.php',
+          url: '../../api/city/update.php',
           type: 'POST',
           data: {
+            Id: Id,
             StateId: StateId,
             Name: Name
           }, 
           success: function(response) {
-                        $("#success").modal('show');
-                        setTimeout(function() {
-                            location.reload();
-                        }, 2000);
-                    },
-                    error: function(response) {
-                        $("#success").modal('show');
-                        setTimeout(function() {
-                            location.reload();
-                        }, 2000);
-                    }
+              $("#success").modal('show');
+              setTimeout(function() {
+                  window.location.href='./index.php';
+              }, 2000);
+          },
+          error: function(response) {
+              $("#error").modal('show');
+              setTimeout(function() {
+                  location.reload();
+              }, 2000);
+          }
         });
       }
     </script>

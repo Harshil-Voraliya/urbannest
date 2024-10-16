@@ -2,7 +2,7 @@
 require '../../includes/init.php';
 
 $index = 0;
-$states = select('SELECT * FROM state');
+$states = select('SELECT * FROM state WHERE IsDeleted = 1');
 include pathof('includes/header.php');
 ?>
 
@@ -101,10 +101,33 @@ include pathof('includes/header.php');
         </div>
       </div>
     </div>
+    <div class="modal" tabindex="-1" id="success">
+        <div class="modal-dialog">
+          <div class="modal-content bg-dark">
+            <div class="modal-header text-white">
+              <h5 class="modal-title">State Deleted!</h5>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success">Success</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" tabindex="-1" id="error">
+        <div class="modal-dialog">
+          <div class="modal-content bg-dark">
+            <div class="modal-header text-white">
+              <h5 class="modal-title">State Not Deleted!</h5>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger">Error</button>
+            </div>
+          </div>
+        </div>
+      </div>
   </body>
   <script>
         function deleteData(Id) {
-            if (confirm("sure you want to delete this state"));
             $.ajax({
                 url: "../../api/state/delete.php",
                 method: "POST",
@@ -113,17 +136,17 @@ include pathof('includes/header.php');
                 },
 
                 success: function(response) {
-                        $("#success").modal('show');
-                        setTimeout(function() {
-                            location.reload();
-                        }, 2000);
-                    },
-                    error: function(response) {
-                        $("#success").modal('show');
-                        setTimeout(function() {
-                            location.reload();
-                        }, 2000);
-                    }
+                    $("#success").modal('show');
+                    setTimeout(function() {
+                        location.reload();
+                    }, 2000);
+                },
+                error: function(response) {
+                    $("#success").modal('show');
+                    setTimeout(function() {
+                        location.reload();
+                    }, 2000);
+                  }
             })
         }
     </script>

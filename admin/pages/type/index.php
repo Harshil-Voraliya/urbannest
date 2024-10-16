@@ -2,7 +2,7 @@
 require '../../includes/init.php';
 
 $index = 0;
-$typepropertys = select('SELECT * FROM PropertyType');
+$typepropertys = select('SELECT * FROM PropertyType WHERE IsDeleted = 1');
 include pathof('includes/header.php');
 ?>
 
@@ -76,8 +76,6 @@ include pathof('includes/header.php');
                                 <td>
                                     <input type="hidden" value="<?= $typeproperty['Id'] ?>" id="Id" name="Id">
                                     <button type="submit" class="btn btn-outline-success">Update</button>
-
-
                                 </td>
                             </form>
                             <td>
@@ -105,10 +103,33 @@ include pathof('includes/header.php');
         </div>
       </div>
     </div>
+    <div class="modal" tabindex="-1" id="success">
+        <div class="modal-dialog">
+          <div class="modal-content bg-dark">
+            <div class="modal-header text-white">
+              <h5 class="modal-title">Type Deleted!</h5>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success">Success</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" tabindex="-1" id="error">
+        <div class="modal-dialog">
+          <div class="modal-content bg-dark">
+            <div class="modal-header text-white">
+              <h5 class="modal-title">Type Not Deleted!</h5>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger">Error</button>
+            </div>
+          </div>
+        </div>
+      </div>
   </body>
   <script>
       function deleteData(Id) {
-        if(confirm("Are you sure you want to delete this role?")) {
             $.ajax({
                 url: '../../api/type/delete.php',
                 type: 'POST',
@@ -122,14 +143,13 @@ include pathof('includes/header.php');
                         }, 2000);
                     },
                     error: function(response) {
-                        $("#success").modal('show');
+                        $("#error").modal('show');
                         setTimeout(function() {
                             location.reload();
                         }, 2000);
                     }
             });
         }
-      }
     </script>
 </html>
 
