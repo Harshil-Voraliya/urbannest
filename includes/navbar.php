@@ -162,7 +162,7 @@
                 <!-- Header Logo Start -->
                 <div class="col">
                     <div class="header-logo">
-                        <a href="#"><img src="assets/images/logo/black.png" alt="Learts Logo"></a>
+                        <a href="#"><img src="assets/images/logo/white.png" alt="Learts Logo"></a>
                     </div>
                 </div>
                 <!-- Header Logo End -->

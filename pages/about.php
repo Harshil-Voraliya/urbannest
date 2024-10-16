@@ -10,7 +10,6 @@ include pathOf('includes/navbar.php');
         <div class="container">
             <div class="row">
                 <div class="col">
-
                     <div class="page-title">
                         <h1 class="title">About us</h1>
                     </div>
@@ -25,11 +24,11 @@ include pathOf('includes/navbar.php');
                 <div class="col-lg-4 col-12 align-self-center learts-mb-30">
                     <div class="about-us4">
                         <span class="sub-title">Urbannest</span>
-                        <h2 class="title">Aspiration Inspired Happiness</h2>
+                        <h2 class="title">Redefining real estate with innovation</h2>
                     </div>
                 </div>
                 <div class="col-lg-8 col-12 learts-mb-30">
-                    <img src="<?= urlOf('assets/images/about/about-6.webp') ?>" alt="">
+                    <img src="<?= urlOf('assets/images/about/1.jpg') ?>" alt="">
                 </div>
             </div>
         </div>
@@ -42,7 +41,7 @@ include pathOf('includes/navbar.php');
             <div class="row learts-mb-n30">
 
                 <div class="col-lg-6 col-12 text-center learts-mb-30">
-                    <img src="<?= urlOf('assets/images/about/about-7.webp') ?>" alt="">
+                    <img src="<?= urlOf('assets/images/about/2.jpg') ?>" alt="">
                 </div>
 
                 <div class="col-lg-6 col-12 align-self-center learts-mb-30">
@@ -50,15 +49,15 @@ include pathOf('includes/navbar.php');
                         <div class="row learts-mb-n30">
                             <div class="col-xl-8 col-12 learts-mb-30">
                                 <div class="desc mb-0">
-                                    <p>Crafting beautiful stuff with our own hands and the help from useful tools is a wonderful process, where you can enjoy yourself while pulling out some ideas and busy perfecting your work.</p>
+                                    <p>We provide personalized real estate services, guiding you through every step from finding your dream home to closing the deal, we’re here to support you with expert guidance and tailored solutions.</p>
                                 </div>
                             </div>
                             <div class="col-12 learts-mb-30">
                                 <div class="icon-box4 text-left justify-content-start text-start">
                                     <div class="inner">
                                         <div class="content">
-                                            <h6 class="title">FREE SHIPPING</h6>
-                                            <p>1800 Abbot Kinney Blvd. Unit D & E Venice</p>
+                                            <h6 class="title">OFFICE</h6>
+                                            <p>200 feet Ring Road, Sabarmati Aashram, SG Highway, Ahmedabbad</p>
                                         </div>
                                     </div>
                                 </div>
@@ -113,11 +112,11 @@ include pathOf('includes/navbar.php');
             <div class="testimonial-carousel">
                 <div class="col">
                     <div class="testimonial">
-                        <p>There's nothing would satisfy me much more than a worry-free clean and responsive theme for my high-traffic site.</p>
+                        <p>The team made my home-buying process seamless. They listened to my needs and found the perfect property for my family. Highly recommended!</p>
                         <div class="author">
-                            <img src="<?= urlOf('assets/images/testimonial/testimonial-1.webp') ?>" alt="">
+                            <img src="<?= urlOf('assets/images/feedback/1.jpg') ?>" alt="">
                             <div class="content">
-                                <h6 class="name">Anais Coulon</h6>
+                                <h6 class="name">Hritik Roshan</h6>
                                 <span class="title">Actor</span>
                             </div>
                         </div>
@@ -125,11 +124,11 @@ include pathOf('includes/navbar.php');
                 </div>
                 <div class="col">
                     <div class="testimonial">
-                        <p>Really good design/documentation, pretty much everything is nicely setup. The best choice for Woocommerce shop.</p>
+                        <p>They went above and beyond to ensure my investment purchase went smoothly. I’ll definitely work with them again in the future!</p>
                         <div class="author">
-                            <img src="<?= urlOf('assets/images/testimonial/testimonial-2.webp') ?>" alt="">
+                            <img src="<?= urlOf('assets/images/feedback/2.jpg') ?>" alt="">
                             <div class="content">
-                                <h6 class="name">Ian Schneider</h6>
+                                <h6 class="name">Simran Kapoor</h6>
                                 <span class="title">Actor</span>
                             </div>
                         </div>
@@ -137,23 +136,23 @@ include pathOf('includes/navbar.php');
                 </div>
                 <div class="col">
                     <div class="testimonial">
-                        <p>ThemeMove deserves 5 star for theme’s features, design quality, flexibility, customizability and support service!</p>
+                        <p>From property search to closing, they were incredibly supportive. They understood exactly what I was looking for and delivered outstanding results.!</p>
                         <div class="author">
-                            <img src="<?= urlOf('assets/images/testimonial/testimonial-3.webp') ?>" alt="">
+                            <img src="<?= urlOf('assets/images/feedback/3.jpg') ?>" alt="">
                             <div class="content">
-                                <h6 class="name">Florence Polla</h6>
-                                <span class="title">Customer</span>
+                                <h6 class="name">Arjun Mark</h6>
+                                <span class="title">Photographer</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="testimonial">
-                        <p>Thanks for always keeping your WordPress themes up to date. Your level of support is second to none.</p>
+                        <p>They took the time to get to know my needs and preferences. I felt like they genuinely cared about finding the right property for me.</p>
                         <div class="author">
-                            <img src="<?= urlOf('assets/images/testimonial/testimonial-4.webp') ?>" alt="">
+                            <img src="<?= urlOf('assets/images/feedback/4.jpg') ?>" alt="">
                             <div class="content">
-                                <h6 class="name">Sally Ramsey</h6>
+                                <h6 class="name">Sudhir Choudhary</h6>
                                 <span class="title">Reporter</span>
                             </div>
                         </div>
@@ -181,23 +180,23 @@ include pathOf('includes/navbar.php');
 
                     <div class="instafeed instafeed-carousel instafeed-carousel2">
                         <a class="instafeed-item" href="#">
-                            <img src="<?= urlOf('assets/images/instagram/instagram-1.webp') ?>" alt="instagram image" />
+                            <img src="<?= urlOf('assets/images/instagram/1.jpg') ?>" alt="instagram image" />
                             <i class="fab fa-instagram"></i>
                         </a>
                         <a class="instafeed-item" href="#">
-                            <img src="<?= urlOf('assets/images/instagram/instagram-2.webp') ?>" alt="instagram image" />
+                            <img src="<?= urlOf('assets/images/instagram/2.jpg') ?>" alt="instagram image" />
                             <i class="fab fa-instagram"></i>
                         </a>
                         <a class="instafeed-item" href="#">
-                            <img src="<?= urlOf('assets/images/instagram/instagram-3.webp') ?>" alt="instagram image" />
+                            <img src="<?= urlOf('assets/images/instagram/3.jpg') ?>" alt="instagram image" />
                             <i class="fab fa-instagram"></i>
                         </a>
                         <a class="instafeed-item" href="#">
-                            <img src="<?= urlOf('assets/images/instagram/instagram-4.webp') ?>" alt="instagram image" />
+                            <img src="<?= urlOf('assets/images/instagram/4.jpg') ?>" alt="instagram image" />
                             <i class="fab fa-instagram"></i>
                         </a>
                         <a class="instafeed-item" href="#">
-                            <img src="<?= urlOf('assets/images/instagram/instagram-4.webp') ?>" alt="instagram image" />
+                            <img src="<?= urlOf('assets/images/instagram/5.jpg') ?>" alt="instagram image" />
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
