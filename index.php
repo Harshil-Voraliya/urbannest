@@ -19,7 +19,7 @@
 <br>
     <!-- Parallax Banner Start -->
     <div class="parallax-banner parallax-banner-2" data-scrollax-parent="true">
-        <div class="parallax-image" data-scrollax="properties: { translateY: '30%' }"><img src="assets/images/out/2.jpg" alt="parallax-2" /></div>
+        <div class="parallax-image" data-scrollax="properties: { translateY: '30%' }"><img src="assets/images/out/1.jpg" alt="parallax-2" /></div>
         <div class="content text-center">
             <img class="price " src="assets/images/banner/parallax/parallax-2-1.webp" alt="Price">
             <h2 class="title" >MOROCCO VASE</h2>
@@ -31,7 +31,7 @@
 <br>
     <!-- Parallax Banner Start -->
     <div class="parallax-banner parallax-banner-3" data-scrollax-parent="true">
-        <div class="parallax-image" data-scrollax="properties: { translateY: '30%' }"><img src="assets/images/out/1.jpg" alt="parallax-3" /></div>
+        <div class="parallax-image" data-scrollax="properties: { translateY: '30%' }"><img src="assets/images/out/2.jpg" alt="parallax-3" /></div>
         <div class="content text-center">
             <img class="sub-title " src="assets/images/banner/parallax/parallax-3-1.webp" alt="Price">
             <h2 class="title">Alumsy Shelf</h2>

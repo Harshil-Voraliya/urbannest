@@ -12,7 +12,7 @@ include pathof('includes/header.php');
       <div class="dot"></div>
       <div class="dot"></div>
       <div class="dot"></div>
-      <div class="dot"> </div>
+      <div class="dot"></div>
       <div class="dot"></div>
     </div>
     <!-- Loader ends-->
