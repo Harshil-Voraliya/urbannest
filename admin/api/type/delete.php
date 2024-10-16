@@ -4,14 +4,14 @@
 
     $Id = $_POST['Id'];
 
-    $query = "DELETE FROM PropertyType WHERE Id = ?";
+    $query = "UPDATE propertytype SET IsDeleted = -1 WHERE Id = ?";
     $param = [$Id];
 
     $result = execute($query, $param);
 
     if($result) {
-        echo json_encode(["status" => "success", "message" => "Role Deleted Successfully"]);
+        echo json_encode(["status" => "success", "message" => "Category Deleted Successfully"]);
     } else {
-        echo json_encode(["status" => "error", "message" => "Something Went Wrong"]);
+        echo json_encode(["status" => "error", "message" => "Something Went Wrong"]); 
     }
 ?>
