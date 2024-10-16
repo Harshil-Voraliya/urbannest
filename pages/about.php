@@ -4,6 +4,15 @@ include pathOf('includes/header.php');
 include pathOf('includes/navbar.php');
 ?>
 
+<style>
+    .about-us4 p {
+        color: black;
+    }
+    .icon-box4 .inner .content p{
+        color: black;
+    }
+</style>
+
 <body>
     <!-- Page Title/Header Start -->
     <div class="page-title-section section" data-bg-image="<?= urlOf('assets/images/bg/page-title-1.webp') ?>">
@@ -23,12 +32,11 @@ include pathOf('includes/navbar.php');
             <div class="row learts-mb-n30">
                 <div class="col-lg-4 col-12 align-self-center learts-mb-30">
                     <div class="about-us4">
-                        <span class="sub-title">Urbannest</span>
                         <h2 class="title">Redefining real estate with innovation</h2>
                     </div>
                 </div>
                 <div class="col-lg-8 col-12 learts-mb-30">
-                    <img src="<?= urlOf('assets/images/about/1.jpg') ?>" alt="">
+                    <img src="<?= urlOf('assets/images/about/3.jpg') ?>" alt="">
                 </div>
             </div>
         </div>
@@ -40,8 +48,8 @@ include pathOf('includes/navbar.php');
         <div class="container">
             <div class="row learts-mb-n30">
 
-                <div class="col-lg-6 col-12 text-center learts-mb-30">
-                    <img src="<?= urlOf('assets/images/about/2.jpg') ?>" alt="">
+                <div class="col-lg-6 col-12 text-center learts-mb-30" >
+                    <img src="<?= urlOf('assets/images/about/1.jpg') ?>" alt="">
                 </div>
 
                 <div class="col-lg-6 col-12 align-self-center learts-mb-30">
@@ -67,7 +75,7 @@ include pathOf('includes/navbar.php');
                                     <div class="inner">
                                         <div class="content">
                                             <h6 class="title">PHONE</h6>
-                                            <p>Mobile: (+91) 1234567899 <br> Office: 02888 1102</p>
+                                            <p>Mobile: (+91) 7990949979 <br> Office: 02888 1102</p>
                                         </div>
                                     </div>
                                 </div>

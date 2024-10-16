@@ -36,7 +36,7 @@ include pathOf('includes/navbar.php');
                 <div class="col-lg-4 col-md-6 col-12 learts-mb-30">
                     <div class="contact-info">
                         <h4 class="title">ADDRESS</h4>
-                        <span class="info"><i class="icon fas fa-map-marker-alt"></i> 1800 Abbot Kinney Blvd. Unit D & E Venice</span>
+                        <span class="info"><i class="icon fas fa-map-marker-alt"></i> 200 feet Ring Road, Sabarmati Aashram, SG Highway, Ahmedabbad</span>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12 learts-mb-30">

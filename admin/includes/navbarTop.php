@@ -1,3 +1,28 @@
+<style>
+  /* Default Light Mode */
+  .light-mode .logout-icon {
+    color: black;
+  }
+
+  /* Dark Mode */
+  .dark-mode .logout-icon {
+    color: white;
+  }
+
+  /* Optional styling for better UX */
+  body {
+    transition: background-color 0.3s ease;
+  }
+
+  .light-mode {
+    background-color: white;
+  }
+
+  .dark-mode {
+    background-color: #333;
+  }
+</style>
+
 <div class="page-header">
   <div class="header-wrapper row m-0">
     <!-- Left Sidebar Toggle and Logo -->
@@ -24,34 +49,31 @@
         <div class="mode me-3">
           <i class="fa fa-moon-o"></i>
         </div>
-        
+
         <!-- Logout Button -->
         <div class="profile-nav onhover-dropdown">
           <a href="../api/logout/logout.php">
-            <i data-feather="log-out"></i>
+            <i data-feather="log-out" class="logout-icon"></i>
           </a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Scripts -->
-  <script class="result-template" type="text/x-handlebars-template">
-    <div class="ProfileCard u-cf">
-      <div class="ProfileCard-avatar">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay m-0">
-          <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
-          <polygon points="12 15 17 21 7 21 12 15"></polygon>
-        </svg>
-      </div>
-      <div class="ProfileCard-details">
-        <div class="ProfileCard-realName">{{name}}</div>
-      </div>
-    </div>
-  </script>
+  <!-- JavaScript for theme toggle -->
+  <script>
+    const modeToggle = document.querySelector('.mode');
+    const body = document.body;
 
-  <script class="empty-template" type="text/x-handlebars-template">
-    <div class="EmptyMessage">Your search turned up 0 results. This most likely means the backend is down, yikes!</div>
+    modeToggle.addEventListener('click', function() {
+      // Toggle dark and light mode classes
+      body.classList.toggle('dark-mode');
+      body.classList.toggle('light-mode');
+    });
+
+    // Set the initial mode to light mode
+    window.onload = function() {
+      body.classList.add('light-mode'); // Default light mode
+    }
   </script>
 </div>
- 

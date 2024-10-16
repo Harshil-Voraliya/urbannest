@@ -10,13 +10,16 @@
     .menu-text{
         color: white;
     }
+    .header-section{
+        background-color: black !important;
+    }
 </style>
 
 <?php
 ?>
 
     <!-- Header Section Start -->
-    <div class="header-section header-transparent header-menu-center section section-fluid bg-white d-none d-xl-block">
+    <div class="header-section header-menu-center section section-fluid bg-black d-none d-xl-block">
         <div class="container">
             <div class="row align-items-center">
 
@@ -31,10 +34,10 @@
                 <div class="col">
                     <nav class="site-main-menu menu-height-100 justify-content-center">
                         <ul>
-                            <li class=""><a href="<?= urlOf('index.php') ?>"><span class="menu-text">Home</span></a></li>
-                            <li class=""><a href="<?= urlOf('pages/propertylist.php') ?>"><span class="menu-text">Property</span></a></li>
-                            <li class=""><a href="<?= urlOf('pages/about.php') ?>"><span class="menu-text">About</span></a></li>
-                            <li class=""><a href="<?= urlOf('pages/contact.php') ?>"><span class="menu-text">Contact Us</span></a></li>
+                            <li class=""><a href="<?= urlOf('index.php') ?>"><span class="menu-text-t">Home</span></a></li>
+                            <li class=""><a href="<?= urlOf('pages/propertylist.php') ?>"><span class="menu-text-t">Property</span></a></li>
+                            <li class=""><a href="<?= urlOf('pages/about.php') ?>"><span class="menu-text-t">About</span></a></li>
+                            <li class=""><a href="<?= urlOf('pages/contact.php') ?>"><span class="menu-text-t">Contact Us</span></a></li>
                         </ul>
                     </nav>
                 </div>
@@ -82,7 +85,7 @@
                 <!-- Search Start -->
                  
                 <div class="col">
-                    <nav class="site-main-menu justify-content-center nav">
+                    <nav class="site-main-menu justify-content-center">
                         <ul>
                             <li class=""><a href="<?= urlOf('index.php') ?>"><span class="menu-text">Home</span></a></li>
                             <li class=""><a href="<?= urlOf('pages/propertylist.php') ?>"><span class="menu-text">Property</span></a></li>
