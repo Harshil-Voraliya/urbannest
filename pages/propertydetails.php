@@ -14,19 +14,11 @@ include pathOf('includes/navbar.php');
         <div class="container">
             <div class="row">
                 <div class="col">
-
                     <div class="page-title">
                         <h1 class="title">Shop</h1>
-                        <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
-                            <li class="breadcrumb-item"><a href="shop.html">Products</a></li>
-                            <li class="breadcrumb-item active">Cleaning Dustpan & Brush</li>
-                        </ul>
                     </div>
-
                 </div>
-            </div>
-        </div>
+             </div>
     </div>
     <!-- Page Title/Header End -->
 

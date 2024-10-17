@@ -23,7 +23,6 @@ include pathOf('includes/navbar.php');
 
         <!-- Shop Products Section Start -->
         <div class="section section-padding pt-0">
-
             <!-- Shop Toolbar Start -->
             <div class="shop-toolbar border-bottom">
                 <div class="container">
@@ -39,7 +38,7 @@ include pathOf('includes/navbar.php');
                                 </li>
                             </ul>
                         </div>
-
+                    
                     </div>
                 </div>
             </div>
