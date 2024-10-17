@@ -54,7 +54,7 @@ $totalYearlySales = selectOne("SELECT SUM(TotalAmount) as total FROM `Order` WHE
             </div>
 
             <!-- Total Clients Card -->
-            <div class="col-lg-3">
+            <div class="col-lg-3">  
               <div class="card">
                 <div class="card-header text-center">Total Clients</div>
                 <div class="card-body text-center">
