@@ -3,16 +3,39 @@ require '../includes/init.php';
 include pathOf('includes/header.php');
 ?>
 
+<style>
+    .login-logo {
+        max-height: 120px;
+        /* Adjust the size to fit within the form box */
+        width: auto;
+        /* Maintain aspect ratio */
+        display: block;
+        margin: 0 auto;
+    }
+
+    .user-login-register {
+        padding-top: 20px;
+        /* Add some padding to ensure the form content doesn't touch the logo */
+    }
+</style>
+
+
 <!-- Login & Register Section Start -->
 <div class="section section-padding">
     <div class="container">
         <div class="row justify-content-center g-0">
             <div class="col-md-6 col-lg-5 col-12 user-login-register bg-light p-4">
+                <!-- Add logo inside the form container -->
+                <div class="text-center mb-4">
+                    <a class="logo" href="index.html">
+                        <img class="login-logo" src="<?= urlOf('assets/images/logo/white.png') ?>" alt="loginpage">
+                    </a>
+                </div>
                 <div class="login-register-title text-center">
-                    
                     <h2 class="title">Register</h2>
                     <p class="desc">If you don't have an account, register now!</p>
                 </div>
+
                 <div class="login-register-form">
                     <div class="row">
                         <div class="col-12 mb-3">

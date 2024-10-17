@@ -53,7 +53,7 @@
         <!-- Logout Button -->
         <div class="profile-nav onhover-dropdown">
           <a href="../admin/api/logout/logout.php">
-            <i data-feather="log-out"></i>
+            <i data-feather="log-out" style="color: black;" ></i>
           </a>
         </div>
       </div>
