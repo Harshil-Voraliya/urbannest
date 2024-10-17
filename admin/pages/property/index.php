@@ -9,6 +9,12 @@ include pathof('includes/header.php');
 
 <body>
   <link rel="stylesheet" href="../../assets/css/button.css">
+  <style>
+    .product-img img {
+      max-width: 100%; /* Make image responsive */
+      height: auto; /* Maintain aspect ratio */
+    }
+  </style>
   <!-- tap on top starts-->
   <div class="tap-top"><i data-feather="chevrons-up"></i></div>
   <!-- tap on tap ends-->
@@ -17,7 +23,7 @@ include pathof('includes/header.php');
     <div class="dot"></div>
     <div class="dot"></div>
     <div class="dot"></div>
-    <div class="dot"> </div>
+    <div class="dot"></div>
     <div class="dot"></div>
   </div>
   <!-- Loader ends-->
@@ -62,20 +68,23 @@ include pathof('includes/header.php');
                 </div>
               </div>
             </div>
-            <div class="product-wrapper-grid">
+            <div class="row">
               <?php foreach ($propertydetails as $propertydetail) { ?>
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4"> <!-- Each card occupies 3 columns on large screens (4 in a row) -->
                   <div class="card">
                     <input type="hidden" value="<?= $propertydetail['Id'] ?>">
                     <div class="product-box">
-                      <div class="product-img"><img class="img-fluid" src=<?= urlOf('assets/images/uploads/') . $propertydetail['ImageFileName'] ?> alt="">
+                      <div class="product-img">
+                        <img class="img-fluid" src=<?= urlOf('assets/images/uploads/') . $propertydetail['ImageFileName'] ?> alt="">
                       </div>
                       <div class="modal fade" id="exampleModalCenter16">
                         <div class="modal-dialog modal-lg modal-dialog-centered">
                           <div class="modal-content">
                             <div class="modal-header">
                               <div class="product-box row">
-                                <div class="product-img col-lg-6"><img class="img-fluid" src=<?= urlOf('assets/images/uploads/') . $propertydetail['ImageFileName'] ?> alt=""></div>
+                                <div class="product-img col-lg-6">
+                                  <img class="img-fluid" src=<?= urlOf('assets/images/uploads/') . $propertydetail['ImageFileName'] ?> alt="">
+                                </div>
                                 <div class="col-lg-6 text-start">
                                   <div class="product-details"><a href="product-page.html">
                                       <h4><?= $propertydetail['PropertyName'] ?></h4>
@@ -94,7 +103,8 @@ include pathof('includes/header.php');
                           </div>
                         </div>
                       </div>
-                      <div class="product-details"><a href="product-page.html">
+                      <div class="product-details">
+                        <a href="product-page.html">
                           <h4><?= $propertydetail['PropertyName'] ?></h4>
                         </a>
                         <p><?= $propertydetail['Address'] ?></p>
@@ -110,14 +120,13 @@ include pathof('includes/header.php');
                     </div>
                   </div>
                 </div>
+              <?php } ?>
             </div>
-          <?php } ?>
           </div>
         </div>
+        <!-- Container-fluid Ends-->
       </div>
-      <!-- Container-fluid Ends-->
     </div>
-  </div>
   </div>
 
   <script>
