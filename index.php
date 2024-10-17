@@ -11,7 +11,7 @@
         <div class="parallax-image" data-scrollax="properties: { translateY: '30%' }"><img src="assets/images/out/20.jpg" alt="parallax-1" /></div>
         <div class="content text-center" data-scrollax="properties: { opacity: '2' }">
             <!-- <span class="sub-title">Large</span> -->
-            <!-- <a href="shop.html" class="btn btn-light btn-hover-dark">shop now</a> -->
+            <!-- <a href="<?= urlOf("pages/propertylist.php") ?>" class="btn btn-light btn-hover-dark">shop now</a> -->
             <!-- <h2 class="title">CUTTING BOARD</h2> -->
         </div>
     </div>
@@ -23,7 +23,7 @@
         <div class="content text-center">
             <img class="price " src="assets/images/banner/parallax/parallax-2-1.webp" alt="Price">
             <h2 class="title" >MOROCCO VASE</h2>
-            <a href="shop.html" class="btn btn-light btn-hover-dark">shop now</a>
+            <a href="<?= urlOf("pages/propertylist.php") ?>" class="btn btn-light btn-hover-dark">shop now</a>
             <span class="sub-title">Superb quality</span>
         </div>
     </div>
@@ -35,7 +35,7 @@
         <div class="content text-center">
             <img class="sub-title " src="assets/images/banner/parallax/parallax-3-1.webp" alt="Price">
             <h2 class="title">Alumsy Shelf</h2>
-            <a href="shop.html" class="btn btn-light btn-hover-dark">shop now</a>
+            <a href="<?= urlOf("pages/propertylist.php") ?>" class="btn btn-light btn-hover-dark">shop now</a>
         </div>
     </div>
     <!-- Parallax Banner End -->
@@ -46,7 +46,7 @@
         <div class="content">
             <span class="sub-title">made for you</span>
             <h2 class="title">Salmon Cutting Board Blue Stone</h2>
-            <a href="shop.html" class="btn btn-light btn-hover-dark">shop now</a>
+            <a href="<?= urlOf("pages/propertylist.php") ?>" class="btn btn-light btn-hover-dark">shop now</a>
         </div>
     </div>
     <!-- Parallax Banner End -->

@@ -1,8 +1,11 @@
 <?php
 require '../../includes/init.php';
 
+// Initialize index counter
 $index = 0;
-$cities = select("SELECT City.Id, City.Name, State.Name AS StateName FROM State INNER JOIN City ON City.StateId = State.Id");
+
+// Query to select cities where IsDeleted = 1
+$cities = select("SELECT City.Id, City.Name, State.Name AS StateName FROM State INNER JOIN City ON City.StateId = State.Id WHERE City.IsDeleted = 1");
 
 include pathof('includes/header.php');
 ?>
@@ -10,31 +13,31 @@ include pathof('includes/header.php');
 <body>
   <link rel="stylesheet" href="../../assets/css/button.css">
 
-  <!-- tap on top starts-->
+  <!-- Tap on top starts-->
   <div class="tap-top"><i data-feather="chevrons-up"></i></div>
-  <!-- tap on tap ends-->
+  <!-- Tap on top ends-->
   <!-- Loader starts-->
   <div class="loader-wrapper">
     <div class="dot"></div>
     <div class="dot"></div>
     <div class="dot"></div>
-    <div class="dot"> </div>
+    <div class="dot"></div>
     <div class="dot"></div>
   </div>
   <!-- Loader ends-->
-  <!-- page-wrapper Start-->
+  <!-- Page wrapper start-->
   <div class="page-wrapper compact-wrapper" id="pageWrapper">
     <!-- Page Header Start-->
     <?php include pathOf('includes/navbarTop.php') ?>
-
     <!-- Page Header Ends-->
+
     <!-- Page Body Start-->
     <div class="page-body-wrapper">
       <!-- Page Sidebar Start-->
-      <?php
-      include pathOf('includes/sidebar.php');
-      ?>
+      <?php include pathOf('includes/sidebar.php'); ?>
       <!-- Page Sidebar Ends-->
+
+      <!-- Main content starts-->
       <div class="page-body">
         <div class="container-fluid">
           <div class="page-title">
@@ -56,7 +59,7 @@ include pathof('includes/header.php');
         <div class="col-sm-12">
           <div class="card">
             <div class="card-header pb-0">
-              <a class="btn btn-outline-primary" href="./add.php">Add</a><span>
+              <a class="btn btn-outline-primary" href="./add.php">Add</a>
             </div>
             <div class="card-body">
               <div class="table-responsive theme-scrollbar">
@@ -74,12 +77,12 @@ include pathof('includes/header.php');
                   <tbody>
                     <?php foreach ($cities as $city) { ?>
                       <tr>
-                        <td><?= $index += 1 ?></td>
+                        <td><?= ++$index ?></td>
                         <td><?= $city['Name'] ?></td>
                         <td><?= $city['StateName'] ?></td>
                         <form action="./update.php" method="post">
                           <td>
-                            <input type="hidden" value="<?= $city['Id'] ?>" id="Id" name="Id">
+                            <input type="hidden" value="<?= $city['Id'] ?>" name="Id">
                             <button type="submit" class="btn btn-outline-success">Update</button>
                           </td>
                         </form>
@@ -89,10 +92,12 @@ include pathof('includes/header.php');
                       </tr>
                     <?php } ?>
                   </tbody>
+
                   <tfoot>
                     <tr>
                       <th>SR No.</th>
-                      <th>User</th>
+                      <th>City Name</th>
+                      <th>State Name</th>
                       <th>Update</th>
                       <th>Delete</th>
                     </tr>
@@ -103,42 +108,44 @@ include pathof('includes/header.php');
           </div>
         </div>
       </div>
+      <!-- Main content ends-->
+
+      <!-- Success and Error Modal -->
+      <div class="modal" tabindex="-1" id="success">
+        <div class="modal-dialog">
+          <div class="modal-content bg-dark">
+            <div class="modal-header text-white">
+              <h5 class="modal-title">City Deleted!</h5>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-success">Success</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" tabindex="-1" id="error">
+        <div class="modal-dialog">
+          <div class="modal-content bg-dark">
+            <div class="modal-header text-white">
+              <h5 class="modal-title">City Not Deleted!</h5>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-danger">Error</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modals end-->
     </div>
   </div>
 
-  <div class="modal" tabindex="-1" id="success">
-            <div class="modal-dialog">
-                <div class="modal-content bg-dark">
-                    <div class="modal-header text-white">
-                        <h5 class="modal-title">City Deleted !</h5>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-success">Success</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal" tabindex="-1" id="error">
-            <div class="modal-dialog">
-                <div class="modal-content bg-dark">
-                    <div class="modal-header text-white">
-                        <h5 class="modal-title">City Not Delete !</h5>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-danger">Error</button>
-                    </div>
-                </div>
-            </div>
-        </div> 
-
   <script>
+    // Function to delete city
+    function deleteData(Id) {
       $.ajax({
         url: "../../api/city/delete.php",
         method: "POST",
-        data: {
-          Id: Id
-        },
-
+        data: { Id: Id },
         success: function(response) {
           $("#success").modal('show');
           setTimeout(function() {
@@ -146,17 +153,17 @@ include pathof('includes/header.php');
           }, 2000);
         },
         error: function(response) {
-          $("#success").modal('show');
+          $("#error").modal('show');
           setTimeout(function() {
             location.reload();
           }, 2000);
         }
-      })
+      });
+    }
   </script>
+
 </body>
 
 </html>
 
-<?php
-include pathof('includes/scripts.php');
-?>
+<?php include pathof('includes/scripts.php'); ?>

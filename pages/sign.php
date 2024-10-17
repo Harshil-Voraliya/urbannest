@@ -9,8 +9,9 @@ include pathOf('includes/header.php');
         <div class="row justify-content-center g-0">
             <div class="col-md-6 col-lg-5 col-12 user-login-register bg-light p-4">
                 <div class="login-register-title text-center">
+                    
                     <h2 class="title">Register</h2>
-                    <p class="desc">If you don’t have an account, register now!</p>
+                    <p class="desc">If you don't have an account, register now!</p>
                 </div>
                 <div class="login-register-form">
                     <div class="row">
