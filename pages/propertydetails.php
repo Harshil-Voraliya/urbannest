@@ -19,6 +19,7 @@ include pathOf('includes/navbar.php');
                     </div>
                 </div>
              </div>
+        </div>
     </div>
     <!-- Page Title/Header End -->
 

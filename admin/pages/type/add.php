@@ -58,8 +58,8 @@ include pathof('includes/header.php');
                   <div class="card-body">
                         <div class="mb-3 row">
                             <label">Name</label>
-                            <div class="col-sm-12">
-                              <input class="form-control" type="text" id="Name" name="Name" autofocus>
+                            <div class="col-sm-12"><br>
+                              <input class="form-control" type="text" id="Name" name="Name" placeholder="Enter Property Type" autofocus>
                             </div>
                           </div>
                           <div class="card-footer text-end">

@@ -11,8 +11,10 @@ include pathof('includes/header.php');
   <link rel="stylesheet" href="../../assets/css/button.css">
   <style>
     .product-img img {
-      max-width: 100%; /* Make image responsive */
-      height: auto; /* Maintain aspect ratio */
+      max-width: 100%;
+      /* Make image responsive */
+      height: auto;
+      /* Maintain aspect ratio */
     }
   </style>
   <!-- tap on top starts-->
@@ -109,14 +111,21 @@ include pathof('includes/header.php');
                         </a>
                         <p><?= $propertydetail['Address'] ?></p>
                         <div class="product-price"><?= $propertydetail['Price'] ?></div>
-                        <form action="./update.php" method="post">
-                          <input type="hidden" name="Id" id="Id" value="<?= $propertydetail['Id'] ?>">
-                          <button type="submit" class="btn btn-outline-success mb-2">
-                            Update
+
+                        <!-- Wrapping Update and Delete buttons inside a flexbox container -->
+                        <div class="d-flex justify-content-between">
+                          <form action="./update.php" method="post">
+                            <input type="hidden" name="Id" id="Id" value="<?= $propertydetail['Id'] ?>">
+                            <button type="submit" class="btn btn-outline-success">
+                              Update
+                            </button>
+                          </form>
+                          <button type="button" class="btn btn-outline-danger" onclick="deleteData(<?= $propertydetail['Id'] ?>)">
+                            Delete
                           </button>
-                        </form>
-                        <button type="button" class="btn btn-outline-danger" onclick="deleteData(<?= $propertydetail['Id'] ?>)">Delete</button>
+                        </div>
                       </div>
+
                     </div>
                   </div>
                 </div>
@@ -157,4 +166,4 @@ include pathof('includes/header.php');
 
   <?php
   include pathof('includes/scripts.php');
- ?>
+  ?>
