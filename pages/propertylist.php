@@ -1,7 +1,7 @@
 <?php
 require '../includes/init.php';
 
-$propertydetails = select("SELECT * FROM propertydetails");
+$propertydetails = select("SELECT * FROM propertydetails WHERE IsDeleted = 1");
 
 include pathOf('includes/header.php');
 include pathOf('includes/navbar.php');
@@ -38,7 +38,7 @@ include pathOf('includes/navbar.php');
                                 </li>
                             </ul>
                         </div>
-                    
+
                     </div>
                 </div>
             </div>

@@ -1,22 +1,69 @@
 <?php
-    require '../../includes/init.php';
-    header('Content-Type: application/json');
+require '../../includes/init.php';
+header("Content-type:application/json");
 
-    $Id = $_POST['Id'];
-    $Type = $_POST['TypeId'];
-    $City = $_POST['CityId'];
-    $State = $_POST['StateId'];
-    $PropertyName = $_POST['PropertyName'];
-    $Address = $_POST['Address'];
-    $Sqft = $_POST['Sqft'];
-    $Description = $_POST['Description'];
-    $Price = $_POST['Price'];
-    $Image = $_POST['Image'];
-    $Image2 = $_POST['Image2'];
-    $Image3 = $_POST['Image3'];
-    $Image4 = $_POST['Image4'];
-    $Image5 = $_POST['Image5'];
+// Retrieve form data
+$PropertyId = $_POST['PropertyId'];
+$TypeId = $_POST['TypeId'];
+$CityId = $_POST['CityId'];
+$StateId = $_POST['StateId'];
+$PropertyName = $_POST['PropertyName'];
+$Address = $_POST['Address'];
+$Sqft = $_POST['Sqft'];
+$Description = $_POST['Description'];
+$Price = $_POST['Price'];
 
-    $query = "UPDATE TypeId = ?, CityId = ?, StateId = ?, PropertyName = ?, Address = ?, Sqft = ?, Description = ?, Price = ?, Image = ?, Image2 = ?, Image3 = ?, Image4 = ?, Image5 = ? WHERE Id = ?";
-    $param = [$Type, $City, $State, $PropertyName, $Address, $Sqft, $Description, $Price, $Image, $Image2, $Image3, $Image4, $Image5, $Id];
+// Initialize an array to hold the image filenames
+$imageFileNames = [];
+
+// Retrieve existing images from the database for reference
+$existingImagesQuery = "SELECT ImageFileName, ImageFileName2, ImageFileName3, ImageFileName4, ImageFileName5 FROM PropertyDetails WHERE PropertyId = ?";
+$existingImages = fetchOne($existingImagesQuery, [$PropertyId]);
+
+// Process each image upload (up to 5 images)
+for ($i = 1; $i <= 5; $i++) {
+    $imageField = "Image" . ($i === 1 ? "" : $i); // Image, Image2, ..., Image5
+    if (isset($_FILES[$imageField]) && $_FILES[$imageField]['error'] === UPLOAD_ERR_OK) {
+        $fileName = time() . "-" . basename($_FILES[$imageField]['name']);
+        $tmpFileName = $_FILES[$imageField]['tmp_name'];
+        
+        // Move the uploaded file to the designated folder
+        if (move_uploaded_file($tmpFileName, pathOf("assets/images/uploads/$fileName"))) {
+            $imageFileNames[$i - 1] = $fileName; // Store the new filename
+        } else {
+            $imageFileNames[$i - 1] = $existingImages["ImageFileName" . ($i === 1 ? "" : $i)]; // Use existing image if upload fails
+        }
+    } else {
+        $imageFileNames[$i - 1] = $existingImages["ImageFileName" . ($i === 1 ? "" : $i)]; // Use existing image if no new file is uploaded
+    }
+}
+
+// Prepare the update query
+$query = "UPDATE PropertyDetails SET TypeId = ?, CityId = ?, StateId = ?, PropertyName = ?, Address = ?, Sqft = ?, Description = ?, Price = ?, ImageFileName = ?, ImageFileName2 = ?, ImageFileName3 = ?, ImageFileName4 = ?, ImageFileName5 = ? WHERE PropertyId = ?";
+
+$params = [
+    $TypeId,
+    $CityId,
+    $StateId,
+    $PropertyName,
+    $Address,
+    $Sqft,
+    $Description,
+    $Price,
+    $imageFileNames[0], // ImageFileName
+    $imageFileNames[1], // ImageFileName2
+    $imageFileNames[2], // ImageFileName3
+    $imageFileNames[3], // ImageFileName4
+    $imageFileNames[4], // ImageFileName5
+    $PropertyId // Property to update
+];
+
+// Execute the update query
+$result = execute($query, $params);
+
+// Respond based on the result of the query
+echo json_encode(["success" => $result]);
+
+// Redirect after processing (optional, as we're returning JSON)
+header('Location: ../../pages/property/index.php');
 ?>

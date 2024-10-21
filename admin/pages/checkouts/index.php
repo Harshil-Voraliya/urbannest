@@ -24,7 +24,7 @@ include pathof('includes/header.php');
     <!-- Loader ends-->
     <!-- page-wrapper Start-->
     <div class="page-wrapper compact-wrapper" id="pageWrapper">
-        <!-- Page Header Start-->
+        <!-- Page Header Start-->   
         <?php include pathOf('includes/navbarTop.php') ?>
 
         <!-- Page Header Ends-->
@@ -100,31 +100,6 @@ include pathof('includes/header.php');
             </div>
         </div>
     </div>
-    <script>
-        function deleteData(Id) {
-            if (confirm("sure you want to delete this City"));
-            $.ajax({
-                url: "../../api/city/delete.php",
-                method: "POST",
-                data: {
-                    Id: Id
-                },
-
-                success: function(response) {
-                        $("#success").modal('show');
-                        setTimeout(function() {
-                            location.reload();
-                        }, 2000);
-                    },
-                    error: function(response) {
-                        $("#success").modal('show');
-                        setTimeout(function() {
-                            location.reload();
-                        }, 2000);
-                    }
-            })
-        }
-    </script>
 </body>
 
 </html>

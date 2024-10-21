@@ -35,9 +35,7 @@
                     <img class="img-fluid for-light logo " src="<?= urlOf('assets/images/logo/black.png') ?>" alt="">
                 </a>
                 <div class="back-btn"><i data-feather="grid"></i></div>
-                <!-- <div class="toggle-sidebar icon-box-sidebar">
-                    <i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i>
-                </div> -->
+                
             </div>
             <div class="logo-icon-wrapper">
                 <a href="index.html">

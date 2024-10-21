@@ -85,31 +85,6 @@ include pathof('includes/header.php');
   </div>
   </div>
 
-  <div class="modal" tabindex="-1" id="success">
-            <div class="modal-dialog">
-                <div class="modal-content bg-dark">
-                    <div class="modal-header text-white">
-                        <h5 class="modal-title">City Added !</h5>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-success">Success</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal" tabindex="-1" id="error">
-            <div class="modal-dialog">
-                <div class="modal-content bg-dark">
-                    <div class="modal-header text-white">
-                        <h5 class="modal-title">City Not Added !</h5>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-danger">Error</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
   <script>
     function insertData() {
       var StateId = $("#StateId").val();
@@ -123,16 +98,8 @@ include pathof('includes/header.php');
           Name: Name
         },
         success: function(response) {
-          $("#success").modal('show');
-          setTimeout(function() {
-            window.location.href = "./index.php";
-          }, 2000);
-        },
-        error: function(response) {
-          $("#error").modal('show');
-          setTimeout(function() {
-            location.reload();
-          }, 2000);
+          alert("City Inserted Successfully");
+          window.location.href = "index.php";
         }
       });
     }

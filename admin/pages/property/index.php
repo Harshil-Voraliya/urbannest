@@ -79,32 +79,6 @@ include pathof('includes/header.php');
                       <div class="product-img">
                         <img class="img-fluid" src=<?= urlOf('assets/images/uploads/') . $propertydetail['ImageFileName'] ?> alt="">
                       </div>
-                      <div class="modal fade" id="exampleModalCenter16">
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <div class="product-box row">
-                                <div class="product-img col-lg-6">
-                                  <img class="img-fluid" src=<?= urlOf('assets/images/uploads/') . $propertydetail['ImageFileName'] ?> alt="">
-                                </div>
-                                <div class="col-lg-6 text-start">
-                                  <div class="product-details"><a href="product-page.html">
-                                      <h4><?= $propertydetail['PropertyName'] ?></h4>
-                                    </a>
-                                    <div class="product-price">$50.00
-                                    </div>
-                                    <div class="product-view">
-                                      <h6 class="f-w-600"><?= $propertydetail['Address'] ?></h6>
-                                      <p class="mb-0"><?= $propertydetail['Details'] ?></p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                       <div class="product-details">
                         <a href="product-page.html">
                           <h4><?= $propertydetail['PropertyName'] ?></h4>
@@ -148,16 +122,8 @@ include pathof('includes/header.php');
             Id: Id
           },
           success: function(response) {
-            $("#success").modal('show');
-            setTimeout(function() {
-              location.reload();
-            }, 2000);
-          },
-          error: function(response) {
-            $("#success").modal('show');
-            setTimeout(function() {
-              location.reload();
-            }, 2000);
+            alert("City Deleted Successfully");
+            window.location.href = "index.php";
           }
         });
       }

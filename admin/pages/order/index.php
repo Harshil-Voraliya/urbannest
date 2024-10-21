@@ -55,7 +55,7 @@ include pathof('includes/header.php');
         <div class="col-sm-12">
           <div class="card">
             <div class="card-header pb-0">
-                  ` 
+              `
             </div>
             <div class="card-body">
               <div class="table-responsive theme-scrollbar">
@@ -117,17 +117,7 @@ include pathof('includes/header.php');
           TotalAmount: TotalAmount
         },
         success: function(response) {
-                        $("#success").modal('show');
-                        setTimeout(function() {
-                            location.reload();
-                        }, 2000);
-                    },
-                    error: function(response) {
-                        $("#success").modal('show');
-                        setTimeout(function() {
-                            location.reload();
-                        }, 2000);
-                    }
+        }
       });
     }
   </script>

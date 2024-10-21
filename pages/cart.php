@@ -4,6 +4,8 @@ require '../includes/init.php';
 $ClientId = $_SESSION['UserId'];
 $carts = select("SELECT cart.*, propertydetails.PropertyName, propertydetails.Price, propertydetails.ImageFileName FROM cart JOIN propertydetails ON cart.PropertyId = propertydetails.Id WHERE cart.ClientId = $ClientId");
 
+$totalPrice = 0; // Initialize total price variable
+
 include pathOf('includes/header.php');
 include pathOf('includes/navbar.php');
 ?>
@@ -33,7 +35,9 @@ include pathOf('includes/navbar.php');
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach ($carts as $cart) : ?>
+                                        <?php foreach ($carts as $cart) : 
+                                            $totalPrice += $cart['Price']; // Accumulate price
+                                        ?>
                                             <tr>
                                                 <td class="thumbnail" style="width: 80px;">
                                                     <a href="product-details.html">
@@ -70,7 +74,7 @@ include pathOf('includes/navbar.php');
                                         <tbody>
                                             <tr class="total">
                                                 <th>Total</th>
-                                                <td><strong><span class="amount">₹<?= $cart['Price'] ?></span></strong></td>
+                                                <td><strong><span class="amount">₹<?= $totalPrice ?></span></strong></td> <!-- Display total price -->
                                             </tr>
                                         </tbody>
                                     </table>
@@ -80,7 +84,6 @@ include pathOf('includes/navbar.php');
                         </div>
                     </div>
                     <!-- Shopping Cart Section End -->
-
 
                 </div>
                 <!-- Shopping Cart Section End -->
@@ -93,16 +96,7 @@ include pathOf('includes/navbar.php');
                                 Id: Id
                             },
                             success: function(response) {
-                                $("#success").modal('show');
-                                setTimeout(function() {
-                                    location.reload();
-                                }, 2000);
-                            },
-                            error: function(response) {
-                                $("#success").modal('show');
-                                setTimeout(function() {
-                                    location.reload();
-                                }, 2000);
+                                alert("Products Deleted Successfully");
                             }
                         })
                     }

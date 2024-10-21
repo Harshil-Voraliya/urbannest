@@ -1,9 +1,10 @@
 <?php
 require '../includes/init.php';
 
+if(isset($_SESSION['UserId'])) {
 $ClientId = $_SESSION['UserId'];
 $wishlists = select("SELECT wishlist.*, propertydetails.PropertyName, propertydetails.Price, propertydetails.ImageFileName FROM wishlist JOIN propertydetails ON wishlist.PropertyId = propertydetails.Id WHERE wishlist.ClientId = $ClientId");
-
+}
 include pathOf('includes/header.php');
 include pathOf('includes/navbar.php');
 ?>
@@ -16,10 +17,7 @@ include pathOf('includes/navbar.php');
                 <div class="col">
                     <div class="page-title">
                         <h1 class="title">Wishlist</h1>
-                        <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
-                            <li class="breadcrumb-item active">Wishlist</li>
-                        </ul>
+                        
                     </div>
                 </div>
                 <!-- Page Title/Header End -->
@@ -38,7 +36,8 @@ include pathOf('includes/navbar.php');
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($wishlists as $wishlist) : ?>
+                                    <?php if(isset($_SESSION['UserId'])) {
+                                     foreach ($wishlists as $wishlist) : ?>
                                         <tr>
                                             <td class="thumbnail"><a href="product-details.html"><img src="<?= urlOf('admin/assets/images/uploads/') . $wishlist['ImageFileName'] ?>" alt="cart-product-1"></a></td>
                                             <td class="name"> <a href="product-details.html"><?= $wishlist['PropertyName'] ?></a></td>
@@ -46,7 +45,7 @@ include pathOf('includes/navbar.php');
                                             <td class="remove"><button onclick="deleteWishlistItem(<?= $wishlist['Id'] ?>)">×</button></td>
                                             <td class="add"><button onclick="addToCart(<?= $wishlist['PropertyId'] ?>)">Add to Cart</button></td>
                                         </tr>
-                                    <?php endforeach; ?>
+                                    <?php endforeach;  } ?>
                                 </tbody>
                             </table>
                             <div class="row justify-content-between mb-n3">

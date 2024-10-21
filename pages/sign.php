@@ -59,6 +59,30 @@ include pathOf('includes/header.php');
         </div>
     </div>
 </div>
+<div class="modal" tabindex="-1" id="success">
+    <div class="modal-dialog">
+        <div class="modal-content bg-dark">
+            <div class="modal-header text-white">
+                <h5 class="modal-title">Regestired Successfully !</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-success">Success</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" tabindex="-1" id="error">
+    <div class="modal-dialog">
+        <div class="modal-content bg-dark">
+            <div class="modal-header text-white">
+                <h5 class="modal-title">Not Registered !</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger">Error</button>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Login & Register Section End -->
 
 <script>
@@ -82,7 +106,7 @@ include pathOf('includes/header.php');
                 }, 2000);
             },
             error: function(response) {
-                $("#success").modal('show');
+                $("#error").modal('show');
                 setTimeout(function() {
                     location.reload();
                 }, 2000);

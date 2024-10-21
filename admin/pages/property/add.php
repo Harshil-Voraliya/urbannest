@@ -60,7 +60,7 @@ include pathof('includes/header.php');
                                 <div class="card-body">
                                     <div class="mb-3 row">
                                         <label class="form-label" for="validationCustom04">Type</label>
-                                        <select class="form-select" id="TypeId" name="TypeId" >
+                                        <select class="form-select" id="TypeId" name="TypeId">
                                             <?php foreach ($types as $type): ?>
                                                 <option value="<?= $type['Id'] ?>"><?= $type['Name'] ?></option>
                                             <?php endforeach; ?>
@@ -182,17 +182,9 @@ include pathof('includes/header.php');
                 processData: false,
                 contentType: false,
                 success: function(response) {
-                        $("#success").modal('show');
-                        setTimeout(function() {
-                            location.reload();
-                        }, 2000);
-                    },
-                    error: function(response) {
-                        $("#success").modal('show');
-                        setTimeout(function() {
-                            location.reload();
-                        }, 2000);
-                    }
+                    alert("Property Inserted Successfully");
+                    window.location.href = "index.php";
+                }
             })
         }
     </script>

@@ -110,34 +110,6 @@ include pathof('includes/header.php');
       </div>
       <!-- Main content ends-->
 
-      <!-- Success and Error Modal -->
-      <div class="modal" tabindex="-1" id="success">
-        <div class="modal-dialog">
-          <div class="modal-content bg-dark">
-            <div class="modal-header text-white">
-              <h5 class="modal-title">City Deleted!</h5>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-outline-success">Success</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal" tabindex="-1" id="error">
-        <div class="modal-dialog">
-          <div class="modal-content bg-dark">
-            <div class="modal-header text-white">
-              <h5 class="modal-title">City Not Deleted!</h5>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-outline-danger">Error</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Modals end-->
-    </div>
-  </div>
 
   <script>
     // Function to delete city
@@ -147,16 +119,8 @@ include pathof('includes/header.php');
         method: "POST",
         data: { Id: Id },
         success: function(response) {
-          $("#success").modal('show');
-          setTimeout(function() {
-            location.reload();
-          }, 2000);
-        },
-        error: function(response) {
-          $("#error").modal('show');
-          setTimeout(function() {
-            location.reload();
-          }, 2000);
+          alert("City Deleted Successfully");
+          window.location.href = "index.php";
         }
       });
     }

@@ -392,24 +392,24 @@ body.homepage-bg1.offcanvas-open{
     filter:grayscale(0)
 }
 .section-padding{
-    padding-top:100px;
+    padding-top: 0px;
     padding-bottom:100px
 }
 @media only screen and (min-width:992px)and (max-width:1199px){
     .section-padding{
-        padding-top:100px;
+        padding-top: 0px;
         padding-bottom:100px
     }
 }
 @media only screen and (min-width:768px)and (max-width:991px){
     .section-padding{
-        padding-top:80px;
+        padding-top: 0px;
         padding-bottom:80px
     }
 }
 @media only screen and (max-width:767px){
     .section-padding{
-        padding-top:60px;
+        padding-top: 0px;
         padding-bottom:60px
     }
 }
@@ -7475,21 +7475,21 @@ body.offcanvas-open .sticky-header{
     margin:0
 }
 .page-title-section{
-    padding:130px 0
+    padding: 70px 0
 }
 @media only screen and (min-width:992px)and (max-width:1199px),only screen and (min-width:768px)and (max-width:991px){
     .page-title-section{
-        padding:80px 0
+        padding:70px 0
     }
 }
 @media only screen and (max-width:767px){
     .page-title-section{
-        padding:60px 0
+        padding:70px 0
     }
 }
 @media only screen and (max-width:479px){
     .page-title-section{
-        padding:50px 0
+        padding:70px 0
     }
 }
 .page-title .title{

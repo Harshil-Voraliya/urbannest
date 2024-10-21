@@ -13,5 +13,7 @@ $param = [$UserName, $Email, $Password];
 
 execute($query, $param);
 
+header("Location: ../../../pages/login.php");
+
 echo json_encode(["status" => "success", "message" => "Client Added"]);
 ?>

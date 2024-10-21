@@ -18,7 +18,7 @@ include pathOf('includes/navbar.php');
                         <h1 class="title">Shop</h1>
                     </div>
                 </div>
-             </div>
+            </div>
         </div>
     </div>
     <!-- Page Title/Header End -->
@@ -165,17 +165,17 @@ include pathOf('includes/navbar.php');
                     UserId: UserId
                 },
                 success: function(response) {
-                        $("#success").modal('show');
-                        setTimeout(function() {
-                            location.reload();
-                        }, 2000);
-                    },
-                    error: function(response) {
-                        $("#success").modal('show');
-                        setTimeout(function() {
-                            location.reload();
-                        }, 2000);
-                    }
+                    $("#success").modal('show');
+                    setTimeout(function() {
+                        location.reload();
+                    }, 2000);
+                },
+                error: function(response) {
+                    $("#success").modal('show');
+                    setTimeout(function() {
+                        location.reload();
+                    }, 2000);
+                }   
             });
         }
     </script>

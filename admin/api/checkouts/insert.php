@@ -19,18 +19,15 @@ $currentDate = date('Y-m-d');
 $query = "INSERT INTO checkout (CartId, FirstName, LastName, Address, City, State, PinCode, Phone, Email) VALUES (?,?,?,?,?,?,?,?,?)";
 $param = [$CartId, $FirstName, $LastName, $Address, $City, $State, $PinCode, $Phone, $Email];    
 execute($query, $param);
-echo json_encode(["status" => "success", "message" => "Checkout Submitted Successfully"]);
 
 // Order API
 $cartData = select("SELECT * FROM Cart WHERE Id = $CartId");
 $query = "INSERT INTO `Order` (CartId, TotalAmount, Status, Date) VALUES (?,?,?,?)";  // Enclose Order in backticks
 $param = [$CartId, $TotalPrice, "Pending", $currentDate];
 execute($query, $param);
-echo json_encode(["status" => "success", "message" => "Order Submitted Successfully"]);
 
-// Uncomment this section if you want to delete the cart after order
-// $query = "DELETE FROM carts WHERE Id = ?";
-// $param = [$CartId];
-// $result = execute($query, $param);
-// echo json_encode(["status" => "success", "message" => "Cart Deleted Successfully"]);
+$query = "UPDATE Carts SET IsDeleted = -1 WHERE Id = ?";
+$param = [$CartId];
+$result = execute($query, $param);
+echo json_encode(["status" => "success", "message" => "Cart Deleted Successfully"]);
 ?>
